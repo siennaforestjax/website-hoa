@@ -1,0 +1,8 @@
+:root {
+  --fontSize: 16px;
+  --primaryColor: #fff;
+  --secondaryColor: #aaa;
+  --primaryFontColor: #abc;
+  --secondaryFontColor: #def;
+  --gutter: 2px;
+}
