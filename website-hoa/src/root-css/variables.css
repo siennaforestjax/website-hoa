@@ -1,6 +1,6 @@
 :root {
   --fontSize: 16px;
-  --primaryColor: #fff;
+  --primaryColor: rgb(50, 150, 150);
   --secondaryColor: #aaa;
   --primaryFontColor: #abc;
   --secondaryFontColor: #def;

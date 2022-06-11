@@ -1,0 +1,7 @@
+nav {
+  display: inline;
+}
+.nav-container {
+  height: 100%;
+  background-color: var(--primaryColor);
+}
