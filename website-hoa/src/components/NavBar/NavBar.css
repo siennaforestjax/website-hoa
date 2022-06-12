@@ -1,7 +1,71 @@
-nav {
-  display: inline;
-}
 .nav-container {
   height: 100%;
-  background-color: var(--primaryColor);
+}
+
+.nav-hamburger {
+  display: block;
+  height: 50px;
+  width: 50px;
+  transform: rotateZ(90deg);
+  letter-spacing: -1px;
+  margin-top: 20px;
+  margin-left: var(--gutter);
+  background-color: var(--primaryButtonColor);
+  border: none;
+  box-shadow: black 0px 0px 8px -2px;
+  border-radius: 10%;
+}
+
+.nav-panel {
+  position: absolute;
+  width: 35vw;
+  height: 100vh;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+}
+.nav-list > li {
+  padding-left: var(--gutter);
+}
+
+.nav-list > li,
+.nav-list > li > .nav-sub-list > li {
+  display: block;
+  width: 100%;
+  line-height: 50px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  margin: auto;
+  text-align: left;
+  color: var(--primaryFontColor);
+  background-color: var(--secondaryColor);
+}
+
+.nav-list > li > .nav-sub-list > li {
+  border-bottom: 1px dashed black;
+  border-right: none;
+  width: 80%;
+  max-width: 80%;
+  line-height: 20px;
+  position: relative;
+  padding: 5px 5px;
+  text-overflow: ellipsis;
+}
+
+.nav-list > li > .nav-sub-list > li:first-of-type {
+  border-top: 1px dashed black;
+}
+
+.nav-list > li > .nav-sub-list > li:last-of-type {
+  border-bottom: none;
+}
+
+.nav-list > li > .nav-sub-list > li:before {
+  content: '>';
+  left: -15px;
+  position: absolute;
+}
+
+.nav-list > li:last-child {
+  line-height: 2px;
 }
