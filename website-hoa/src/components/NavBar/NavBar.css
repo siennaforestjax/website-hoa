@@ -21,9 +21,24 @@
   width: 35vw;
   height: 100vh;
   background-color: transparent;
+  left: -35vw;
+  transition: none;
+}
+
+.nav-panel.open {
   top: 0;
   left: 0;
+  transition: left 0.3s ease;
 }
+
+.nav-panel > .exit-button {
+  content: 'x';
+  top: 2px;
+  right: 3px;
+  background-color: transparent;
+  position: absolute;
+}
+
 .nav-list > li {
   padding-left: var(--gutter);
 }
@@ -60,12 +75,11 @@
   border-bottom: none;
 }
 
-.nav-list > li > .nav-sub-list > li:before {
-  content: '>';
-  left: -15px;
-  position: absolute;
-}
-
 .nav-list > li:last-child {
   line-height: 2px;
+}
+
+.nav-sub-list > li:hover {
+  color: var(--primaryButtonColor);
+  background-color: black;
 }
