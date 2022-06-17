@@ -56,7 +56,7 @@
   border-right: 1px solid black;
   margin: auto;
   text-align: left;
-  color: var(--secondaryFontColor);
+  color: var(--primaryFontColor);
   background-color: var(--secondaryColor);
 }
 
@@ -86,5 +86,5 @@
 
 .nav-sub-list > li:hover {
   color: var(--secondaryColor);
-  background-color: var(--secondaryFontColor);
+  background-color: var(--primaryFontColor);
 }

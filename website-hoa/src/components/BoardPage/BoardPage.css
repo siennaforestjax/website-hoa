@@ -1,6 +1,7 @@
 .pageWrapper {
   padding-left: var(--gutter);
   padding-right: var(--gutter);
+  color: var(--primaryFontColor);
 }
 
 .boardMember {
@@ -28,7 +29,7 @@ figcaption {
 }
 
 img {
-  border: 1px solid gold;
+  border: 2px solid var(--primaryColor);
   border-radius: 21%;
   height: calc(100% - 20px);
   width: 200px;
