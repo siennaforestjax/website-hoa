@@ -1,0 +1,53 @@
+.pageWrapper {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.boardMember {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+figure {
+  width: 100%;
+  height: 220px;
+}
+
+figure > * {
+  margin: auto;
+}
+
+figcaption {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+img {
+  border: 1px solid gold;
+  border-radius: 21%;
+  height: calc(100% - 20px);
+  width: 200px;
+}
+
+.details {
+  margin-top: 10px;
+  padding-left: 15px;
+  flex-basis: 1;
+}
+
+.details p:not(:last-of-type) {
+  margin-bottom: 4px;
+}
+
+.fieldDescription {
+  text-decoration: underline;
+}
+
+.fieldTitle {
+  font-weight: bold;
+}

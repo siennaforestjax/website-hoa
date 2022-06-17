@@ -1,5 +1,6 @@
 .nav-container {
   height: 100%;
+  position: relative;
 }
 
 .nav-hamburger {
@@ -8,20 +9,22 @@
   width: 50px;
   transform: rotateZ(90deg);
   letter-spacing: -1px;
-  margin-top: 20px;
-  margin-left: var(--gutter);
+  top: var(--gutter);
+  left: var(--gutter);
   background-color: var(--primaryButtonColor);
   border: none;
   box-shadow: black 0px 0px 8px -2px;
   border-radius: 10%;
+  position: absolute;
 }
 
 .nav-panel {
+  --panelWidth: 65vw;
   position: absolute;
-  width: 35vw;
+  width: var(--panelWidth);
   height: 100vh;
   background-color: transparent;
-  left: -35vw;
+  left: calc(-1 * var(--panelWidth));
   transition: none;
 }
 
@@ -41,10 +44,11 @@
 
 .nav-list > li {
   padding-left: var(--gutter);
+  font-weight: bold;
 }
 
 .nav-list > li,
-.nav-list > li > .nav-sub-list > li {
+.nav-sub-list > li {
   display: block;
   width: 100%;
   line-height: 50px;
@@ -52,11 +56,11 @@
   border-right: 1px solid black;
   margin: auto;
   text-align: left;
-  color: var(--primaryFontColor);
+  color: var(--secondaryFontColor);
   background-color: var(--secondaryColor);
 }
 
-.nav-list > li > .nav-sub-list > li {
+.nav-sub-list > li {
   border-bottom: 1px dashed black;
   border-right: none;
   width: 80%;
@@ -65,13 +69,14 @@
   position: relative;
   padding: 5px 5px;
   text-overflow: ellipsis;
+  font-weight: normal;
 }
 
-.nav-list > li > .nav-sub-list > li:first-of-type {
+.nav-sub-list > li:first-of-type {
   border-top: 1px dashed black;
 }
 
-.nav-list > li > .nav-sub-list > li:last-of-type {
+.nav-sub-list > li:last-of-type {
   border-bottom: none;
 }
 
@@ -80,6 +85,6 @@
 }
 
 .nav-sub-list > li:hover {
-  color: var(--primaryButtonColor);
-  background-color: black;
+  color: var(--secondaryColor);
+  background-color: var(--secondaryFontColor);
 }

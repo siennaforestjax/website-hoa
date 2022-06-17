@@ -1,11 +1,5 @@
 .header-container {
-  height: 90px;
+  height: 100%;
   background-color: var(--primaryColor);
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, teal 40%, blue 20%, teal 40%);
-  border-image-slice: 1;
   width: 100%;
 }
