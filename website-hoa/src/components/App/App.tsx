@@ -2,6 +2,9 @@ import './App.css';
 import HeaderBar from '../HeaderBar/HeaderBar';
 import BoardPage from '../BoardPage/BoardPage';
 import theBoard from '../../boardMembers.json';
+import theDocuments from '../../hoaDocuments.json';
+import NeighborhoodPage from '../NeighborhoodPage/NeighborhoodPage';
+import DocumentsPage from '../DocumentsPage/DocumentsPage';
 
 function App() {
   function tellNavigationToClose() {
@@ -14,7 +17,9 @@ function App() {
         <HeaderBar />
       </header>
       <main onClick={tellNavigationToClose}>
-        <BoardPage boardMembers={theBoard.boardMembers} />
+        <DocumentsPage documents={theDocuments.documents} />
+        {/* <NeighborhoodPage /> */}
+        {/*<BoardPage boardMembers={theBoard.boardMembers} />*/}
       </main>
     </div>
   );

@@ -4,6 +4,11 @@
 }
 
 .App > header {
-  height: 90px;
+  height: var(--headerHeight);
+  width: 100vw;
+}
+
+.App main {
+  height: calc(100vh - var(--headerHeight));
   width: 100vw;
 }

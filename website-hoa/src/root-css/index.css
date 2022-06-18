@@ -21,3 +21,11 @@ code {
   border-image: linear-gradient(to right, white 0%, teal 60%, white 100%);
   border-image-slice: 1;
 }
+
+.pageWrapper {
+  height: 100%;
+  width: 100%;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  color: var(--primaryFontColor);
+}

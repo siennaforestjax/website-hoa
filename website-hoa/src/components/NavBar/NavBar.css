@@ -14,7 +14,7 @@
   background-color: var(--primaryButtonColor);
   border: none;
   box-shadow: black 0px 0px 8px -2px;
-  border-radius: 10%;
+  border-radius: var(--buttonBorderRadius);
   position: absolute;
 }
 
@@ -22,24 +22,34 @@
   --panelWidth: 65vw;
   position: absolute;
   width: var(--panelWidth);
-  height: 100vh;
-  background-color: transparent;
   left: calc(-1 * var(--panelWidth));
   transition: none;
+  height: auto;
+  border-radius: 3px;
 }
 
 .nav-panel.open {
   top: 0;
   left: 0;
   transition: left 0.3s ease;
+  box-shadow: 1px 0 8px 0 black;
 }
 
 .nav-panel > .exit-button {
-  content: 'x';
-  top: 2px;
-  right: 3px;
-  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  top: 0;
+  right: 0;
+  padding: 0;
+  height: 20px;
+  width: 20px;
   position: absolute;
+  color: var(--primaryFontColor);
+  transform: rotateZ(45deg);
+  background-color: transparent;
+  border: none;
 }
 
 .nav-list > li {
@@ -50,10 +60,10 @@
 .nav-list > li,
 .nav-sub-list > li {
   display: block;
-  width: 100%;
+
   line-height: 50px;
   border-bottom: 1px solid black;
-  border-right: 1px solid black;
+
   margin: auto;
   text-align: left;
   color: var(--primaryFontColor);
@@ -62,9 +72,6 @@
 
 .nav-sub-list > li {
   border-bottom: 1px dashed black;
-  border-right: none;
-  width: 80%;
-  max-width: 80%;
   line-height: 20px;
   position: relative;
   padding: 5px 5px;
@@ -72,16 +79,17 @@
   font-weight: normal;
 }
 
-.nav-sub-list > li:first-of-type {
-  border-top: 1px dashed black;
-}
-
 .nav-sub-list > li:last-of-type {
   border-bottom: none;
 }
 
-.nav-list > li:last-child {
-  line-height: 2px;
+.nav-sub-list > li:first-of-type {
+  border-top: 1px dashed black;
+}
+
+.nav-list > li:last-of-type,
+.nav-sub-list > li:last-of-type {
+  border-bottom: none;
 }
 
 .nav-sub-list > li:hover {

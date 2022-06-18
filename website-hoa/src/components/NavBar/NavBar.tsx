@@ -22,7 +22,7 @@ const NavBar = ({ ...isLoggedIn }) => {
       </button>
       <div className="nav-panel">
         <button type="button" className="exit-button" onClick={toggleNavPanel}>
-          X
+          +
         </button>
         <ul className="nav-list">
           <li>
@@ -45,7 +45,6 @@ const NavBar = ({ ...isLoggedIn }) => {
               <li>The Neighborhood</li>
             </ul>
           </li>
-          <li className="empty"></li>
         </ul>
       </div>
     </nav>

@@ -1,9 +1,3 @@
-.pageWrapper {
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-  color: var(--primaryFontColor);
-}
-
 .boardMember {
   display: flex;
   flex-direction: row;
