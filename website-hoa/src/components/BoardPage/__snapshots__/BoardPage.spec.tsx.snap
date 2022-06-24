@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Board Page renders as expected 1`] = `
+<div
+  className="pageWrapper"
+>
+  <h1>
+    Meet The Board
+  </h1>
+  <section
+    className="boardMember colorful-bottom-border"
+  >
+    <figure>
+      <img
+        alt="Photo of Kurt Ringo (President)"
+        src="president.jpg"
+      />
+      <figcaption
+        aria-hidden={true}
+      >
+        too cool for school
+      </figcaption>
+    </figure>
+    <div
+      className="details"
+    >
+      <p>
+        <span
+          className="fieldTitle"
+        >
+          President
+        </span>
+         -
+         
+        Kurt Ringo
+      </p>
+      <p>
+        The HOA President serves as the leader of the board. The main responsibilities of the president include presiding over board meetings and facilitating the decision-making process; signing contacts, checks, and other legal documents; serving as a spokesman for the HOA; and taking charge of the day-to-day operations.
+      </p>
+    </div>
+  </section>
+  <section
+    className="boardMember colorful-bottom-border"
+  >
+    <figure>
+      <img
+        alt="Photo of Maxine Holcomb (Treasurer)"
+        src="treasurer.jpg"
+      />
+      <figcaption
+        aria-hidden={true}
+      >
+        growing up on a farm
+      </figcaption>
+    </figure>
+    <div
+      className="details"
+    >
+      <p>
+        <span
+          className="fieldTitle"
+        >
+          Treasurer
+        </span>
+         -
+         
+        Maxine Holcomb
+      </p>
+      <p>
+        The HOA Treasurer oversees the financial operations of the association.  They are in charge of developing the budget, monitoring income and expenses, collecting assessments, issuing payments to vendors, preparing financial reports, and facilitating an audit at the end of a fiscal year.
+      </p>
+    </div>
+  </section>
+  <section
+    className="boardMember colorful-bottom-border"
+  >
+    <figure>
+      <img
+        alt="Photo of Caroline Shank (Secretary)"
+        src="secretary.jpg"
+      />
+      <figcaption
+        aria-hidden={true}
+      >
+        scary hair
+      </figcaption>
+    </figure>
+    <div
+      className="details"
+    >
+      <p>
+        <span
+          className="fieldTitle"
+        >
+          Secretary
+        </span>
+         -
+         
+        Caroline Shank
+      </p>
+      <p>
+        The HOA secretary creates the board meeting agenda (with the president), records the minutes of board meetings, and ensures quorum. They also send notices for board meetings, ensure compliance with the governing documents, maintain bank information and other important documents, and store homeowner and maintenance records.
+      </p>
+    </div>
+  </section>
+</div>
+`;

@@ -1,9 +1,6 @@
 import './BoardPage.css';
-import BoardMember from '../../interfaces/BoardMember';
-
-type BoardPageProps = {
-  boardMembers: Array<BoardMember>;
-};
+import React from 'react';
+import { BoardPageProps } from './BoardPageProps';
 
 const BoardPage = ({ boardMembers }: BoardPageProps) => {
   return (

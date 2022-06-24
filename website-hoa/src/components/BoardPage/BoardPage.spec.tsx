@@ -1,6 +1,7 @@
 import React from 'react';
 import BoardPage from './BoardPage';
 import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import testData from '../../boardMembers.json';
 
 describe('The Board Page', () => {
