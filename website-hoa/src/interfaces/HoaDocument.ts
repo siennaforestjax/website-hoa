@@ -4,4 +4,6 @@ export default interface HoaDocument {
   location: string;
   description: string;
   name: string;
+  displayName: string;
+  creationDate: string;
 }

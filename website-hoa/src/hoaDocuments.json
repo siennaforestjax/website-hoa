@@ -5,14 +5,36 @@
       "size": "8kb",
       "location": "/meetingMinutes",
       "name": "SFHOA_Minutes_2022-05-26.docx",
-      "description": "HOA Meeting Notes from May 26th 2022"
+      "displayName": "May 26th Meeting Notes",
+      "description": "HOA Meeting Notes from May 26th 2022",
+      "creationDate": "05/26/2022"
     },
     {
       "type": "meetingMinutes",
       "size": "10kb",
       "location": "/meetingMinutes",
       "name": "SFHOA_Minutes_2022-04-28.docx",
-      "description": "HOA Meeting Notes from April 28th 2022"
+      "displayName": "April 28th Meeting Notes",
+      "description": "HOA Meeting Notes from April 28th 2022",
+      "creationDate": "04/28/2022"
+    },
+    {
+      "type": "misc",
+      "size": "10kb",
+      "location": "/misc",
+      "name": "Mock_Covenants & Restrictions.docx",
+      "displayName": "Covenants & Restrictions",
+      "description": "Covenants & Restrictions For The Sienna Forest HOA",
+      "creationDate": "01/23/2000"
+    },
+    {
+      "type": "misc",
+      "size": "10kb",
+      "location": "/misc",
+      "name": "Mock_PhoneNumberRegistry.docx",
+      "displayName": "Resident Contact Information",
+      "description": "All the latest contact info for the residents of the Sienna Forest HOA",
+      "creationDate": "01/23/2000"
     }
   ]
 }
