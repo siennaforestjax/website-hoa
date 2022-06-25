@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The NavBar Component The Snapshot should render as expected 1`] = `
+<nav
+  className="nav-container"
+>
+  <button
+    className="nav-hamburger"
+    onClick={[Function]}
+  >
+    l l l
+  </button>
+  <div
+    className="nav-panel"
+  >
+    <button
+      className="exit-button"
+      onClick={[Function]}
+      type="button"
+    >
+      +
+    </button>
+    <ul
+      className="nav-list"
+    >
+      <li>
+        Events
+        <ul
+          className="nav-sub-list"
+        >
+          <li>
+            See All
+          </li>
+        </ul>
+      </li>
+      <li>
+        Docs
+        <ul
+          className="nav-sub-list"
+        >
+          <li>
+            Covenants & Restrictions
+          </li>
+          <li>
+            <a>
+              Contact List
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        About
+        <ul
+          className="nav-sub-list"
+        >
+          <li>
+            The Board
+          </li>
+          <li>
+            The Neighborhood
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

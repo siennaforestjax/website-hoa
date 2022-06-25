@@ -1,3 +1,4 @@
+import React from 'react';
 import './DocumentsPage.css';
 import HoaDocument from '../../interfaces/HoaDocument';
 
