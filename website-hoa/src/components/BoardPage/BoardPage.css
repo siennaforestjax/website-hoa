@@ -23,7 +23,7 @@ figcaption {
 }
 
 img {
-  border: 2px solid var(--primaryColor);
+  border: 2px solid rgb(var(--primaryColor));
   border-radius: 21%;
   height: calc(100% - 20px);
   width: 200px;

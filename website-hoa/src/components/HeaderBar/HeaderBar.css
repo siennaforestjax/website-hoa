@@ -1,6 +1,6 @@
 .header-container {
   height: 100%;
-  background-color: var(--primaryColor);
+  background-color: rgb(var(--primaryColor));
   width: 100%;
   display: flex;
   justify-content: center;
@@ -9,7 +9,6 @@
 }
 
 .title {
-  --myColor: red;
   font-size: 2.5rem;
-  text-shadow: 1px 1px rgba(var(--myColor) / 58%);
+  text-shadow: 1px 1px rgba(var(--secondaryFontColor), 0.58);
 }

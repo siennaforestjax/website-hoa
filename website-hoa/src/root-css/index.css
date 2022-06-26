@@ -27,5 +27,5 @@ code {
   width: 100%;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
-  color: var(--primaryFontColor);
+  color: rgb(var(--primaryFontColor));
 }
