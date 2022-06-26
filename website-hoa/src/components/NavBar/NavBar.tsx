@@ -1,23 +1,14 @@
 import React from 'react';
 import './NavBar.css';
 
-const NavBar = ({ ...isLoggedIn }) => {
-  function displayContactList() {
-    return isLoggedIn ? (
-      <li>
-        <a>Contact List</a>
-      </li>
-    ) : (
-      <li>Contact List (Log in)</li>
-    );
-  }
+const NavBar = () => {
 
   function toggleNavPanel() {
     document.getElementsByClassName('nav-panel')[0].classList.toggle('open');
   }
 
   return (
-    <nav className="nav-container">
+    <nav>
       <button className="nav-hamburger" onClick={toggleNavPanel}>
         l l l
       </button>
@@ -35,8 +26,7 @@ const NavBar = ({ ...isLoggedIn }) => {
           <li>
             Docs
             <ul className="nav-sub-list">
-              <li>Covenants & Restrictions</li>
-              {displayContactList()}
+              <li>See All</li>
             </ul>
           </li>
           <li>

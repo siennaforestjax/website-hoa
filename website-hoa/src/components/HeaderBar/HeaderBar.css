@@ -2,4 +2,14 @@
   height: 100%;
   background-color: var(--primaryColor);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  --myColor: red;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px rgba(var(--myColor) / 58%);
 }
