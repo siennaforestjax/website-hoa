@@ -4,9 +4,9 @@ import NavBar from '../NavBar/NavBar';
 
 function HeaderBar() {
   return (
-    <div className="header-container colorful-bottom-border">
-        <NavBar />
-      <div className='title'>Sienna Forest</div>
+    <div className="header-container">
+      <NavBar />
+      <div className="title">Sienna Forest</div>
     </div>
   );
 }

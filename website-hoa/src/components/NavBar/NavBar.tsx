@@ -2,9 +2,11 @@ import React from 'react';
 import './NavBar.css';
 
 const NavBar = () => {
-
   function toggleNavPanel() {
     document.getElementsByClassName('nav-panel')[0].classList.toggle('open');
+    document
+      .getElementsByClassName('nav-panel-background')[0]
+      .classList.toggle('open');
   }
 
   return (
@@ -38,6 +40,7 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
+      <div className="nav-panel-background" onClick={toggleNavPanel}></div>
     </nav>
   );
 };

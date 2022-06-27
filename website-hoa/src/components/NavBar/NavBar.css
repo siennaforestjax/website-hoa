@@ -13,14 +13,30 @@
   position: absolute;
 }
 
+.nav-panel-background {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.nav-panel-background.open {
+  left: 0;
+}
+
 .nav-panel {
   --panelWidth: 65vw;
   position: absolute;
-  width: var(--panelWidth);
   left: calc(-1 * var(--panelWidth));
-  transition: none;
+  width: var(--panelWidth);
   height: auto;
   border-radius: 3px;
+  transition: none;
+  background-color: rgb(var(--secondaryColor));
+  z-index: 2;
 }
 
 .nav-panel.open {
