@@ -9,10 +9,6 @@
 
 figure {
   width: 100%;
-  min-width: 170px;
-  min-height: 170px;
-  max-width: 250px;
-  max-height: 250px;
   height: 220px;
 }
 
@@ -27,10 +23,15 @@ figcaption {
 }
 
 img {
+  height: calc(100% - 20px);
+  min-width: 170px;
+  min-height: 170px;
+  max-width: 250px;
+  max-height: 250px;
   border: 2px solid rgb(var(--primaryColor));
   border-radius: 21%;
-  height: calc(100% - 20px);
-  width: 200px;
+
+  margin: auto;
 }
 
 .details {
