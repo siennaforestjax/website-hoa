@@ -5,11 +5,14 @@
   margin-top: 25px;
   width: 100%;
   padding-bottom: 20px;
+  justify-content: center;
 }
 
 figure {
-  width: 100%;
-  height: 220px;
+  min-width: 170px;
+  min-height: 170px;
+  max-width: 225px;
+  max-height: 225px;
 }
 
 figure > * {
@@ -24,10 +27,7 @@ figcaption {
 
 img {
   height: calc(100% - 20px);
-  min-width: 170px;
-  min-height: 170px;
-  max-width: 250px;
-  max-height: 250px;
+  width: 100%;
   border: 2px solid rgb(var(--primaryColor));
   border-radius: 21%;
 

@@ -7,10 +7,6 @@
     flex-wrap: nowrap;
   }
 
-  figure {
-    width: var(--figureWidth);
-  }
-
   .details {
     width: calc(100% - var(--figureWidth));
     margin-top: 0;
