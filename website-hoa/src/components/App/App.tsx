@@ -5,29 +5,18 @@ import theBoard from '../../boardMembers.json';
 import theDocuments from '../../hoaDocuments.json';
 import NeighborhoodPage from '../NeighborhoodPage/NeighborhoodPage';
 import DocumentsPage from '../DocumentsPage/DocumentsPage';
+import EventsPage from '../EventsPage/EventsPage';
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  function tellNavigationToClose() {
-    console.log('TODO: I should update this to tell Navigation to close');
-  }
-
   return (
-    // <Router>
     <div className="App">
       <header>
         <HeaderBar />
       </header>
-      <main onClick={tellNavigationToClose}>
-        {/* <DocumentsPage documents={theDocuments.documents} />
-            
-              <NeighborhoodPage /> */}
-
-        <BoardPage boardMembers={theBoard.boardMembers} />
-
-        {/* <Route path="/events">
-          <EventsPage events={theEvents.events}/>
-        </Route> */}
+      <main>
+        {/* <EventsPage /> */}
+        <DocumentsPage documents={theDocuments.documents} />
       </main>
     </div>
     // </Router>

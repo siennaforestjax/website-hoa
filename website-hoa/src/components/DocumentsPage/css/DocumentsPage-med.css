@@ -1,0 +1,15 @@
+/* @media screen and (min-width: 768px) {
+  .doc-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+  }
+
+  .doc {
+    display: block;
+    width: 50%;
+    padding: 10px;
+  }
+} */

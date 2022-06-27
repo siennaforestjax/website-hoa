@@ -2,8 +2,8 @@
   "documents": [
     {
       "type": "meetingMinutes",
-      "size": "8kb",
-      "location": "/meetingMinutes",
+      "size": 9254,
+      "storageLocation": "/meetingMinutes",
       "name": "SFHOA_Minutes_2022-05-26.docx",
       "displayName": "May 26th Meeting Notes",
       "description": "HOA Meeting Notes from May 26th 2022",
@@ -11,17 +11,53 @@
     },
     {
       "type": "meetingMinutes",
-      "size": "10kb",
-      "location": "/meetingMinutes",
+      "size": 13181,
+      "storageLocation": "/meetingMinutes",
       "name": "SFHOA_Minutes_2022-04-28.docx",
       "displayName": "April 28th Meeting Notes",
       "description": "HOA Meeting Notes from April 28th 2022",
       "creationDate": "04/28/2022"
     },
     {
+      "type": "meetingMinutes",
+      "size": 13827,
+      "storageLocation": "/meetingMinutes",
+      "name": "SFHOA_Minutes_2022-05-26.docx",
+      "displayName": "July 4th Meeting Notes",
+      "description": "HOA Meeting Notes from May 26th 2022",
+      "creationDate": "07/04/2022"
+    },
+    {
+      "type": "meetingMinutes",
+      "size": 112127,
+      "storageLocation": "/meetingMinutes",
+      "name": "SFHOA_Minutes_2022-04-28.docx",
+      "displayName": "August 11th Meeting Notes",
+      "description": "HOA Meeting Notes from April 28th 2022",
+      "creationDate": "08/11/2022"
+    },
+    {
+      "type": "meetingMinutes",
+      "size": 8000,
+      "storageLocation": "/meetingMinutes",
+      "name": "SFHOA_Minutes_2022-05-26.docx",
+      "displayName": "March 29th Meeting Notes",
+      "description": "HOA Meeting Notes from May 26th 2022",
+      "creationDate": "03/29/2022"
+    },
+    {
+      "type": "meetingMinutes",
+      "size": 10000,
+      "storageLocation": "/meetingMinutes",
+      "name": "SFHOA_Minutes_2022-04-28.docx",
+      "displayName": "June 20th Meeting Notes",
+      "description": "HOA Meeting Notes from April 28th 2022",
+      "creationDate": "06/20/2022"
+    },
+    {
       "type": "misc",
-      "size": "10kb",
-      "location": "/misc",
+      "size": 15000,
+      "storageLocation": "/misc",
       "name": "Mock_Covenants & Restrictions.docx",
       "displayName": "Covenants & Restrictions",
       "description": "Covenants & Restrictions For The Sienna Forest HOA",
@@ -29,8 +65,8 @@
     },
     {
       "type": "misc",
-      "size": "10kb",
-      "location": "/misc",
+      "size": 100000,
+      "storageLocation": "/misc",
       "name": "Mock_PhoneNumberRegistry.docx",
       "displayName": "Resident Contact Information",
       "description": "All the latest contact info for the residents of the Sienna Forest HOA",

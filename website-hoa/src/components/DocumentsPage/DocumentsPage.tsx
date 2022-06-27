@@ -1,6 +1,7 @@
 import React from 'react';
-import './DocumentsPage.css';
+import './css/index.css';
 import HoaDocument from '../../interfaces/HoaDocument';
+import getSimplifiedFileSize from '../helper-functions/getSimplifiedFileSize';
 
 type DocumentsPageProps = {
   documents: Array<HoaDocument>;
@@ -11,26 +12,26 @@ function DocumentsPage({ documents }: DocumentsPageProps) {
   const miscDocs = documents.filter((x) => x.type === 'misc');
 
   function getFullFilePath(document: HoaDocument) {
-    return `${document.location}/${document.name}`;
+    return `${document.storageLocation}/${document.name}`;
   }
 
-  function sortStringDates(stringDate1: string, stringDate2:string) {
-    if(!stringDate1) {
+  function sortStringDates(stringDate1: string, stringDate2: string) {
+    if (!stringDate1) {
       return -1;
     }
 
-    if(!stringDate2) {
+    if (!stringDate2) {
       return 1;
     }
 
     const date1 = new Date(stringDate1);
     const date2 = new Date(stringDate2);
 
-    if(date1 < date2) {
+    if (date1 < date2) {
       return -1;
     }
 
-    if(date1 > date2) {
+    if (date1 > date2) {
       return 1;
     }
 
@@ -41,36 +42,50 @@ function DocumentsPage({ documents }: DocumentsPageProps) {
     return (
       <div className="file-container">
         <ul>
-          {docs.sort((x, y) => sortStringDates(x.creationDate, y.creationDate)).map(displayDoc)}
+          {docs
+            .sort((x, y) => sortStringDates(x.creationDate, y.creationDate))
+            .map(displayDoc)}
         </ul>
       </div>
-    )
+    );
+  }
+
+  function displayFileSize(bytes: number) {
+    const { size, unit } = getSimplifiedFileSize(bytes);
+
+    return (
+      <span>
+        {size}
+        {unit}
+      </span>
+    );
   }
 
   function displayDoc(doc: HoaDocument) {
     const fullFilePath = getFullFilePath(doc);
-          return (
-            <li key={doc.displayName}>
-              <a
-                href={fullFilePath}
-                target="_blank"
-                rel="nofollow noreferrer noopener"
-                download
-              >
-                {doc.displayName} ({doc.size})
-              </a>
-            </li>
-          );
+    return (
+      <li key={doc.displayName} className="doc">
+        <a
+          href={fullFilePath}
+          target="_blank"
+          rel="nofollow noreferrer noopener"
+          download
+        >
+          <span className="doc-name">{doc.displayName}</span>
+          <span className="doc-size"> {displayFileSize(doc.size)}</span>
+        </a>
+      </li>
+    );
   }
 
   return (
     <div className="pageWrapper">
       <h1>Documents</h1>
       <h2>HOA Meeting Notes</h2>
-      {displayDocuments(documents.filter(x => x.type === 'meetingMinutes'))}
-      
+      {displayDocuments(documents.filter((x) => x.type === 'meetingMinutes'))}
+
       <h2>Community Documents</h2>
-      {displayDocuments(documents.filter(x => x.type === 'misc'))}
+      {displayDocuments(documents.filter((x) => x.type === 'misc'))}
     </div>
   );
 }
