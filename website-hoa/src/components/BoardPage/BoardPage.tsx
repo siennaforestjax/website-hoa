@@ -1,4 +1,4 @@
-import './BoardPage.css';
+import './css/index.css';
 import React from 'react';
 import { BoardPageProps } from './BoardPageProps';
 

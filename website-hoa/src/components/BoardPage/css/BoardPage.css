@@ -9,6 +9,10 @@
 
 figure {
   width: 100%;
+  min-width: 170px;
+  min-height: 170px;
+  max-width: 250px;
+  max-height: 250px;
   height: 220px;
 }
 
@@ -32,7 +36,6 @@ img {
 .details {
   margin-top: 10px;
   padding-left: 15px;
-  flex-basis: 1;
 }
 
 .details p:not(:last-of-type) {
