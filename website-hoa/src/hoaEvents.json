@@ -1,0 +1,18 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "HOA Resident Meeting",
+      "startTime": "07/05/2022 16:00",
+      "endTime": "07/05/2022 17:00",
+      "description": "July 2022's Monthly HOA Resident Meeting"
+    },
+    {
+      "id": 2,
+      "name": "HOA Board Meeting",
+      "startTime": "12/05/2022 16:00",
+      "endTime": "12/05/2022 17:00",
+      "description": "July 2022's Monthly HOA Board Meeting.  Residents welcome to participate."
+    }
+  ]
+}

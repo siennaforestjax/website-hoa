@@ -1,4 +1,7 @@
 export default interface HoaEvent {
+  id: number;
   name: string;
-  startDate: Date;
+  startTime: string;
+  endTime: string;
+  description: string;
 }

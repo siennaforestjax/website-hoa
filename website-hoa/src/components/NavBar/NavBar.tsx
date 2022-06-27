@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   function toggleNavPanel() {
@@ -22,20 +23,22 @@ const NavBar = () => {
           <li>
             Events
             <ul className="nav-sub-list">
-              <li>See All</li>
+              <li>
+                <Link to="/events">See All</Link>
+              </li>
             </ul>
           </li>
           <li>
             Docs
             <ul className="nav-sub-list">
-              <li>See All</li>
+              <Link to="/documents">See All</Link>
             </ul>
           </li>
           <li>
             About
             <ul className="nav-sub-list">
-              <li>The Board</li>
-              <li>The Neighborhood</li>
+              <Link to="/board">See All</Link>
+              <Link to="/neighborhood">See All</Link>
             </ul>
           </li>
         </ul>
