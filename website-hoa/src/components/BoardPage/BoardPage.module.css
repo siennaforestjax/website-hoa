@@ -8,24 +8,24 @@
   justify-content: center;
 }
 
-figure {
+.figure {
   min-width: 170px;
   min-height: 170px;
   max-width: 225px;
   max-height: 225px;
 }
 
-figure > * {
+.figure > * {
   margin: auto;
 }
 
-figcaption {
+.figureCaption {
   font-size: 12px;
   font-style: italic;
   text-align: center;
 }
 
-img {
+.image {
   height: calc(100% - 20px);
   width: 100%;
   border: 2px solid rgb(var(--primaryColor));
@@ -49,4 +49,20 @@ img {
 
 .fieldTitle {
   font-weight: bold;
+}
+
+/*------Medium Screens--------*/
+@media screen and (min-width: 500px) {
+  :root {
+    --figureWidth: 35%;
+  }
+
+  .boardMember {
+    flex-wrap: nowrap;
+  }
+
+  .details {
+    width: calc(100% - var(--figureWidth));
+    margin-top: 0;
+  }
 }

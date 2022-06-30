@@ -1,12 +1,12 @@
 import React from 'react';
-import './HeaderBar.css';
+import classes from './HeaderBar.module.css';
 import NavBar from '../NavBar/NavBar';
 
 function HeaderBar() {
   return (
-    <div className="header-container">
+    <div className={classes.headerContainer}>
       <NavBar />
-      <div className="title">Sienna Forest</div>
+      <div className={classes.title}>Sienna Forest</div>
     </div>
   );
 }

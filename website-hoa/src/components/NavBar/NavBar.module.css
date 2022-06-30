@@ -1,4 +1,4 @@
-.nav-hamburger {
+.navHamburger {
   display: block;
   height: 50px;
   width: 50px;
@@ -13,7 +13,7 @@
   position: absolute;
 }
 
-.nav-panel-background {
+.navPanelBackground {
   position: absolute;
   top: 0;
   left: -100vw;
@@ -23,11 +23,11 @@
   z-index: 1;
 }
 
-.nav-panel-background.open {
+.navPanelBackground.open {
   left: 0;
 }
 
-.nav-panel {
+.navPanel {
   --panelWidth: 65vw;
   position: absolute;
   left: calc(-1 * var(--panelWidth));
@@ -39,14 +39,14 @@
   z-index: 2;
 }
 
-.nav-panel.open {
+.navPanel.open {
   top: 0;
   left: 0;
   transition: left 0.3s ease;
   box-shadow: 1px 0 8px 0 black;
 }
 
-.nav-panel > .exit-button {
+.navPanel > .exitButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -63,18 +63,18 @@
   border: none;
 }
 
-.nav-list a {
+.navList a {
   text-decoration: none;
 }
 
-.nav-list > li {
-  padding-left: var(--gutter);
+.navList > li {
+  paddingleft: var(--gutter);
   font-weight: bold;
   border-bottom: 1px solid black;
 }
 
-.nav-list > li,
-.nav-sub-list > li {
+.navList > li,
+.navSubList > li {
   display: block;
   line-height: 50px;
   margin: auto;
@@ -83,7 +83,7 @@
   background-color: rgb(var(--secondaryColor));
 }
 
-.nav-sub-list > li > a {
+.navSubList > li > a {
   display: block;
   width: 100%;
   height: auto;
@@ -93,7 +93,7 @@
   background-color: rgb(var(--secondaryColor));
 }
 
-.nav-sub-list > li {
+.navSubList > li {
   border-bottom: 1px dashed black;
   line-height: 20px;
   position: relative;
@@ -102,20 +102,20 @@
   font-weight: normal;
 }
 
-.nav-sub-list > li:last-of-type {
+.navSubList > li:last-of-type {
   border-bottom: none;
 }
 
-.nav-sub-list > li:first-of-type {
+.navSubList > li:first-of-type {
   border-top: 1px dashed black;
 }
 
-.nav-list > li:last-of-type,
-.nav-sub-list > li:last-of-type {
+.navList > li:last-of-type,
+.navSubList > li:last-of-type {
   border-bottom: none;
 }
 
-.nav-sub-list > li > a:hover {
+.navSubList > li > a:hover {
   color: rgb(var(--secondaryColor));
   background-color: rgb(var(--primaryFontColor));
 }

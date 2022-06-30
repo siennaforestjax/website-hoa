@@ -8,12 +8,12 @@ import EventsPage from '../EventsPage/EventsPage';
 import theBoard from '../../boardMembers.json';
 import theDocuments from '../../hoaDocuments.json';
 import theEvents from '../../hoaEvents.json';
-import './App.css';
+import classes from './App.module.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className={classes.App}>
         <header>
           <HeaderBar />
         </header>

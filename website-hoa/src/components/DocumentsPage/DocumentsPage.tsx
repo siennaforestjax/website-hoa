@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/index.css';
+import classes from './DocumentsPage.module.css';
 import HoaDocument from '../../interfaces/HoaDocument';
 import getSimplifiedFileSize from '../helper-functions/getSimplifiedFileSize';
 
@@ -40,7 +40,7 @@ function DocumentsPage({ documents }: DocumentsPageProps) {
 
   function displayDocuments(docs: Array<HoaDocument>) {
     return (
-      <div className="fileContainer">
+      <div className={classes.fileContainer}>
         <ul>
           {docs
             .sort((x, y) => sortStringDates(x.creationDate, y.creationDate))
@@ -64,22 +64,22 @@ function DocumentsPage({ documents }: DocumentsPageProps) {
   function displayDoc(doc: HoaDocument) {
     const fullFilePath = getFullFilePath(doc);
     return (
-      <li key={doc.displayName} className="classes.doc">
+      <li key={doc.displayName} className={classes.doc}>
         <a
           href={fullFilePath}
           target="_blank"
           rel="nofollow noreferrer noopener"
           download
         >
-          <span className="docName">{doc.displayName}</span>
+          <span className={classes.docName}>{doc.displayName}</span>
         </a>
-        <span className="docSize"> {displayFileSize(doc.size)}</span>
+        <span className={classes.docSize}> {displayFileSize(doc.size)}</span>
       </li>
     );
   }
 
   return (
-    <div className="pageWrapper">
+    <div className={'pageWrapper ' + classes.pageWrapperOverride}>
       <h1>Documents</h1>
       <h2>HOA Meeting Notes</h2>
       {displayDocuments(documents.filter((x) => x.type === 'meetingMinutes'))}

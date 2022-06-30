@@ -1,5 +1,5 @@
-import './css/index.css';
 import React from 'react';
+import classes from './BoardPage.module.css';
 import { BoardPageProps } from './BoardPageProps';
 
 const BoardPage = ({ boardMembers }: BoardPageProps) => {
@@ -9,19 +9,20 @@ const BoardPage = ({ boardMembers }: BoardPageProps) => {
       {boardMembers.map((boardMember) => {
         return (
           <section
-            className="boardMember colorful-bottom-border"
+            className={classes.boardMember + ' colorful-bottom-border'}
             key={boardMember.title}
           >
-            <figure>
+            <figure className={classes.figure}>
               <img
+                className={classes.image}
                 src={boardMember.imageName}
                 alt={`Photo of ${boardMember.name} (${boardMember.title})`}
               ></img>
-              <figcaption aria-hidden>
+              <figcaption className={classes.figureCaption}>
                 {boardMember.imageDescription}
               </figcaption>
             </figure>
-            <div className="details">
+            <div className={classes.details}>
               <p>
                 <span className="fieldTitle">{boardMember.title}</span> -{' '}
                 {boardMember.name}

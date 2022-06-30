@@ -1,28 +1,31 @@
-import React from 'react';
-import './NavBar.css';
+import React, { useState } from 'react';
+import classes from './NavBar.module.css';
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   function toggleNavPanel() {
-    document.getElementsByClassName('nav-panel')[0].classList.toggle('open');
-    document
-      .getElementsByClassName('nav-panel-background')[0]
-      .classList.toggle('open');
+    setIsOpen(!isOpen);
   }
 
   return (
     <nav>
-      <button className="nav-hamburger" onClick={toggleNavPanel}>
+      <button className={classes.navHamburger} onClick={() => toggleNavPanel()}>
         l l l
       </button>
-      <div className="nav-panel">
-        <button type="button" className="exit-button" onClick={toggleNavPanel}>
+      <div className={`${classes.navPanel} ${isOpen ? classes.open : ''}`}>
+        <button
+          type="button"
+          className={classes.exitButton}
+          onClick={() => toggleNavPanel()}
+        >
           +
         </button>
-        <ul className="nav-list">
+        <ul className={classes.navList}>
           <li>
             Events
-            <ul className="nav-sub-list">
+            <ul className={classes.navSubList}>
               <li>
                 <Link to="/events">See All</Link>
               </li>
@@ -30,7 +33,7 @@ const NavBar = () => {
           </li>
           <li>
             Docs
-            <ul className="nav-sub-list">
+            <ul className={classes.navSubList}>
               <li>
                 <Link to="/documents">See All</Link>
               </li>
@@ -38,7 +41,7 @@ const NavBar = () => {
           </li>
           <li>
             About
-            <ul className="nav-sub-list">
+            <ul className={classes.navSubList}>
               <li>
                 <Link to="/board">The Board</Link>
               </li>
@@ -49,9 +52,14 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      <div className="nav-panel-background" onClick={toggleNavPanel}></div>
+      <div
+        className={`${classes.navPanelBackground} ${
+          isOpen ? classes.open : ''
+        }`}
+        onClick={() => toggleNavPanel()}
+      ></div>
     </nav>
   );
-};
+}
 
 export default NavBar;
