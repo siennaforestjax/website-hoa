@@ -38,7 +38,7 @@ function DocumentsPage({ documents }: DocumentsPageProps) {
   function displayDocuments(docs: Array<HoaDocument>) {
     return (
       <div className={classes.fileContainer}>
-        <ul>
+        <ul className={classes.fileList}>
           {docs
             .sort((x, y) => sortStringDates(x.creationDate, y.creationDate))
             .map(displayDoc)}
@@ -69,8 +69,8 @@ function DocumentsPage({ documents }: DocumentsPageProps) {
           download
         >
           <span className={classes.docName}>{doc.displayName}</span>
+          <span className={classes.docSize}> {displayFileSize(doc.size)}</span>
         </a>
-        <span className={classes.docSize}> {displayFileSize(doc.size)}</span>
       </li>
     );
   }

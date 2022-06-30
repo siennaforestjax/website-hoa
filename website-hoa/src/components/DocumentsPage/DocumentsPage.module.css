@@ -2,10 +2,6 @@
   align-items: flex-start;
 }
 
-.docList {
-  list-style-type: none;
-}
-
 h2 {
   font-size: 1.2rem;
 }
@@ -20,26 +16,45 @@ h2:first-of-type {
 
 .fileContainer {
   display: block;
+  width: 100%;
   margin-bottom: 25px;
 }
 
+.fileList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 10px;
+  list-style-type: none;
+}
+
 .doc {
-  padding: 5px;
+  display: block;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.doc:hover {
+  cursor: pointer;
+}
+
+.doc > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.doc:nth-of-type(2n) {
+  background-color: lightgreen;
 }
 
 /*--------------Medium Screens--------*/
 @media screen and (min-width: 768px) {
-  .docList {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 80%;
-    justify-content: center;
-  }
-
-  .doc {
-    display: block;
-    width: 50%;
-    padding: 10px;
-  }
 }
