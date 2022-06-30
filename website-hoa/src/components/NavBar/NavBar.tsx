@@ -27,7 +27,9 @@ function NavBar() {
             Events
             <ul className={classes.navSubList}>
               <li>
-                <Link to="/events">See All</Link>
+                <Link to="/events" onClick={() => toggleNavPanel()}>
+                  See All
+                </Link>
               </li>
             </ul>
           </li>
@@ -35,7 +37,9 @@ function NavBar() {
             Docs
             <ul className={classes.navSubList}>
               <li>
-                <Link to="/documents">See All</Link>
+                <Link to="/documents" onClick={() => toggleNavPanel()}>
+                  See All
+                </Link>
               </li>
             </ul>
           </li>
@@ -43,10 +47,14 @@ function NavBar() {
             About
             <ul className={classes.navSubList}>
               <li>
-                <Link to="/board">The Board</Link>
+                <Link to="/board" onClick={() => toggleNavPanel()}>
+                  The Board
+                </Link>
               </li>
               <li>
-                <Link to="/">The Neighborhood (Home)</Link>
+                <Link to="/" onClick={() => toggleNavPanel()}>
+                  The Neighborhood (Home)
+                </Link>
               </li>
             </ul>
           </li>

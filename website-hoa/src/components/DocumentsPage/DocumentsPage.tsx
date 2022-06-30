@@ -8,9 +8,6 @@ type DocumentsPageProps = {
 };
 
 function DocumentsPage({ documents }: DocumentsPageProps) {
-  const meetingMinutes = documents.filter((x) => x.type === 'meetingMinutes');
-  const miscDocs = documents.filter((x) => x.type === 'misc');
-
   function getFullFilePath(document: HoaDocument) {
     return `${document.storageLocation}/${document.name}`;
   }

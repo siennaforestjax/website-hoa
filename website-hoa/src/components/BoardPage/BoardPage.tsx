@@ -16,7 +16,7 @@ const BoardPage = ({ boardMembers }: BoardPageProps) => {
               <img
                 className={classes.image}
                 src={boardMember.imageName}
-                alt={`Photo of ${boardMember.name} (${boardMember.title})`}
+                alt={`${boardMember.name} (${boardMember.title})`}
               ></img>
               <figcaption className={classes.figureCaption}>
                 {boardMember.imageDescription}
