@@ -63,20 +63,32 @@
   border: none;
 }
 
+.nav-list a {
+  text-decoration: none;
+}
+
 .nav-list > li {
   padding-left: var(--gutter);
   font-weight: bold;
+  border-bottom: 1px solid black;
 }
 
 .nav-list > li,
 .nav-sub-list > li {
   display: block;
-
   line-height: 50px;
-  border-bottom: 1px solid black;
-
   margin: auto;
   text-align: left;
+  color: rgb(var(--primaryFontColor));
+  background-color: rgb(var(--secondaryColor));
+}
+
+.nav-sub-list > li > a {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
   color: rgb(var(--primaryFontColor));
   background-color: rgb(var(--secondaryColor));
 }
@@ -103,7 +115,7 @@
   border-bottom: none;
 }
 
-.nav-sub-list > li:hover {
+.nav-sub-list > li > a:hover {
   color: rgb(var(--secondaryColor));
   background-color: rgb(var(--primaryFontColor));
 }

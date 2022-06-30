@@ -40,7 +40,7 @@ function DocumentsPage({ documents }: DocumentsPageProps) {
 
   function displayDocuments(docs: Array<HoaDocument>) {
     return (
-      <div className="file-container">
+      <div className="fileContainer">
         <ul>
           {docs
             .sort((x, y) => sortStringDates(x.creationDate, y.creationDate))
@@ -55,8 +55,8 @@ function DocumentsPage({ documents }: DocumentsPageProps) {
 
     return (
       <span>
-        {size}
-        {unit}
+        ({size}
+        {unit})
       </span>
     );
   }
@@ -64,16 +64,16 @@ function DocumentsPage({ documents }: DocumentsPageProps) {
   function displayDoc(doc: HoaDocument) {
     const fullFilePath = getFullFilePath(doc);
     return (
-      <li key={doc.displayName} className="doc">
+      <li key={doc.displayName} className="classes.doc">
         <a
           href={fullFilePath}
           target="_blank"
           rel="nofollow noreferrer noopener"
           download
         >
-          <span className="doc-name">{doc.displayName}</span>
-          <span className="doc-size"> {displayFileSize(doc.size)}</span>
+          <span className="docName">{doc.displayName}</span>
         </a>
+        <span className="docSize"> {displayFileSize(doc.size)}</span>
       </li>
     );
   }

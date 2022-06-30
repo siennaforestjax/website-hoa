@@ -31,14 +31,20 @@ const NavBar = () => {
           <li>
             Docs
             <ul className="nav-sub-list">
-              <Link to="/documents">See All</Link>
+              <li>
+                <Link to="/documents">See All</Link>
+              </li>
             </ul>
           </li>
           <li>
             About
             <ul className="nav-sub-list">
-              <Link to="/board">See All</Link>
-              <Link to="/neighborhood">See All</Link>
+              <li>
+                <Link to="/board">The Board</Link>
+              </li>
+              <li>
+                <Link to="/">The Neighborhood (Home)</Link>
+              </li>
             </ul>
           </li>
         </ul>

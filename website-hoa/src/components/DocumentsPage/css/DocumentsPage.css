@@ -1,4 +1,8 @@
-.doc-list {
+.pageWrapper {
+  align-items: flex-start;
+}
+
+.docList {
   list-style-type: none;
 }
 
@@ -10,11 +14,11 @@ h2:first-of-type {
   margin-top: 15px;
 }
 
-.file-container li {
+.fileContainer li {
   padding-left: calc(var(--gutter) * 2);
 }
 
-.file-container {
+.fileContainer {
   display: block;
   margin-bottom: 25px;
 }

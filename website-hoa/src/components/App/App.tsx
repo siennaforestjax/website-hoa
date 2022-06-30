@@ -19,18 +19,20 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route path="/">
-              <NeighborhoodPage />
-            </Route>
-            <Route path="/documents">
-              <DocumentsPage documents={theDocuments.documents} />
-            </Route>
-            <Route path="/board">
-              <BoardPage boardMembers={theBoard.boardMembers} />
-            </Route>
-            <Route path="/events">
-              <EventsPage events={theEvents.events} />
-            </Route>
+            <Route path="/" element={<NeighborhoodPage />} />
+            <Route
+              path="/documents"
+              element={<DocumentsPage documents={theDocuments.documents} />}
+            />
+            <Route
+              path="/board"
+              element={<BoardPage boardMembers={theBoard.boardMembers} />}
+            />
+
+            <Route
+              path="/events"
+              element={<EventsPage events={theEvents.events} />}
+            />
           </Routes>
         </main>
       </div>

@@ -10,6 +10,10 @@ function EventsPage({ events }: EventsPageProps) {
   return (
     <div className="pageWrapper">
       <h1>Events</h1>
+      <h2>
+        Need to learn how to implement css modules in this project. tweaking
+        pageWrapper in one component should not change it in all components{' '}
+      </h2>
     </div>
   );
 }
