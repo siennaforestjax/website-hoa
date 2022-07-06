@@ -33,9 +33,10 @@
   left: calc(-1 * var(--panelWidth));
   width: var(--panelWidth);
   height: auto;
+  padding-left: var(--gutter);
   border-radius: 3px;
   transition: none;
-  background-color: rgb(var(--secondaryColor));
+  background: linear-gradient(to right, white 5%, rgb(var(--primaryColor)));
   z-index: 2;
 }
 
@@ -63,59 +64,36 @@
   border: none;
 }
 
-.navList a {
-  text-decoration: none;
+.navList > li {
+  display: block;
+  width: 100%;
 }
 
 .navList > li {
-  padding-left: var(--gutter);
   font-weight: bold;
-  border-bottom: 1px solid black;
-}
-
-.navList > li,
-.navSubList > li {
-  display: block;
-  line-height: 50px;
-  margin: auto;
-  text-align: left;
   color: rgb(var(--primaryFontColor));
-  background-color: rgb(var(--secondaryColor));
+  margin: var(--gutter) 0;
 }
 
-.navSubList > li > a {
-  display: block;
-  width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  color: rgb(var(--primaryFontColor));
-  background-color: rgb(var(--secondaryColor));
-}
-
-.navSubList > li {
-  border-bottom: 1px dashed black;
-  line-height: 20px;
-  position: relative;
-  padding: 5px 5px;
-  text-overflow: ellipsis;
+.navSubList > a {
   font-weight: normal;
+  text-decoration: none;
+  display: block;
+  width: 90%;
+  height: auto;
+  padding-left: var(--gutter);
+  color: rgb(var(--primaryFontColor));
 }
 
-.navSubList > li:last-of-type {
-  border-bottom: none;
+.navSubList > a:hover {
+  background-color: white;
 }
 
-.navSubList > li:first-of-type {
-  border-top: 1px dashed black;
-}
-
-.navList > li:last-of-type,
-.navSubList > li:last-of-type {
-  border-bottom: none;
-}
-
-.navSubList > li > a:hover {
-  color: rgb(var(--secondaryColor));
-  background-color: rgb(var(--primaryFontColor));
+/* ------Medium Screens------ */
+@media screen and (min-width: 600px) {
+  .navPanel {
+    --panelWidth: 35vw;
+    left: calc(-1 * var(--panelWidth));
+    width: var(--panelWidth);
+  }
 }

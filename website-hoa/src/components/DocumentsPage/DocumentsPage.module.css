@@ -43,10 +43,10 @@ h2:first-of-type {
   width: 100%;
 }
 
-a,
-a:hover,
-a:visited,
-a:active {
+.doc > a,
+.doc > a:hover,
+.doc > a:visited,
+.doc > a:active {
   color: inherit;
   text-decoration: none;
 }

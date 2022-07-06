@@ -26,36 +26,29 @@ function NavBar() {
           <li>
             Events
             <ul className={classes.navSubList}>
-              <li>
-                <Link to="/events" onClick={() => toggleNavPanel()}>
-                  See All
-                </Link>
-              </li>
+              <Link to="/events" onClick={() => toggleNavPanel()}>
+                See All
+              </Link>
             </ul>
           </li>
           <li>
             Docs
             <ul className={classes.navSubList}>
-              <li>
-                <Link to="/documents" onClick={() => toggleNavPanel()}>
-                  See All
-                </Link>
-              </li>
+              <Link to="/documents" onClick={() => toggleNavPanel()}>
+                See All
+              </Link>
             </ul>
           </li>
           <li>
             About
             <ul className={classes.navSubList}>
-              <li>
-                <Link to="/board" onClick={() => toggleNavPanel()}>
-                  The Board
-                </Link>
-              </li>
-              <li>
-                <Link to="/" onClick={() => toggleNavPanel()}>
-                  The Neighborhood (Home)
-                </Link>
-              </li>
+              <Link to="/board" onClick={() => toggleNavPanel()}>
+                The Board
+              </Link>
+
+              <Link to="/" onClick={() => toggleNavPanel()}>
+                The Neighborhood (Home)
+              </Link>
             </ul>
           </li>
         </ul>
