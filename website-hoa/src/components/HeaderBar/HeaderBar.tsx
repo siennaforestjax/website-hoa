@@ -4,7 +4,7 @@ import NavBar from '../NavBar/NavBar';
 
 function HeaderBar() {
   return (
-    <div className={classes.headerContainer}>
+    <div className="websiteBorder">
       <NavBar />
       <div className={classes.title}>Sienna Forest</div>
     </div>

@@ -8,6 +8,7 @@
   --secondaryButtonColor: 255, 255, 255;
   --buttonBorderRadius: 20%;
   --gutter: 10px;
-  --headerHeight: 90px;
+  --headerHeight: 70px;
+  --footerHeight: 50px;
   --sandColor: 244, 230, 160;
 }

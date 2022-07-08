@@ -8,7 +8,15 @@
   width: 100vw;
 }
 
-.App main {
-  height: calc(100vh - var(--headerHeight));
+.App > footer {
+  height: var(--footerHeight);
   width: 100vw;
+}
+
+.App main {
+  width: 100vw;
+}
+
+.ScrollableContent {
+  overflow-y: scroll;
 }
