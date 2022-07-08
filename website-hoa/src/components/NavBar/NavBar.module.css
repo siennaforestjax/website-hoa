@@ -8,7 +8,7 @@
   left: var(--gutter);
   background-color: rgb(var(--primaryButtonColor));
   border: none;
-  box-shadow: black 0px 0px 8px -2px;
+  box-shadow: 0 0 8px -2px black;
   border-radius: var(--buttonBorderRadius);
   position: absolute;
 }

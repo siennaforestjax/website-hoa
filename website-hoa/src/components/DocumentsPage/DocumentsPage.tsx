@@ -1,77 +1,25 @@
 import React from 'react';
 import classes from './DocumentsPage.module.css';
 import HoaDocument from '../../interfaces/HoaDocument';
-import getSimplifiedFileSize from '../helper-functions/getSimplifiedFileSize';
+import sortStringDates from '../../helper-functions/sortStringDates';
+import Document from '../Document/Document';
 
 type DocumentsPageProps = {
   documents: Array<HoaDocument>;
 };
 
 function DocumentsPage({ documents }: DocumentsPageProps) {
-  function getFullFilePath(document: HoaDocument) {
-    return `${document.storageLocation}/${document.name}`;
-  }
-
-  function sortStringDates(stringDate1: string, stringDate2: string) {
-    if (!stringDate1) {
-      return -1;
-    }
-
-    if (!stringDate2) {
-      return 1;
-    }
-
-    const date1 = new Date(stringDate1);
-    const date2 = new Date(stringDate2);
-
-    if (date1 < date2) {
-      return -1;
-    }
-
-    if (date1 > date2) {
-      return 1;
-    }
-
-    return 0;
-  }
-
   function displayDocuments(docs: Array<HoaDocument>) {
     return (
       <div className={classes.fileContainer}>
         <ul className={classes.fileList}>
           {docs
             .sort((x, y) => sortStringDates(x.creationDate, y.creationDate))
-            .map(displayDoc)}
+            .map((doc) => (
+              <Document key={doc.name} document={doc} />
+            ))}
         </ul>
       </div>
-    );
-  }
-
-  function displayFileSize(bytes: number) {
-    const { size, unit } = getSimplifiedFileSize(bytes);
-
-    return (
-      <span>
-        ({size}
-        {unit})
-      </span>
-    );
-  }
-
-  function displayDoc(doc: HoaDocument) {
-    const fullFilePath = getFullFilePath(doc);
-    return (
-      <li key={doc.displayName} className={classes.doc}>
-        <a
-          href={fullFilePath}
-          target="_blank"
-          rel="nofollow noreferrer noopener"
-          download
-        >
-          <span className={classes.docName}>{doc.displayName}</span>
-          <span className={classes.docSize}> {displayFileSize(doc.size)}</span>
-        </a>
-      </li>
     );
   }
 
