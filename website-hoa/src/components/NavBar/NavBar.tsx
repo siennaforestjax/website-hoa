@@ -49,6 +49,9 @@ function NavBar() {
               <Link to="/" onClick={() => toggleNavPanel()}>
                 The Neighborhood (Home)
               </Link>
+              <Link to="/yotm" onClick={() => toggleNavPanel()}>
+                Yard of the Month
+              </Link>
             </ul>
           </li>
         </ul>
