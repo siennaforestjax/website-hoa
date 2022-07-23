@@ -14,7 +14,7 @@ function NeighborhoodPage() {
         area neighborhood. Come visit us{' '}
         <a
           href="https://www.google.com/maps/dir//30.1537381,-81.6409145/@30.1546496,-81.6409789,18z/data=!4m2!4m1!3e0"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           here.
         </a>
