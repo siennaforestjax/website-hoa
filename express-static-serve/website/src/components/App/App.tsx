@@ -6,11 +6,11 @@ import NeighborhoodPage from '../NeighborhoodPage/NeighborhoodPage';
 import DocumentsPage from '../DocumentsPage/DocumentsPage';
 import EventsPage from '../EventsPage/EventsPage';
 import theBoard from '../../boardMembers.json';
-import theDocuments from '../../hoaDocuments.json';
 import theEvents from '../../hoaEvents.json';
 import classes from './App.module.css';
 import Footer from '../Footer/Footer';
 import CelebrationPage from '../CelebrationPage/CelebrationPage';
+import '../../services/azure-blob-service'
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
               <Route path="/" element={<NeighborhoodPage />} />
               <Route
                 path="/documents"
-                element={<DocumentsPage documents={theDocuments.documents} />}
+                element={<DocumentsPage />}
               />
               <Route
                 path="/board"

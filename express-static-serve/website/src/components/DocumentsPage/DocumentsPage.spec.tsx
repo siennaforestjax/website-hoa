@@ -7,7 +7,7 @@ describe('The DocumentsPage Component', () => {
   describe('The Snapshot', () => {
     it('should render as expected', () => {
       const jsonTree = renderer
-        .create(<DocumentsPage documents={testData.documents} />)
+        .create(<DocumentsPage />)
         .toJSON();
 
       expect(jsonTree).toMatchSnapshot();
