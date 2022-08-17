@@ -41,9 +41,9 @@ function DocumentsPage() {
       <div className={classes.fileContainer}>
         <ul className={classes.fileList}>
           {docs
-            .sort((x, y) => sortStringDates(x.creationDate, y.creationDate))
+            .sort((x, y) => sortStringDates(x.createTime, y.createTime))
             .map((doc) => (
-              <Document key={doc.name} document={doc} />
+              <Document key={doc.filename} document={doc} />
             ))}
         </ul>
       </div>

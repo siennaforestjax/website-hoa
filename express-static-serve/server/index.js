@@ -18,10 +18,10 @@ router.get('/healthcheck', (req, res) => {
     res.send('API is running');
 });
 
-router.get('/documents/:type', (req, res) => {
-    const type = req.params.type;
+router.get('/documents/:category', (req, res) => {
+    const category = req.params.category;
 
-    fs.readdir(path.join(__dirname, 'public', 'documents', type), (err, files) => {
+    fs.readdir(path.join(__dirname, 'public', 'documents', category), (err, files) => {
         if(err) {
             console.log(err);
             res.status(500).send({
@@ -30,7 +30,7 @@ router.get('/documents/:type', (req, res) => {
         } else {
             const fileDetails = [];
             files.forEach(filename => {
-                const details = getFileDetails(filename, path.join(__dirname, 'public', 'documents', type, filename));
+                const details = getFileDetails(path.join(__dirname, 'public', 'documents', category, filename), category);
                 fileDetails.push(details);
             })
             res.send(fileDetails);
@@ -58,15 +58,20 @@ app.listen(port || 5000, () => {
     console.log(`server started on port ${port}`);
 });
 
-function getFileDetails(filename, fullFilePath) {
+function getFileDetails(fullFilePath) {
     var stats = fs.statSync(fullFilePath);
     
     const createTime = stats.birthtimeMs;
     const fileSizeInBytes = stats.size;
-    
+
+    const splitPath = fullFilePath.split('\\');
+    const [folder1, folder2, filename] = splitPath.slice(-3);
+    const location = encodeURI(path.join(folder1, folder2, filename));
+
     return {
         filename,
         createTime,
-        fileSizeInBytes
+        fileSizeInBytes,
+        location
     };
 }

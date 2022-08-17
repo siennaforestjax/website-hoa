@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import DocumentsPage from './DocumentsPage';
-import testData from '../../hoaDocuments.json';
 
 describe('The DocumentsPage Component', () => {
   describe('The Snapshot', () => {

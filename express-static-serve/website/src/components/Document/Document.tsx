@@ -8,27 +8,22 @@ type DocumentProps = {
 };
 
 function Document({ document }: DocumentProps) {
-  const fullFilePath = getFullFilePath(document);
 
   return (
-    <li key={document.displayName} className={classes.doc}>
+    <li key={document.filename} className={classes.doc}>
       <a
-        href={fullFilePath}
+        href={`http://localhost:5000/api/document/${document.location}`}
         target="_blank"
         rel="nofollow noreferrer noopener"
         download
       >
-        <span className={classes.docName}>{document.displayName}</span>
+        <span className={classes.docName}>{document.filename}</span>
         <span className={classes.docSize}>
-          {displayFileSize(document.size)}
+          {displayFileSize(document.fileSizeInBytes)}
         </span>
-      </a>
+        </a>
     </li>
   );
-
-  function getFullFilePath(document: HoaDocument) {
-    return `${document.storageLocation}/${document.name}`;
-  }
 
   function displayFileSize(bytes: number) {
     const { size, unit } = getSimplifiedFileSize(bytes);

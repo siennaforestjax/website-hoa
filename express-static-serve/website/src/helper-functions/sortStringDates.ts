@@ -1,17 +1,17 @@
-export default function sortStringDates(
-  stringDate1: string,
-  stringDate2: string
+export default function sortDates(
+  unixDate1: number,
+  unixDate2: number
 ) {
-  if (!stringDate1) {
+  if (!unixDate1) {
     return -1;
   }
 
-  if (!stringDate2) {
+  if (!unixDate2) {
     return 1;
   }
 
-  const date1 = new Date(stringDate1);
-  const date2 = new Date(stringDate2);
+  const date1 = new Date(unixDate1);
+  const date2 = new Date(unixDate2);
 
   if (date1 < date2) {
     return -1;
