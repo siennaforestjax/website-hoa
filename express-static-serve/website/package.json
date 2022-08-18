@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@azure/storage-blob": "^12.11.0",
+    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "npm": "^8.15.0",
     "react": "^18.2.0",
@@ -13,7 +14,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run build && (cd .. && cd server && npm start)",
+    "start-client": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "test:tsc": "tsc -p tsconfig.test.json -w",
