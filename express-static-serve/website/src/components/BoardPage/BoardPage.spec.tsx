@@ -3,9 +3,9 @@ import BoardPage from './BoardPage';
 import renderer from 'react-test-renderer';
 import testData from '../../boardMembers.json';
 
-describe('The Board Page', () => {
+describe.skip('The Board Page', () => {
   
-  describe('The Snapshot', () => {
+  describe.skip('The Snapshot', () => {
 
     it('renders as expected', () => {
       const tree = renderer
@@ -16,7 +16,7 @@ describe('The Board Page', () => {
     });
   });
 
-  describe('The component', () => {
+  describe.skip('The component', () => {
     it('maps divs based on props', () => {
       const tree = renderer.create(<BoardPage boardMembers={testData.boardMembers} />);
       const component = tree.root;
