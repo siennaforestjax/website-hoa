@@ -1,6 +1,6 @@
 import React from 'react';
 
-describe('The Footer', () => {
+describe.skip('The Footer', () => {
   it('replace me', () => {
     expect(0).toBe(0);
   });
