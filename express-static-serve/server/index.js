@@ -1,9 +1,9 @@
 const path = require('path');
 const express = require('express');
-const app = express();
 const router = express.Router();
 const fs = require('fs');
-const e = require('express');
+
+const app = express();
 
 //serve the files from the sibling website 
 app.use(express.static(path.join(__dirname, '..', 'website', 'build')));
