@@ -1,19 +1,29 @@
-const path = require('path');
-const express = require('express');
+import path from 'path';
+import express from 'express';
+import fs from 'fs';
 const router = express.Router();
-const fs = require('fs');
+
 
 const app = express();
+const DIST_DIR = __dirname;
+const HTML_FILE = path.join(DIST_DIR, 'index.html');
+// const HTML_BEFORE_TUTORIAL_FILE = path.join(DIST_DIR, 'public', 'index.html');
+// const WEBSITE_BUILD_FOLDER = path.join(__dirname, '..', 'website', 'build');
+// const SERVER_PUBLIC_FOLDER = path.join(__dirname, 'public');
 
 //serve the files from the sibling website 
-app.use(express.static(path.join(__dirname, '..', 'website', 'build')));
-
-//serve the files from the servers public folder
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(WEBSITE_BUILD_FOLDER));
+app.use(express.static(DIST_DIR));
 
 //prefix all calls with /api
-app.use('/api', router);
+// app.use('/api', router);
 
+app.get('*', (req,res) => {
+    res.sendFile(HTML_FILE);
+})
+
+
+/*  Before Tutorial
 router.get('/healthcheck', (req, res) => {
     res.send('API is running');
 });
@@ -53,10 +63,6 @@ app.use((req, res, next) => {
     });
 })
 
-const port = process.env.PORT || 5000;
-app.listen(port || 5000, () => {
-    console.log(`server started on port ${port}`);
-});
 
 function getFileDetails(fullFilePath) {
     var stats = fs.statSync(fullFilePath);
@@ -75,3 +81,11 @@ function getFileDetails(fullFilePath) {
         location
     };
 }
+
+*/
+
+const port = process.env.PORT || 5000;
+app.listen(port || 5000, () => {
+    console.log(`Server started on port ${port}...`);
+    console.log(`Press Ctrl+C to quit`);
+});
