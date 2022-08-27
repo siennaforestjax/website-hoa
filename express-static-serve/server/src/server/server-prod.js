@@ -1,54 +1,26 @@
 import path from 'path';
 import express from 'express';
-import webpack from 'webpack';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware'
-import config from '../../webpack.dev.config';
+import fs from 'fs';
 const router = express.Router();
 
 
 const app = express();
 const DIST_DIR = __dirname;
 const HTML_FILE = path.join(DIST_DIR, 'index.html');
-const compiler = webpack(config);
 // const HTML_BEFORE_TUTORIAL_FILE = path.join(DIST_DIR, 'public', 'index.html');
 // const WEBSITE_BUILD_FOLDER = path.join(__dirname, '..', 'website', 'build');
 // const SERVER_PUBLIC_FOLDER = path.join(__dirname, 'public');
 
-
-app.use(webpackDevMiddleware(compiler, {
-    publicPath: config.output.publicPath
-}));
-
-app.use(webpackHotMiddleware(compiler))
-
-app.get('*', (req, res, next) => {
-    compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
-        if(err) {
-            return next(err);
-        }
-        res.set('content-type', 'text/html');
-        res.send(result);
-        res.end();
-    })
-})
-
-const port = process.env.PORT || 5000;
-app.listen(port || 5000, () => {
-    console.log(`Server started on port ${port}...`);
-    console.log(`Press Ctrl+C to quit`);
-});
-
 //serve the files from the sibling website 
 // app.use(express.static(WEBSITE_BUILD_FOLDER));
-// app.use(express.static(DIST_DIR));
+app.use(express.static(DIST_DIR));
 
 //prefix all calls with /api
 // app.use('/api', router);
 
-// app.get('*', (req,res) => {
-//     res.sendFile(HTML_FILE);
-// })
+app.get('*', (req,res) => {
+    res.sendFile(HTML_FILE);
+})
 
 
 /*  Before Tutorial
@@ -112,3 +84,8 @@ function getFileDetails(fullFilePath) {
 
 */
 
+const port = process.env.PORT || 5000;
+app.listen(port || 5000, () => {
+    console.log(`Server started on port ${port}...`);
+    console.log(`Press Ctrl+C to quit`);
+});
