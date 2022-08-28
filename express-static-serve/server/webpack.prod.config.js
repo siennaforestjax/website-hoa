@@ -59,10 +59,10 @@ module.exports = {
   },
   plugins: [
     // not used because we want the website's index.html from the other build
-    // new HtmlWebPackPlugin({
-    //   template: "./src/html/index.html",
-    //   filename: "./index.html"
-    // }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/index.html",
+      filename: "./index.html"
+    }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
