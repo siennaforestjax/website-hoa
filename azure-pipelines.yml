@@ -36,10 +36,8 @@ stages:
       displayName: 'Install Node.js'
 
     - script: |
-        cd express-static-serve/website && npm install
-        npm run build --if-present
-        npm run test --if-present
-      displayName: 'npm install, build and test'
+        npm run buildProd && cd ../website && npm run build
+      displayName: 'Build Prod Server and Website.  Bundle together'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'

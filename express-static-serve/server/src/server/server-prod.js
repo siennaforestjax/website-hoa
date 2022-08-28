@@ -1,15 +1,21 @@
-const path = require('path');
-const express = require('express');
+import path from 'path';
+import express from 'express';
+import fs from 'fs';
+import getFileDetails from '../js/getFileDetails';
 const router = express.Router();
-const fs = require('fs');
+
 
 const app = express();
+const DIST_DIR = __dirname;
+const WEB_FOLDER = path.join(DIST_DIR, 'webapp');
+const HTML_FILE = path.join(WEB_FOLDER, 'index.html');
+// const HTML_BEFORE_TUTORIAL_FILE = path.join(DIST_DIR, 'public', 'index.html');
+// const WEBSITE_BUILD_FOLDER = path.join(__dirname, '..', 'website', 'build');
+const SERVER_PUBLIC_FOLDER = path.join(__dirname, 'public');
 
 //serve the files from the sibling website 
-app.use(express.static(path.join(__dirname, '..', 'website', 'build')));
-
-//serve the files from the servers public folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(WEB_FOLDER));
+app.use(express.static(SERVER_PUBLIC_FOLDER));
 
 //prefix all calls with /api
 app.use('/api', router);
@@ -20,6 +26,8 @@ router.get('/healthcheck', (req, res) => {
 
 router.get('/documents/:category', (req, res) => {
     const category = req.params.category;
+
+    console.log(`readying this folder ${path.join(__dirname, 'public', 'documents', category)}`);
 
     fs.readdir(path.join(__dirname, 'public', 'documents', category), (err, files) => {
         if(err) {
@@ -38,12 +46,11 @@ router.get('/documents/:category', (req, res) => {
     })
 })
 
-
 //If no other route on the server matches at this point, the route request is likely for client-side routing.  Tell the client to look internally for the route
 app.use((req, res, next) => {
-    const file = path.join(__dirname, '..', 'build', 'index.html');
+    const file = HTML_FILE;
     const options = {};
-    
+
     res.sendFile(file, options, function(err) {
         // results in a 404 if the page does not exist
         // consider building an error page in the future
@@ -53,25 +60,11 @@ app.use((req, res, next) => {
     });
 })
 
+
+
+
 const port = process.env.PORT || 5000;
-app.listen(port || 5000, () => {
-    console.log(`server started on port ${port}`);
+app.listen(port, () => {
+    console.log(`Server started on port ${port}...`);
+    console.log(`Press Ctrl+C to quit`);
 });
-
-function getFileDetails(fullFilePath) {
-    var stats = fs.statSync(fullFilePath);
-    
-    const createTime = stats.birthtimeMs;
-    const fileSizeInBytes = stats.size;
-
-    const splitPath = fullFilePath.split('\\');
-    const [folder1, folder2, filename] = splitPath.slice(-3);
-    const location = encodeURI(path.join(folder1, folder2, filename));
-
-    return {
-        filename,
-        createTime,
-        fileSizeInBytes,
-        location
-    };
-}
