@@ -16,7 +16,7 @@
   "scripts": {
     "start": "npm run build && (cd .. && cd server && npm start)",
     "start-client": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "BUILD_PATH='../ react-scripts build",
     "test": "jest",
     "test:tsc": "tsc -p tsconfig.test.json -w",
     "eject": "react-scripts eject"

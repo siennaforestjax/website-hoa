@@ -6,13 +6,14 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: './dist/server.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
     filename: '[name].js'
   },
+  mode: 'production',
   target: 'web',
   devtool: 'source-map',
   // Webpack 4 does not have a CSS minifier, although
@@ -64,5 +65,20 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css"
     })
-  ]
+  ],
+  resolve: {
+    fallback: {
+        "util": false,
+        "buffer": false,
+        "stream": false,
+        "fs": false,
+        "path": false,
+        "http": false,
+        "string_decoder": false,
+        "net": false,
+        "crypto": false,
+        "zlib": false,
+        "async_hooks": false,
+      }
+  }
 }

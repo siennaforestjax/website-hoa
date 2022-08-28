@@ -4,10 +4,9 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import config from '../../webpack.dev.config';
-const router = express.Router();
-
 
 const app = express();
+const router = express.Router();
 const DIST_DIR = __dirname;
 const HTML_FILE = path.join(DIST_DIR, 'index.html');
 const compiler = webpack(config);
@@ -22,16 +21,7 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler))
 
-app.get('*', (req, res, next) => {
-    compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
-        if(err) {
-            return next(err);
-        }
-        res.set('content-type', 'text/html');
-        res.send(result);
-        res.end();
-    })
-})
+compiler.close();
 
 const port = process.env.PORT || 5000;
 app.listen(port || 5000, () => {

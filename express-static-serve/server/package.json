@@ -14,14 +14,16 @@
   "jest": {
     "moduleNameMapper": {
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
-    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
     }
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "path-browserify": "^1.0.1",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",

@@ -60,5 +60,20 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
-  ]
+  ],
+  resolve: {
+    fallback: {
+        "util": false,
+        "buffer": false,
+        "stream": false,
+        "fs": false,
+        "path": false,
+        "http": false,
+        "string_decoder": false,
+        "net": false,
+        "crypto": false,
+        "zlib": false,
+        "async_hooks": false,
+      }
+  }
 }
