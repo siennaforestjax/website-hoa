@@ -23,7 +23,7 @@ jobs:
 
       - name: Build Prod Server and Website.  Bundle together
         run: |
-          npm run buildProd && cd ../website && npm run build
+          cd express-static-serve/server && npm run buildProd && cd ../website && npm run build
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
