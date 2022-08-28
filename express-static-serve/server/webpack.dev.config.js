@@ -1,6 +1,8 @@
 const path = require("path")
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
+const CopyPlugin = require("copy-webpack-plugin");
+
 module.exports = {
   entry: {
     main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.js']
@@ -47,33 +49,40 @@ module.exports = {
         use: [ 'style-loader', 'css-loader' ]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|doc|docx)$/,
         type: 'asset/resource'
        }
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/html/index.html",
-      filename: "./index.html",
-      excludeChunks: [ 'server' ]
+    // not used because we want the website's index.html from the other build
+    // new HtmlWebPackPlugin({
+    //   template: "./src/html/index.html",
+    //   filename: "./index.html",
+    //   excludeChunks: [ 'server' ]
+    // }),
+    new CopyPlugin({
+      patterns: [
+        {from: './public', to: './public'} //copy the public folder to the .dist/public folder
+      ]
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
   resolve: {
     fallback: {
-        "util": false,
-        "buffer": false,
-        "stream": false,
-        "fs": false,
-        "path": false,
-        "http": false,
-        "string_decoder": false,
-        "net": false,
-        "crypto": false,
-        "zlib": false,
-        "async_hooks": false,
-      }
+      "stream": false,
+      "fs": false,
+      "path": false,
+      "http": false,
+      "string_decoder": false,
+      "net": false,
+      "crypto": false,
+      "zlib": false,
+      "async_hooks": false,
+      "buffer": require.resolve("buffer/"),
+      "util": require.resolve("util/"),
+      "os": false
+    }
   }
 }

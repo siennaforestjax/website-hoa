@@ -4,9 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "buildDev": "del /s/f/q dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
-    "buildProd": "del /s/f/q dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
+    "buildBundleDev": "npm run buildDev && cd ../website && npm run build",
+    "buildBundleProd": "npm run buildProd && cd ../website && npm run build",
+    "buildDev": "rmdir /s/q dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
+    "buildProd": "rmdir /s/q dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
     "start": "node ./dist/server.js",
+    "startBundleDev": "npm run buildBundleDev && npm run start",
+    "startBundleProd": "npm run buildBundleProd && npm run start",
     "start-before-tutorial": "nodemon index.js",
     "test": "jest",
     "coverage": "jest --coverage"
@@ -20,16 +24,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "buffer": "^6.0.3",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "nodemon": "^2.0.19",
     "path-browserify": "^1.0.1",
-    "url": "^0.11.0"
+    "url": "^0.11.0",
+    "util": "^0.12.4"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
     "eslint": "^7.32.0",

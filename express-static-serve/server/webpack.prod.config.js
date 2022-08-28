@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -10,7 +11,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '/public',
     filename: '[name].js'
   },
   mode: 'production',
@@ -57,19 +58,22 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/html/index.html",
-      filename: "./index.html"
-    }),
+    // new HtmlWebPackPlugin({
+    //   template: "./src/html/index.html",
+    //   filename: "./index.html"
+    // }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
+    }),
+    new CopyPlugin({
+      patterns: [
+        {from: './public', to: './public'} //copy the public folder to the .dist/public folder
+      ]
     })
   ],
   resolve: {
     fallback: {
-        "util": false,
-        "buffer": false,
         "stream": false,
         "fs": false,
         "path": false,
@@ -79,6 +83,9 @@ module.exports = {
         "crypto": false,
         "zlib": false,
         "async_hooks": false,
+        "buffer": require.resolve("buffer/"),
+        "util": require.resolve("util/"),
+        "os": false
       }
   }
 }

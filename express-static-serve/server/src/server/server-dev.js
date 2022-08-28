@@ -1,19 +1,22 @@
+import fs from 'fs';
 import path from 'path';
 import express from 'express';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import config from '../../webpack.dev.config';
+import getFileDetails from '../js/getFileDetails';
 
 const app = express();
 const router = express.Router();
 const DIST_DIR = __dirname;
-const HTML_FILE = path.join(DIST_DIR, 'index.html');
-const compiler = webpack(config);
-// const HTML_BEFORE_TUTORIAL_FILE = path.join(DIST_DIR, 'public', 'index.html');
-// const WEBSITE_BUILD_FOLDER = path.join(__dirname, '..', 'website', 'build');
-// const SERVER_PUBLIC_FOLDER = path.join(__dirname, 'public');
+const WEB_FOLDER = path.join(DIST_DIR, 'webapp');
+const HTML_FILE = path.join(WEB_FOLDER, 'index.html');
+const SERVER_PUBLIC_FOLDER = path.join(__dirname, 'public');
+const HTML_BEFORE_TUTORIAL_FILE = path.join(DIST_DIR, 'public', 'index.html');
 
+
+const compiler = webpack(config);
 
 app.use(webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath
@@ -21,27 +24,21 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler))
 
-compiler.close();
 
-const port = process.env.PORT || 5000;
-app.listen(port || 5000, () => {
-    console.log(`Server started on port ${port}...`);
-    console.log(`Press Ctrl+C to quit`);
-});
+// const WEBSITE_BUILD_FOLDER = path.join(__dirname, '..', 'website', 'build');
+
 
 //serve the files from the sibling website 
-// app.use(express.static(WEBSITE_BUILD_FOLDER));
-// app.use(express.static(DIST_DIR));
+app.use(express.static(WEB_FOLDER));
+app.use(express.static(SERVER_PUBLIC_FOLDER));
+app.use(express.static(HTML_BEFORE_TUTORIAL_FILE));
+
+
+
 
 //prefix all calls with /api
-// app.use('/api', router);
+app.use('/api', router);
 
-// app.get('*', (req,res) => {
-//     res.sendFile(HTML_FILE);
-// })
-
-
-/*  Before Tutorial
 router.get('/healthcheck', (req, res) => {
     res.send('API is running');
 });
@@ -66,12 +63,11 @@ router.get('/documents/:category', (req, res) => {
     })
 })
 
-
 //If no other route on the server matches at this point, the route request is likely for client-side routing.  Tell the client to look internally for the route
 app.use((req, res, next) => {
-    const file = path.join(__dirname, '..', 'build', 'index.html');
+    const file = HTML_FILE;
     const options = {};
-    
+
     res.sendFile(file, options, function(err) {
         // results in a 404 if the page does not exist
         // consider building an error page in the future
@@ -82,23 +78,10 @@ app.use((req, res, next) => {
 })
 
 
-function getFileDetails(fullFilePath) {
-    var stats = fs.statSync(fullFilePath);
-    
-    const createTime = stats.birthtimeMs;
-    const fileSizeInBytes = stats.size;
 
-    const splitPath = fullFilePath.split('\\');
-    const [folder1, folder2, filename] = splitPath.slice(-3);
-    const location = encodeURI(path.join(folder1, folder2, filename));
 
-    return {
-        filename,
-        createTime,
-        fileSizeInBytes,
-        location
-    };
-}
-
-*/
-
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+    console.log(`Server started on port ${port}...`);
+    console.log(`Press Ctrl+C to quit`);
+});
