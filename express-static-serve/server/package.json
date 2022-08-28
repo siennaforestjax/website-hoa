@@ -7,7 +7,7 @@
     "buildBundleDev": "npm run buildDev && cd ../website && npm run build",
     "buildBundleProd": "npm run buildProd && cd ../website && npm run build",
     "buildDev": "rmdir /s/q dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
-    "buildProd": "rmdir /s/q dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
+    "buildProd": "webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
     "start": "node ./dist/server.js",
     "startBundleDev": "npm run buildBundleDev && npm run start",
     "startBundleProd": "npm run buildBundleProd && npm run start",

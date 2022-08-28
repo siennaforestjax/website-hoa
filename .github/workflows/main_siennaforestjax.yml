@@ -23,13 +23,18 @@ jobs:
 
       - name: Build Prod Server and Website.  Bundle together
         run: |
-          cd express-static-serve/server && npm run buildProd && cd ../website && npm run build
+          cd express-static-serve/server 
+          npm install 
+          npm run buildProd 
+          cd ../website
+          npm install
+          npm run build
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./dist
+          path: ./express-static-serve/server/dist
 
   deploy:
     runs-on: ubuntu-latest
