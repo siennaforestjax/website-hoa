@@ -21,11 +21,9 @@ jobs:
         with:
           node-version: '16.x'
 
-      - name: npm install, build, and test
+      - name: Build Prod Server and Website.  Bundle together
         run: |
-          cd express-static-serve/website && npm install
-          npm run build --if-present
-          npm run test --if-present
+          npm run buildProd && cd ../website && npm run build
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
