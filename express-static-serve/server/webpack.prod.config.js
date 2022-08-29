@@ -69,7 +69,9 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        {from: './public', to: './public'} //copy the public folder to the .dist/public folder
+        {from: './public', to: './public'}, //copy the public folder to the .dist/public folder
+        {from: './web.config', to: './web.config'},
+        {from: './package.json', to: './package.json'}
       ]
     })
   ],
