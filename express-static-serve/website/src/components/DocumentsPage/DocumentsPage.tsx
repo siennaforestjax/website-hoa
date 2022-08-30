@@ -5,6 +5,8 @@ import sortStringDates from '../../helper-functions/sortStringDates';
 import Document from '../Document/Document';
 import axios from 'axios';
 
+const API_URL = 'https://siennaforestjax.azurewebsites.net/'; //http://localhost:5000
+
 function DocumentsPage() {
   const [docsMinutes, setDocsMinutes] = useState([]);
   const [docsMisc, setDocsMisc] = useState([]);
@@ -14,7 +16,7 @@ function DocumentsPage() {
   const [miscDidError, setMiscDidError] = useState(false);
   
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/documents/minutes`)
+    axios.get(`${API_URL}/api/documents/minutes`)
         .then(response => {
           setDocsMinutes(response.data);
           setIsLoadingMinutes(false);
@@ -25,7 +27,7 @@ function DocumentsPage() {
         });
   }, [])
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/documents/misc`)
+    axios.get(`${API_URL}/api/documents/misc`)
         .then(response => {
           setDocsMisc(response.data);
           setIsLoadingMisc(false);
