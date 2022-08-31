@@ -16,6 +16,9 @@ const SERVER_PUBLIC_FOLDER = path.join(__dirname, 'public');
 //serve the files from the sibling website 
 app.use(express.static(WEB_FOLDER));
 app.use(express.static(SERVER_PUBLIC_FOLDER));
+app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'board')));
+app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'neighborhood')));
+app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'yardOfTheMonth')));
 
 //prefix all calls with /api
 app.use('/api', router);
