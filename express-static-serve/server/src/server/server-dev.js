@@ -13,6 +13,7 @@ const DIST_DIR = __dirname;
 const WEB_FOLDER = path.join(DIST_DIR, 'webapp');
 const HTML_FILE = path.join(WEB_FOLDER, 'index.html');
 const SERVER_PUBLIC_FOLDER = path.join(__dirname, 'public');
+app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'documents')));
 
 
 const compiler = webpack(config);

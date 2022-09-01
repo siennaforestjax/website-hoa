@@ -7,12 +7,14 @@ type DocumentProps = {
   document: HoaDocument;
 };
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function Document({ document }: DocumentProps) {
 
   return (
     <li key={document.filename} className={classes.doc}>
       <a
-        href={`http://localhost:5000/api/document/${document.location}`}
+        href={`${API_URL}/${document.location}`}
         target="_blank"
         rel="nofollow noreferrer noopener"
         download

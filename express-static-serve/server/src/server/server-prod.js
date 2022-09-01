@@ -17,6 +17,7 @@ app.use(express.static(SERVER_PUBLIC_FOLDER));
 app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'board')));
 app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'neighborhood')));
 app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'yardOfTheMonth')));
+app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'documents')));
 
 //prefix all calls with /api
 app.use('/api', router);
