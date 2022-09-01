@@ -1,12 +1,14 @@
 import React from 'react';
 import './NeighborhoodPage.css';
 
+const sourceUrl = process.env.REACT_APP_API_URL;
+
 function NeighborhoodPage() {
   return (
     <div className="pageWrapper">
       <h1>Welcome to the Neighborhood!</h1>
       <figure>
-        <img alt="entrance sign" src="entranceSign.jpeg" />
+        <img alt="entrance sign" src={`${sourceUrl}/entranceSign.jpeg`} />
       </figure>
       <p>
         Sienna Forest was established in 1993 in Jacksonville, FL. Over the past

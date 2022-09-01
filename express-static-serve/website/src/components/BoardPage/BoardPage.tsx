@@ -2,6 +2,8 @@ import React from 'react';
 import classes from './BoardPage.module.css';
 import { BoardPageProps } from './BoardPageProps';
 
+const sourceUrl = process.env.REACT_APP_API_URL;
+
 const BoardPage = ({ boardMembers }: BoardPageProps) => {
   return (
     <div className="pageWrapper">
@@ -15,7 +17,7 @@ const BoardPage = ({ boardMembers }: BoardPageProps) => {
             <figure className={classes.figure}>
               <img
                 className={classes.image}
-                src={boardMember.imageName}
+                src={`${sourceUrl}/${boardMember.imageName}`}
                 alt={`${boardMember.name} (${boardMember.title})`}
               ></img>
               <figcaption className={classes.figureCaption}>
@@ -27,7 +29,6 @@ const BoardPage = ({ boardMembers }: BoardPageProps) => {
                 <span className="fieldTitle">{boardMember.title}</span> -{' '}
                 {boardMember.name}
               </p>
-
               <p>{boardMember.titleDescription}</p>
             </div>
           </section>

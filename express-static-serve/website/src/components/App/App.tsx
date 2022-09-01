@@ -9,7 +9,7 @@ import theBoard from '../../boardMembers.json';
 import theEvents from '../../hoaEvents.json';
 import classes from './App.module.css';
 import Footer from '../Footer/Footer';
-import CelebrationPage from '../CelebrationPage/CelebrationPage';
+import YardOfTheMonthPage from '../YardOfTheMonthPage/YardOfTheMonthPage';
 import '../../services/azure-blob-service'
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
                 path="/events"
                 element={<EventsPage events={theEvents.events} />}
               />
-              <Route path="/yotm" element={<CelebrationPage />} />
+              <Route path="/yotm" element={<YardOfTheMonthPage />} />
             </Routes>
           </main>
           <footer>

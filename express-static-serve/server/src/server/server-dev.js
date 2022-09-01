@@ -30,9 +30,6 @@ app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'board')));
 app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'neighborhood')));
 app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'yardOfTheMonth')));
 
-
-
-
 //prefix all calls with /api
 app.use('/api', router);
 
