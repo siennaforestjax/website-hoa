@@ -56,11 +56,11 @@ module.exports = {
   },
   plugins: [
     // not used because we want the website's index.html from the other build
-    new HtmlWebPackPlugin({
-      template: "./src/html/index.html",
-      filename: "./index.html",
-      excludeChunks: [ 'server' ]
-    }),
+    // new HtmlWebPackPlugin({
+    //   template: "./src/html/index.html",
+    //   filename: "./index.html",
+    //   excludeChunks: [ 'server' ]
+    // }),
     new CopyPlugin({
       patterns: [
         {from: './public', to: './public'} //copy the public folder to the .dist/public folder

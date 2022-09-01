@@ -5,7 +5,7 @@ import sortStringDates from '../../helper-functions/sortStringDates';
 import Document from '../Document/Document';
 import axios from 'axios';
 
-const API_URL = 'https://siennaforestjax.azurewebsites.net/'; //http://localhost:5000
+const API_URL = process.env.REACT_APP_API_URL;
 
 function DocumentsPage() {
   const [docsMinutes, setDocsMinutes] = useState([]);

@@ -13,7 +13,6 @@ const DIST_DIR = __dirname;
 const WEB_FOLDER = path.join(DIST_DIR, 'webapp');
 const HTML_FILE = path.join(WEB_FOLDER, 'index.html');
 const SERVER_PUBLIC_FOLDER = path.join(__dirname, 'public');
-const HTML_BEFORE_TUTORIAL_FILE = path.join(DIST_DIR, 'public', 'index.html');
 
 
 const compiler = webpack(config);
@@ -24,14 +23,12 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler))
 
-
-// const WEBSITE_BUILD_FOLDER = path.join(__dirname, '..', 'website', 'build');
-
-
 //serve the files from the sibling website 
 app.use(express.static(WEB_FOLDER));
 app.use(express.static(SERVER_PUBLIC_FOLDER));
-app.use(express.static(HTML_BEFORE_TUTORIAL_FILE));
+app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'board')));
+app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'neighborhood')));
+app.use(express.static(path.join(SERVER_PUBLIC_FOLDER, 'yardOfTheMonth')));
 
 
 

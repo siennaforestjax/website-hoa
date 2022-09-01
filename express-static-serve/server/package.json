@@ -9,6 +9,7 @@
     "buildDev": "rmdir /s/q dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
     "buildProd": "webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
     "start": "node ./dist/server.js",
+    "startServer": "npm run buildDev && npm run start",
     "startBundleDev": "npm run buildBundleDev && npm run start",
     "startBundleProd": "npm run buildBundleProd && npm run start",
     "start-before-tutorial": "nodemon index.js",

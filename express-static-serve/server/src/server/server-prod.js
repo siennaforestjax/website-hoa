@@ -9,8 +9,6 @@ const app = express();
 const DIST_DIR = __dirname;
 const WEB_FOLDER = path.join(DIST_DIR, 'webapp');
 const HTML_FILE = path.join(WEB_FOLDER, 'index.html');
-// const HTML_BEFORE_TUTORIAL_FILE = path.join(DIST_DIR, 'public', 'index.html');
-// const WEBSITE_BUILD_FOLDER = path.join(__dirname, '..', 'website', 'build');
 const SERVER_PUBLIC_FOLDER = path.join(__dirname, 'public');
 
 //serve the files from the sibling website 
