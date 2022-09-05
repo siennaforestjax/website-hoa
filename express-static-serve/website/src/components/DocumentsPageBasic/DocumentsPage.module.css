@@ -13,8 +13,11 @@ h2:first-of-type {
 .fileContainer {
   display: block;
   width: 100%;
-  margin-bottom: 25px;
   margin-top: 25px;
+}
+
+.fileContainer:not(:last-of-type) {
+  margin-bottom: 25px;
 }
 
 /*--------------Medium Screens--------*/
