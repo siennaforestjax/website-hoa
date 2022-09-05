@@ -1,0 +1,28 @@
+h2 {
+  font-size: 1.2rem;
+}
+
+h2:first-of-type {
+  margin-top: 15px;
+}
+
+.fileContainer li {
+  padding-left: calc(var(--gutter) * 2);
+}
+
+.fileContainer {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.fileList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 10px;
+  list-style-type: none;
+}
+
+/*--------------Medium Screens--------*/
+@media screen and (min-width: 768px) {
+}

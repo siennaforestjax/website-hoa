@@ -17,3 +17,15 @@
   min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
   width: 100vw;
 }
+
+.pageWrapper {
+  height: 100%;
+  width: 100%;
+  padding-left: calc(4 * var(--gutter));
+  padding-right: calc(4 * var(--gutter));
+  color: rgb(var(--primaryFontColor));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

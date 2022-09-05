@@ -1,0 +1,10 @@
+.doc {
+  display: block;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.docSize {
+  margin-left: 10px;
+  font-size: .85rem;
+}

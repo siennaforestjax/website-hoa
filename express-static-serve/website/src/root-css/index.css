@@ -22,14 +22,6 @@ code {
   border-image-slice: 1;
 }
 
-.pageWrapper {
-  height: 100%;
-  width: 100%;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-  color: rgb(var(--primaryFontColor));
-}
-
 .websiteBorder {
   height: 100%;
   background-color: rgb(var(--primaryColor));

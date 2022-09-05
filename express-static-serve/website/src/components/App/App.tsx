@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HeaderBar from '../HeaderBar/HeaderBar';
 import BoardPage from '../BoardPage/BoardPage';
 import NeighborhoodPage from '../NeighborhoodPage/NeighborhoodPage';
-import DocumentsPage from '../DocumentsPage/DocumentsPage';
+import DocumentsPage from '../DocumentsPageBasic/DocumentsPage';
 import EventsPage from '../EventsPage/EventsPage';
 import theBoard from '../../boardMembers.json';
 import theEvents from '../../hoaEvents.json';
-import classes from './App.module.css';
 import Footer from '../Footer/Footer';
 import YardOfTheMonthPage from '../YardOfTheMonthPage/YardOfTheMonthPage';
-import '../../services/azure-blob-service'
+import classes from './App.module.css';
 
 function App() {
   return (
@@ -21,7 +20,7 @@ function App() {
         </header>
         <div>
           <main>
-            <div className="pageWrapper">
+            <div className={classes.pageWrapper}>
             <Routes>
               <Route path="/" element={<NeighborhoodPage />} />
               <Route
