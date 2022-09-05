@@ -1,6 +1,12 @@
 import React from 'react';
+import ImageWithLoadingFallback from '../ImageWithLoadingFallback/ImageWithLoadingFallback';
 import classes from './BoardPage.module.css';
-import { BoardPageProps } from './BoardPageProps';
+import BoardMember from '../../interfaces/BoardMember';
+
+export type BoardPageProps = {
+  boardMembers: Array<BoardMember>;
+};
+
 
 const sourceUrl = process.env.REACT_APP_API_URL;
 
@@ -15,11 +21,8 @@ const BoardPage = ({ boardMembers }: BoardPageProps) => {
             key={boardMember.title}
           >
             <figure className={classes.figure}>
-              <img
-                className={classes.image}
-                src={`${sourceUrl}/${boardMember.imageName}`}
-                alt={`${boardMember.name} (${boardMember.title})`}
-              ></img>
+              <ImageWithLoadingFallback source={`${sourceUrl}/${boardMember.imageName}`} altText={`${boardMember.name} (${boardMember.title})`}/>
+              
               <figcaption className={classes.figureCaption}>
                 {boardMember.imageDescription}
               </figcaption>

@@ -1,11 +1,11 @@
-figure.fig {
+.fig {
   background-size: cover;
-  width: 400px;
-  height: 400px;
+  width: 800px;
+  height: 800px;
   display: block;
-  margin-bottom: 25px;
+  margin: 0 auto 25px auto;
 }
 
-figcaption {
-  text-align: center;
+.description {
+  margin-bottom: 25px;
 }

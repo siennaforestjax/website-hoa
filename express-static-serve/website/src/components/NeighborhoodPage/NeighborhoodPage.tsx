@@ -6,12 +6,12 @@ const sourceUrl = process.env.REACT_APP_API_URL;
 
 function NeighborhoodPage() {
   return (
-    <div className={classes.pageWrapper}>
+    <>
       <h1>Welcome to the Neighborhood!</h1>
       <figure className={classes.fig}>
         <ImageWithLoadingFallback source={`${sourceUrl}/entranceSign.jpeg`} altText="Sienna Forest Entrance Sign" />
       </figure>
-      <p>
+      <p className={classes.description}>
         Sienna Forest was established in 1993 in Jacksonville, FL. Over the past
         30 years, we've grown to 47 beautiful homes in this beautiful Mandarin
         area neighborhood. Come visit us{' '}
@@ -22,7 +22,7 @@ function NeighborhoodPage() {
           here.
         </a>
       </p>
-    </div>
+    </>
   );
 }
 
