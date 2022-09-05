@@ -40,7 +40,7 @@
 }
 
 .details p:not(:last-of-type) {
-  margin-bottom: 4px;
+  padding-bottom: 4px;
 }
 
 .fieldDescription {
