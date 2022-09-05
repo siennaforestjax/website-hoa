@@ -8,9 +8,9 @@ type EventsPageProps = {
 
 function EventsPage({ events }: EventsPageProps) {
   return (
-    <div className="pageWrapper">
+    <>
       <h1 className={classes.h1}>Events</h1>
-    </div>
+    </>
   );
 }
 

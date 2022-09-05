@@ -54,7 +54,7 @@ function DocumentsPage() {
   }
 
   return (
-    <div className={'pageWrapper ' + classes.pageWrapperOverride}>
+    <>
       <h1>Documents</h1>
       <h2>HOA Meeting Notes</h2>
       {
@@ -66,7 +66,7 @@ function DocumentsPage() {
         isLoadingMisc ? <p>Loading . . .</p> :
         miscDidError ? <p>Error!</p> : displayDocuments(docsMisc)
       }
-    </div>
+    </>
   );
 }
 

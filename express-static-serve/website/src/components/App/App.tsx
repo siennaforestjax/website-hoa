@@ -19,8 +19,9 @@ function App() {
         <header>
           <HeaderBar />
         </header>
-        <div className={classes.ScrollableContent}>
+        <div>
           <main>
+            <div className="pageWrapper">
             <Routes>
               <Route path="/" element={<NeighborhoodPage />} />
               <Route
@@ -31,13 +32,13 @@ function App() {
                 path="/board"
                 element={<BoardPage boardMembers={theBoard.boardMembers} />}
               />
-
               <Route
                 path="/events"
                 element={<EventsPage events={theEvents.events} />}
               />
               <Route path="/yotm" element={<YardOfTheMonthPage />} />
             </Routes>
+            </div>
           </main>
           <footer>
             <Footer />

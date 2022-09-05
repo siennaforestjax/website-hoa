@@ -5,7 +5,7 @@ const sourceUrl = process.env.REACT_APP_API_URL;
 
 function YardOfTheMonthPage() {
   return (
-    <div className="pageWrapper">
+    <>
       <h1>Yard of the Month goes to ... Bob Ross!</h1>
       <div className={classes.largeImageWrapper}>
         <figure className={classes.largeImage}>
@@ -27,7 +27,7 @@ function YardOfTheMonthPage() {
           <figcaption>(Side of House)</figcaption>
         </figure>
       </div>
-    </div>
+    </>
   );
 }
 

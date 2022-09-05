@@ -17,7 +17,3 @@
   min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
   width: 100vw;
 }
-
-.ScrollableContent {
-  overflow-y: scroll;
-}

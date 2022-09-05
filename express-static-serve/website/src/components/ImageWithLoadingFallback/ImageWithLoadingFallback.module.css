@@ -1,0 +1,33 @@
+.imageWrapper {
+    width: calc(100% - 20px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageWrapper.loading, .imageWrapper.error {
+    border: 1px solid black;
+    border-style: inset;
+}
+
+.imageWrapper.error {
+    background-color: rgb(200,200,200);
+}
+
+.imageWrapper.loading > img.mainImage,
+.imageWrapper.error > img.mainImage
+ {
+    display: none;
+}
+ 
+.mainImage {
+    height: 100%;
+    width: 100%;
+}
+
+p.errorMessage {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--primaryColor)
+}

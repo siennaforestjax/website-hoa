@@ -6,7 +6,7 @@ const sourceUrl = process.env.REACT_APP_API_URL;
 
 const BoardPage = ({ boardMembers }: BoardPageProps) => {
   return (
-    <div className="pageWrapper">
+    <>
       <h1>Meet The Board</h1>
       {boardMembers.map((boardMember) => {
         return (
@@ -34,7 +34,7 @@ const BoardPage = ({ boardMembers }: BoardPageProps) => {
           </section>
         );
       })}
-    </div>
+    </>
   );
 };
 

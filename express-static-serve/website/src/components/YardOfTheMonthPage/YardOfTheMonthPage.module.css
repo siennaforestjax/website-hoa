@@ -8,10 +8,8 @@ h1 {
   width: 1000px;
 }
 
-figure {
+.largeImage, .standardImage {
   display: block;
-  height: 400px;
-  width: 400px;
   position: relative;
 }
 
@@ -43,4 +41,6 @@ figcaption {
 
 .standardImage {
   margin: 25px;
+  height: 400px;
+  width: 400px;
 }
