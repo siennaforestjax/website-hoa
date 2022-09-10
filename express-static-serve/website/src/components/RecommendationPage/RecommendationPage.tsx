@@ -1,16 +1,12 @@
 import React from 'react';
-
+import Recommendation from '../Recommendation/Recommendation';
 import './RecommendationPage.module.css';
 import classes from './RecommendationPage.module.css';
+import mock from '../../recommendations.json';
 
-type recommendation = {
-  category: string;
-  entityName: string;
-};
 
 function RecommendationPage() {
-  const recommendations = [{ category: 'contractor', entityName: 'tileGuy' }];
-
+  
   return (
     <>
       <h1>Recommendations</h1>
@@ -19,10 +15,11 @@ function RecommendationPage() {
         neighbors
       </p>
       <div className={classes.recommendationContainer}>
-        {recommendations
-          .filter((x) => (x.category = 'contractor'))
+        {mock.recommendations
+          .filter((x) => (x.category === 'contractor'))
+          .slice(0, 1)
           .map((x) => (
-            <Recommendation {...x} />
+            <Recommendation key={x.id} {...x} />
           ))}
       </div>
     </>

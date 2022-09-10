@@ -1,0 +1,47 @@
+{
+  "recommendations": [
+    {
+      "id": 1,
+      "category": "contractor",
+      "lineOfBusiness": "carpenter",
+      "entityName": "Ben's Wearhouse",
+      "contractorName": "Ben's Lil Bro",
+      "workSummary": "Build a new dresser",
+      "reviewer": "Aaron Flick",
+      "review": "Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious. Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious. Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious. Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious.Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious. Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious.",
+      "cost": "$975-ish",
+      "dateOfService": "Spring 2020",
+      "phoneNumber": "846-454-78",
+      "address": "11844 Tanya Ter E, Jacksonville, FL, 32223"
+    },
+    {
+      "id": 2,
+      "category": "contractor",
+      "lineOfBusiness": "elctrician",
+      "entityName": "Carter's Clubhouse",
+      "contractorName": "Carter's Neice",
+      "workSummary": "Rewire my elctrical socket",
+      "reviewer": "Widow Bzzzpt",
+      "review": "Carter was very efficient and discrete.  My husband never saw it coming.  Guess it's time to get back on the apps.",
+      "cost": "Priceless",
+      "dateOfService": "The first day of the rest of my life",
+      "phoneNumber": "<<--redacted-->>",
+      "address": "<<--redacted-->>"
+    },
+    {
+      "id": 3,
+      "category": "contractor",
+      "lineOfBusiness": "HVAC",
+      "entityName": "Brrrrr",
+      "contractorName": "Garfield",
+      "workSummary": "Replace our thermostat",
+      "reviewer": "Barney Babybop",
+      "review": "He did what we asked",
+      "cost": "$150 for labor, $400 for parts",
+      "dateOfService": "August 2021",
+      "phoneNumber": "5465115455",
+      "address": "The corner of Baskin st and Robins rd"
+    }
+  ]
+}
+

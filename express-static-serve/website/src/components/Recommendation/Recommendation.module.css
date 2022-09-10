@@ -1,0 +1,58 @@
+.container {
+    --border-color: rgb(155, 155, 155);
+    --background-color: rgb(200, 200, 200);
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: [first] 2fr [second] 3fr [third];
+    grid-template-rows: [first] 1fr [second] 1fr [third];
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.leftHalf {
+    grid-column-start: 1;
+    grid-column-end: span second;
+    grid-row-start: 1;
+    grid-row-end: span third;
+    background-color: var(--background-color);
+    border-right: 2px solid var(--border-color);
+}
+
+.rightHalf {
+    grid-column-start: second;
+    grid-column-end: span third;
+    grid-row-start: 1;
+    grid-row-end: span third;
+    background-color: var(--background-color);
+    border-left: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: var(--gutter);
+    row-gap: 0px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    column-gap: var(--gutter);
+    border: 1px solid red;
+}
+
+.label {
+    width: 20%;
+    min-width: 20%;
+    max-width: 20%;
+    text-align: end;
+    font-weight: bold;
+
+}
+
+.value {
+    width: 80%;
+    min-width: 80%;
+    max-width: 80%;
+}

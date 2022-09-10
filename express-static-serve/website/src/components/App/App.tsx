@@ -10,6 +10,7 @@ import theEvents from '../../hoaEvents.json';
 import Footer from '../Footer/Footer';
 import YardOfTheMonthPage from '../YardOfTheMonthPage/YardOfTheMonthPage';
 import classes from './App.module.css';
+import RecommendationPage from '../RecommendationPage/RecommendationPage';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
                 element={<EventsPage events={theEvents.events} />}
               />
               <Route path="/yotm" element={<YardOfTheMonthPage />} />
+              <Route path="/recommendations" element={<RecommendationPage />} />
             </Routes>
             </div>
           </main>
