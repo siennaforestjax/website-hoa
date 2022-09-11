@@ -10,38 +10,38 @@ function Recommendation({ category, lineOfBusiness, entityName, contractorName, 
     <div className={classes.container}>
       <div className={classes.leftHalf}>
         <div className={classes.row}>
-          <div className={classes.label}>Name:</div>
-          <div className={classes.value}>{contractorName}</div>
+          <span className={classes.label}>Name:</span>
+          <span className={classes.value}>{contractorName}</span>
         </div>
         <div className={classes.row}>
-          <div className={classes.label}>Employee:</div>
-          <div className={classes.value}>{entityName}</div>
+          <span className={classes.label}>Employee:</span>
+          <span className={classes.value}>{entityName}</span>
         </div>
         <div className={classes.row}>
-          <div className={classes.label}>Line Of Work:</div>
-          <div className={classes.value}>{lineOfBusiness}</div>
+          <span className={classes.label}>Line Of Work:</span>
+          <span className={classes.value}>{lineOfBusiness}</span>
         </div>
       </div>
       <div className={classes.rightHalf}>
       <div className={classes.row}>
-          <div className={classes.label}>Work Summary:</div>
-          <div className={classes.value}>{workSummary}</div>
+          <span className={classes.label}>Work Summary:</span>
+          <span className={classes.value}>{workSummary}</span>
         </div>
         <div className={classes.row}>
-          <div className={classes.label}>Cost:</div>
-          <div className={classes.value}>{cost}</div>
+          <span className={classes.label}>Cost:</span>
+          <span className={classes.value}>{cost}</span>
         </div>
         <div className={classes.row}>
-          <div className={classes.label}>Review:</div>
-          <div className={classes.value}>{review}</div>
+          <span className={classes.label}>Review:</span>
+          <span className={classes.value}>{review}</span>
         </div>
         <div className={classes.row}>
-          <div className={classes.label}>Reviewed By:</div>
-          <div className={classes.value}>{reviewer}</div>
+          <span className={classes.label}>Reviewed By:</span>
+          <span className={classes.value}>{reviewer}</span>
         </div>
         <div className={classes.row}>
-          <div className={classes.label}>Date of Service:</div>
-          <div className={classes.value}>{dateOfService}</div>
+          <span className={classes.label}>Date of Service:</span>
+          <span className={classes.value}>{dateOfService}</span>
         </div>
       </div>
     </div>
