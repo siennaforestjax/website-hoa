@@ -10,7 +10,7 @@ exports[`The NeighborhoodPage Component The Snapshot should render as expected 1
   <figure>
     <img
       alt="entrance sign"
-      src="entranceSign.jpeg"
+      src="entranceSign.jpg"
     />
   </figure>
   <p>

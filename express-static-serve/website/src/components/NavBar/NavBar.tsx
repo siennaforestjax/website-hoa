@@ -23,6 +23,14 @@ function NavBar() {
           +
         </button>
         <ul className={classes.navList}>
+        <li>
+            Recommendations
+            <ul className={classes.navSubList}>
+              <Link to="/recommendations" onClick={() => toggleNavPanel()}>
+                See All
+              </Link>
+            </ul>
+          </li>
           <li>
             Events
             <ul className={classes.navSubList}>

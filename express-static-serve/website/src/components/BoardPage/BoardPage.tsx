@@ -29,9 +29,10 @@ const BoardPage = ({ boardMembers }: BoardPageProps) => {
             </figure>
             <div className={classes.details}>
               <p>
-                <span className="fieldTitle">{boardMember.title}</span> -{' '}
+                <span className={classes.fieldTitle}>{boardMember.title}</span> -{' '}
                 {boardMember.name}
               </p>
+              <p><a href={`mailto: ${boardMember.emailAddress}`}>{boardMember.emailAddress}</a></p>
               <p>{boardMember.titleDescription}</p>
             </div>
           </section>
