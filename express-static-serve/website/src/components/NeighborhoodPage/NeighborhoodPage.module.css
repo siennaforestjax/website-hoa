@@ -5,3 +5,12 @@
   display: block;
   margin: 0 auto 25px auto;
 }
+
+.description {
+  display: block;
+  margin-top: 15px;
+}
+
+.description address {
+  display: inline;
+}
