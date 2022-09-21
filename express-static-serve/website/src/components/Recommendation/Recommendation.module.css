@@ -5,7 +5,7 @@
     width: 100%;
     background-color: black;
     display: grid;
-    grid-template-columns: [first] 2fr [second] 3fr [third];
+    grid-template-columns: [first] 2fr [second] 2fr [third] 6fr [four];
     grid-template-rows: [first] 1fr [second] 1fr [third];
     border: 2px solid var(--border-color);
     border-radius: 5px;
@@ -13,19 +13,20 @@
 
 .leftHalf {
     grid-column-start: 1;
-    grid-column-end: span second;
+    grid-column-end: span third;
     grid-row-start: 1;
     grid-row-end: span third;
     background-color: var(--background-color);
     border-right: 2px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .rightHalf {
-    grid-column-start: second;
-    grid-column-end: span third;
+    grid-column-start: third;
+    grid-column-end: span fourth;
     grid-row-start: 1;
     grid-row-end: span third;
     background-color: var(--background-color);
@@ -45,32 +46,53 @@
     border: 1px solid red;
 }
 
-.leftHalf > .row {
-    text-align: center;
+.column {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
-.label {
+.column .label {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.column .value {
+    display: inline-block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.halfColumn {
+    width: 50%;
+}
+
+
+.row > .label {
     width: 20%;
     min-width: 20%;
     max-width: 20%;
     text-align: end;
-    font-weight: bold;
-
 }
 
-.leftHalf .label {
-    text-align: center;
-    display: block;
-}
-
-.value {
+.row .value {
     width: 80%;
     min-width: 80%;
     max-width: 80%;
 }
 
-.leftHalf .value {
-    text-align: center;
+
+.label {
+    display: inline-block;
+    font-weight: bold;
 }
+
+
+
