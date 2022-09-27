@@ -3,7 +3,6 @@
     --background-color: rgb(200, 200, 200);
     height: 100%;
     width: 100%;
-    background-color: black;
     display: grid;
     grid-template-columns: [first] 2fr [second] 2fr [third] 6fr [four];
     grid-template-rows: [first] 1fr [second] 1fr [third];
@@ -18,10 +17,11 @@
     grid-row-end: span third;
     background-color: var(--background-color);
     border-right: 2px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: [first] 1fr [second] 1fr [third] 1fr [fourth] 1fr [fifth];
+    grid-template-rows: [first] 1fr [second] 1fr [third] 4fr [fourth];
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
 }
 
 .rightHalf {
@@ -31,11 +31,20 @@
     grid-row-end: span third;
     background-color: var(--background-color);
     border-left: 2px solid var(--border-color);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: var(--gutter);
-    row-gap: 0px;
+    border: 2px solid var(--border-color);
+    overflow-y: auto;
+}
+
+.leftRow {
+    grid-column-start: first;
+    grid-column-end: span fifth;
+    grid-auto-rows: 1;
+}
+
+
+.halfColumn {
+    width: 50%;
+    display: inline-block;
 }
 
 .row {
@@ -43,26 +52,25 @@
     flex-wrap: nowrap;
     width: 100%;
     column-gap: var(--gutter);
-    border: 1px solid red;
+    
 }
 
-.column {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+.leftRow, .row {
+    margin-top: calc(3 * var(--gutter));
 }
 
-.column .label {
+.leftRow:first-of-type, .row:first-of-type {
+    margin-top: var(--gutter);
+}
+
+.halfColumn .label {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
     text-align: center;
 }
 
-.column .value {
+.halfColumn .value {
     display: inline-block;
     width: 100%;
     min-width: 100%;
@@ -70,22 +78,21 @@
     text-align: center;
 }
 
-.halfColumn {
-    width: 50%;
+.leftHalf .value {
+    font-size: 1.5rem;
 }
 
-
 .row > .label {
-    width: 20%;
-    min-width: 20%;
-    max-width: 20%;
+    width: 15%;
+    min-width: 15%;
+    max-width: 15%;
     text-align: end;
 }
 
 .row .value {
-    width: 80%;
-    min-width: 80%;
-    max-width: 80%;
+    width: 78%;
+    min-width: 78%;
+    max-width: 78%;
 }
 
 
