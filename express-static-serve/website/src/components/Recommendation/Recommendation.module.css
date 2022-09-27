@@ -1,6 +1,6 @@
 .container {
-    --border-color: rgb(155, 155, 155);
-    --background-color: rgb(200, 200, 200);
+    --border-color: rgb(200, 200, 155);
+    --background-color: rgb(230, 230, 200);
     height: 100%;
     width: 100%;
     display: grid;
@@ -8,6 +8,8 @@
     grid-template-rows: [first] 1fr [second] 1fr [third];
     border: 2px solid var(--border-color);
     border-radius: 5px;
+    overflow-y: auto;
+    background-color: var(--background-color);
 }
 
 .leftHalf {
@@ -15,13 +17,9 @@
     grid-column-end: span third;
     grid-row-start: 1;
     grid-row-end: span third;
-    background-color: var(--background-color);
     border-right: 2px solid var(--border-color);
-    display: grid;
-    grid-template-columns: [first] 1fr [second] 1fr [third] 1fr [fourth] 1fr [fifth];
-    grid-template-rows: [first] 1fr [second] 1fr [third] 4fr [fourth];
-    border: 2px solid var(--border-color);
-    border-radius: 5px;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
 }
 
 .rightHalf {
@@ -29,16 +27,9 @@
     grid-column-end: span fourth;
     grid-row-start: 1;
     grid-row-end: span third;
-    background-color: var(--background-color);
     border-left: 2px solid var(--border-color);
-    border: 2px solid var(--border-color);
-    overflow-y: auto;
-}
-
-.leftRow {
-    grid-column-start: first;
-    grid-column-end: span fifth;
-    grid-auto-rows: 1;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
 }
 
 
@@ -51,55 +42,41 @@
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    column-gap: var(--gutter);
-    
+    column-gap: calc(.5 * var(--gutter));
+    margin-top: calc(2 * var(--gutter));
+    justify-content: center;
 }
 
-.leftRow, .row {
-    margin-top: calc(3 * var(--gutter));
+.row:first-of-type {
+    margin-top: 0;
 }
 
-.leftRow:first-of-type, .row:first-of-type {
-    margin-top: var(--gutter);
-}
-
-.halfColumn .label {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    text-align: center;
-}
-
-.halfColumn .value {
-    display: inline-block;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    text-align: center;
-}
-
-.leftHalf .value {
-    font-size: 1.5rem;
-}
-
-.row > .label {
-    width: 15%;
-    min-width: 15%;
-    max-width: 15%;
+.leftHalf .label {
+    width: 30%;
     text-align: end;
 }
 
-.row .value {
-    width: 78%;
-    min-width: 78%;
-    max-width: 78%;
+.leftHalf .value {
+    width: 70%;
+    align-self: center;
 }
 
+.rightHalf .label {
+    width: 16%;
+    text-align: right;
+}
+
+.rightHalf .value {
+    width: 84%;
+}
+
+.value {
+    padding-right: var(--gutter);
+}
 
 .label {
-    display: inline-block;
+    padding-right: calc(.5 * var(--gutter));
+    border-right: 1px solid rgb(var(--primaryFontColor));
+    padding-left: var(--gutter);
     font-weight: bold;
 }
-
-
-
