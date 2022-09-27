@@ -1,4 +1,26 @@
-.recommendationContainer {
-    height: 350px;
+.pageWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.pageDescription {
     width: 1000px;
+    margin-bottom: 15px;
+}
+
+.recommendationListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    row-gap: 25px;
+}
+
+.recommendationContainer {
+    height: auto;
+    width: 100%;
 }

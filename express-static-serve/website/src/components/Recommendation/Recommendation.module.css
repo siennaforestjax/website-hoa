@@ -1,6 +1,7 @@
 .container {
     --border-color: rgb(200, 200, 155);
     --background-color: rgb(230, 230, 200);
+    --divider-padding: calc(1.5 * var(--gutter))
     height: 100%;
     width: 100%;
     display: grid;
@@ -71,12 +72,14 @@
 }
 
 .value {
-    padding-right: var(--gutter);
+    font-size: 1.1rem;
+    padding-right: var(--divider-padding);
+    text-transform: capitalize;
 }
 
 .label {
     padding-right: calc(.5 * var(--gutter));
     border-right: 1px solid rgb(var(--primaryFontColor));
-    padding-left: var(--gutter);
+    padding-left: var(--divider-padding);
     font-weight: bold;
 }
