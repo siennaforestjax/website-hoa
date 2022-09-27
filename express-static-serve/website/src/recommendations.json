@@ -6,7 +6,7 @@
       "lineOfBusiness": "carpenter",
       "entityName": "Ben's Wearhouse",
       "contractorName": "Ben's Lil Bro",
-      "workSummary": "Build a new dresser",
+      "workSummary": "Knock down bedroom wall.  Wire up new sockets.  Repaint Room.  Add additional window to allow for better flow of the general area.",
       "reviewer": "Aaron Flick",
       "review": "Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious. Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious. Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious. Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious.Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious. Ben's Lil Bro was fantastic.  Good value.  Good looking.  Good gracious.",
       "cost": "$975-ish",
@@ -17,7 +17,7 @@
     {
       "id": 2,
       "category": "contractor",
-      "lineOfBusiness": "elctrician",
+      "lineOfBusiness": "electrician",
       "entityName": "Carter's Clubhouse",
       "contractorName": "Carter's Neice",
       "workSummary": "Rewire my elctrical socket",

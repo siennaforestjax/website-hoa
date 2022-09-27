@@ -1,76 +1,83 @@
 .container {
-    --border-color: rgb(155, 155, 155);
-    --background-color: rgb(200, 200, 200);
+    --divider-padding: calc(1.5 * var(--gutter));
     height: 100%;
     width: 100%;
-    background-color: black;
     display: grid;
-    grid-template-columns: [first] 2fr [second] 3fr [third];
+    grid-template-columns: [first] 2fr [second] 2fr [third] 6fr [four];
     grid-template-rows: [first] 1fr [second] 1fr [third];
-    border: 2px solid var(--border-color);
+    border: 2px solid rgb(var(--primaryBorderColor));
     border-radius: 5px;
+    overflow-y: auto;
+    background-color: rgb(var(--primaryBackgroundColor));
 }
 
 .leftHalf {
     grid-column-start: 1;
-    grid-column-end: span second;
-    grid-row-start: 1;
-    grid-row-end: span third;
-    background-color: var(--background-color);
-    border-right: 2px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.rightHalf {
-    grid-column-start: second;
     grid-column-end: span third;
     grid-row-start: 1;
     grid-row-end: span third;
-    background-color: var(--background-color);
-    border-left: 2px solid var(--border-color);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: var(--gutter);
-    row-gap: 0px;
+    border-right: 2px solid rgb(var(--primaryBorderColor));
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+}
+
+.rightHalf {
+    grid-column-start: third;
+    grid-column-end: span fourth;
+    grid-row-start: 1;
+    grid-row-end: span third;
+    border-left: 2px solid rgb(var(--primaryBorderColor));
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+}
+
+
+.halfColumn {
+    width: 50%;
+    display: inline-block;
 }
 
 .row {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    column-gap: var(--gutter);
-    border: 1px solid red;
-}
-
-.leftHalf > .row {
-    text-align: center;
-    flex-wrap: wrap;
+    column-gap: calc(.5 * var(--gutter));
+    margin-top: calc(2 * var(--gutter));
     justify-content: center;
 }
 
-.label {
-    width: 20%;
-    min-width: 20%;
-    max-width: 20%;
-    text-align: end;
-    font-weight: bold;
-
+.row:first-of-type {
+    margin-top: 0;
 }
 
 .leftHalf .label {
-    text-align: center;
-    display: block;
-}
-
-.value {
-    width: 80%;
-    min-width: 80%;
-    max-width: 80%;
+    width: 30%;
+    text-align: end;
 }
 
 .leftHalf .value {
-    text-align: center;
+    width: 70%;
+    align-self: center;
+}
+
+.rightHalf .label {
+    width: 16%;
+    text-align: right;
+}
+
+.rightHalf .value {
+    width: 84%;
+}
+
+.value {
+    font-size: 1.1rem;
+    padding-right: var(--divider-padding);
+    text-transform: capitalize;
+}
+
+.label {
+    padding-right: calc(.5 * var(--gutter));
+    border-right: 1px solid rgb(var(--primaryFontColor));
+    padding-left: var(--divider-padding);
+    font-weight: bold;
 }
