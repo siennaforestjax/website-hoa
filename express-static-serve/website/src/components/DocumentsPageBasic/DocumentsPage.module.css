@@ -14,6 +14,7 @@ h2:first-of-type {
   display: block;
   width: 100%;
   margin-top: 25px;
+  background-color: rgb(var(--secondaryColor));
 }
 
 .fileContainer:not(:last-of-type) {

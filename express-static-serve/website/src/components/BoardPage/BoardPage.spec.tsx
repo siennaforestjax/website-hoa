@@ -9,24 +9,24 @@ describe.skip('The Board Page', () => {
 
     it('renders as expected', () => {
       const tree = renderer
-        .create(<BoardPage boardMembers={testData.boardMembers} />)
+        .create(<BoardPage boardMembers={testData.boardMembers} subcommittees={testData.subcommittees} />)
         .toJSON();
 
       expect(tree).toMatchSnapshot();
     });
   });
 
-  describe.skip('The component', () => {
-    it('maps divs based on props', () => {
-      const tree = renderer.create(<BoardPage boardMembers={testData.boardMembers} />);
-      const component = tree.root;
+  // describe.skip('The component', () => {
+  //   it('maps divs based on props', () => {
+  //     const tree = renderer.create(<BoardPage boardMembers={testData.boardMembers} subcommittees={testData.subcommittees}  />);
+  //     const component = tree.root;
       
-      const sections = component.findAllByType('section');
+  //     const sections = component.findAllByType('section');
 
-      expect(sections.length).toBe(testData.boardMembers.length);
+  //     expect(sections.length).toBe(testData.boardMembers.length);
   
-    });
-  });
+  //   });
+  // });
 });
 
 

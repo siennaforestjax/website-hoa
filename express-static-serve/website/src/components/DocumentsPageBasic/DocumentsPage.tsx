@@ -40,7 +40,6 @@ function DocumentsPagePretty() {
   }, [])
 
   function displayDocuments(docs: Array<HoaDocument>) {
-    console.log(`sorting ${docs.length} docs`);
     return (
       <div className={classes.fileContainer}>
         <ul className={classes.fileList}>

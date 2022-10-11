@@ -3,7 +3,7 @@
     {
       "title": "President",
       "name": "Kurt Ringo",
-      "emailAddress": "president@siennaforestjax.com",
+      "emailAddress": "board.siennaforestjax.com",
       "startDate": "1/1/2022",
       "titleDescription": "The HOA President serves as the leader of the board. The main responsibilities of the president include presiding over board meetings and facilitating the decision-making process; signing contacts, checks, and other legal documents; serving as a spokesman for the HOA; and taking charge of the day-to-day operations.",
       "imageName": "president.jpg",
@@ -12,7 +12,7 @@
     {
       "title": "Treasurer",
       "name": "Maxine Holcomb",
-      "emailAddress": "treasurer@siennaforestjax.com",
+      "emailAddress": "board.siennaforestjax.com",
       "startDate": "12/1/2021",
       "titleDescription": "The HOA Treasurer oversees the financial operations of the association.  They are in charge of developing the budget, monitoring income and expenses, collecting assessments, issuing payments to vendors, preparing financial reports, and facilitating an audit at the end of a fiscal year.",
       "imageName": "treasurer.jpg",
@@ -21,11 +21,40 @@
     {
       "title": "Secretary",
       "name": "Caroline Shank",
-      "emailAddress": "secretary@siennaforestjax.com",
+      "emailAddress": "board.siennaforestjax.com",
       "startDate": "12/1/2021",
       "titleDescription": "The HOA secretary creates the board meeting agenda (with the president), records the minutes of board meetings, and ensures quorum. They also send notices for board meetings, ensure compliance with the governing documents, maintain bank information and other important documents, and store homeowner and maintenance records.",
       "imageName": "secretary.jpg",
       "imageDescription": "scary hair"
+    }
+  ],
+  "subcommittees": [
+    {
+      "name": "Sienna Forest Management",
+      "description": "This committee handles miscellaneous tasks as assigned by the board",
+      "objectives": ["build the HOA website", "welcome new neighbors", "provide recommendations towards having community guidelines followed"],
+      "representatives": [
+        {
+          "name": "MargaretAnne Payne",
+          "role": "Committee Chair"
+        },
+        {
+          "name": "Erik Willadsen",
+          "role": "Community Relations"
+        },
+        {
+          "name": "George DeMarino",
+          "role": "Community Relations" 
+        },
+        {
+          "name": "Chiti Musonda",
+          "role": "Community Relations"
+        },
+        {
+          "name": "Aaron Flick",
+          "role": "Website Developer" 
+        }
+      ] 
     }
   ]
 }

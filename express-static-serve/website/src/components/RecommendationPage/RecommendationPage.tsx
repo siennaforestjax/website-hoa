@@ -18,8 +18,8 @@ function RecommendationPage() {
         {mock.recommendations
           .filter((x) => (x.category === 'contractor'))
           .map((x) => (
-            <div className={classes.recommendationContainer}>
-              <Recommendation key={x.id} {...x} />
+            <div key={x.id} className={classes.recommendationContainer}>
+              <Recommendation {...x} />
             </div>
           ))}
       </div>
