@@ -1,10 +1,9 @@
 :root {
   --fontSize: 16px;
   --primaryColor: 50, 150, 150;
-  --secondaryColor: 170, 221, 221;
+  --secondaryColor: 230, 230, 200;
   --primaryFontColor: 18, 62, 105;
   --secondaryFontColor: 255, 255, 255;
-  --primaryBackgroundColor: 230, 230, 200;
   --primaryBorderColor: 200, 200, 155;
   --primaryButtonColor: 0, 255, 255;
   --secondaryButtonColor: 255, 255, 255;

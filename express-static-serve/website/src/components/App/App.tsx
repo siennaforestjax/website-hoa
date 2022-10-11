@@ -30,7 +30,7 @@ function App() {
               />
               <Route
                 path="/board"
-                element={<BoardPage boardMembers={theBoard.boardMembers} />}
+                element={<BoardPage boardMembers={theBoard.boardMembers} subcommittees={theBoard.subcommittees} />}
               />
               <Route
                 path="/events"

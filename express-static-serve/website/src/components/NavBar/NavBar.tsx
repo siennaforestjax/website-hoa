@@ -31,14 +31,14 @@ function NavBar() {
               </Link>
             </ul>
           </li>
-          <li>
+          {/* <li>
             Events
             <ul className={classes.navSubList}>
               <Link to="/events" onClick={() => toggleNavPanel()}>
                 See All
               </Link>
             </ul>
-          </li>
+          </li> */}
           <li>
             Docs
             <ul className={classes.navSubList}>

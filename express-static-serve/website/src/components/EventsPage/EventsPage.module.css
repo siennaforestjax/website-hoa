@@ -1,0 +1,9 @@
+.calendarContainer {
+    height: 700px;
+    width: 1200px;
+    background-color: rgb(var(--secondaryColor));
+    margin: auto;
+    display: grid;
+    grid-template-columns: [first] 1fr [second] 1fr [third] 1fr [fourth] 1fr [fifth] 1fr [sixth] 1fr [seventh] 1fr [eighth];
+    grid-template-rows: [first] 1fr [second] 1fr [third] 1fr [fourth] 1fr [fifth] 1fr [sixth] 1fr [seventh];
+}

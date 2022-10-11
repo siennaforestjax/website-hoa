@@ -8,7 +8,7 @@
     border: 2px solid rgb(var(--primaryBorderColor));
     border-radius: 5px;
     overflow-y: auto;
-    background-color: rgb(var(--primaryBackgroundColor));
+    background-color: rgb(var(--secondaryColor));
 }
 
 .leftHalf {
