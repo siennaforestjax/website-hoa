@@ -11,6 +11,7 @@ import Footer from '../Footer/Footer';
 import YardOfTheMonthPage from '../YardOfTheMonthPage/YardOfTheMonthPage';
 import classes from './App.module.css';
 import RecommendationPage from '../RecommendationPage/RecommendationPage';
+import ThemePicker from '../ThemePicker/ThemePicker';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <div className={classes.App}>
         <header>
           <HeaderBar />
+          <ThemePicker />
         </header>
         <div>
           <main>

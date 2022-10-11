@@ -2,6 +2,7 @@
   --fontSize: 16px;
   --primaryColor: 50, 150, 150;
   --secondaryColor: 230, 230, 200;
+  --appBackgroundColor: 255, 255, 255;
   --primaryFontColor: 18, 62, 105;
   --secondaryFontColor: 255, 255, 255;
   --primaryBorderColor: 200, 200, 155;
@@ -12,4 +13,5 @@
   --headerHeight: 70px;
   --footerHeight: 24px;
   --sandColor: 244, 230, 160;
+
 }
