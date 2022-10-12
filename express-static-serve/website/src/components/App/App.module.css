@@ -22,7 +22,7 @@
 
 .pageWrapper {
   height: 100%;
-  width: 100%;
+  width: 90%;
   padding-left: calc(4 * var(--gutter));
   padding-right: calc(4 * var(--gutter));
   color: rgb(var(--primaryFontColor));
@@ -30,5 +30,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin: auto;
   margin-bottom: 35px;
 }

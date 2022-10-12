@@ -1,24 +1,17 @@
-h2 {
+.sectionTitle {
   font-size: 1.2rem;
-}
-
-h2:first-of-type {
   margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .fileContainer li {
-  padding-left: calc(var(--gutter) * 2);
+  padding-left: calc(var(--gutter) * 4);
 }
 
 .fileContainer {
   display: block;
   width: 100%;
   margin-top: 25px;
-  background-color: rgb(var(--secondaryColor));
-}
-
-.fileContainer:not(:last-of-type) {
-  margin-bottom: 25px;
 }
 
 /*--------------Medium Screens--------*/

@@ -7,10 +7,11 @@ const sourceUrl = process.env.REACT_APP_API_URL;
 function NeighborhoodPage() {
   return (
     <>
-      <h1>Welcome to the Neighborhood!</h1>
+      <h1 className={classes.pageTitle}>Welcome to the Neighborhood!</h1>
       <figure className={classes.fig}>
         <ImageWithLoadingFallback source={`${sourceUrl}/entranceSign.jpg`} altText="Sienna Forest Entrance Sign" />
       </figure>
+      <h2 className={classes.sectionTitle}>About Us</h2>
       <div className={classes.description}>
         Sienna Forest was established in 1993 in Jacksonville, FL. Over the past
         30 years, we've grown to 47 beautiful homes in this beautiful Mandarin
@@ -22,17 +23,14 @@ function NeighborhoodPage() {
         >
           here</a>, or write us at: <address>P. O. Box 600991, Jacksonville, Florida 32260-0991</address>
       </div>
-      <div>
-        City Of Jacksonville Information: https://www.coj.net/welcome.aspx
-        
-        Contact the Jacksonville Sheriff's Department: https://www.jaxsheriff.org/Contact-Us.aspx
-
-        Voter Information: https://www.duvalelections.gov/
-
-        Trash Schedule: https://myjax.custhelp.com/app/hauler
-
-        Evacuation Zone: https://myjax.custhelp.com/app/evacuation_zone
-      </div>
+      <h2 className={classes.sectionTitle}>Useful Links</h2>
+      <ul className={classes.linkList}>
+        <li><a className={classes.webLink} href="https://www.coj.net/welcome.aspx" target="_blank" rel="noreferrer">City Of Jacksonville Information</a></li>
+        <li><a className={classes.webLink} href="https://www.jaxsheriff.org/Contact-Us.aspx" target="_blank" rel="noreferrer">Contact the Jacksonville Sheriff's Department</a></li>
+        <li><a className={classes.webLink} href="https://www.duvalelections.gov/" target="_blank" rel="noreferrer">Find Voter Information</a></li>
+        <li><a className={classes.webLink} href="https://myjax.custhelp.com/app/hauler" target="_blank" rel="noreferrer">Your Trash Schedule</a></li>
+        <li><a className={classes.webLink} href="https://myjax.custhelp.com/app/evacuation_zone" target="_blank" rel="noreferrer">Know Your Evacuation Zone</a></li>
+      </ul>
     </>
   )
 }

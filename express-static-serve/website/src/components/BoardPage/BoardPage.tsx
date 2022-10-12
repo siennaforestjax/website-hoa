@@ -58,20 +58,21 @@ const BoardPage = ({ boardMembers, subcommittees }: BoardPageProps) => {
                     )
                   })}
                 </ul>
-                <h3 className={classes.subsection}>Members</h3>
+                <div className={classes.subsection}>
+                  <div className={`${classes.row} ${classes.headerRow}`}>
+                    <span className={classes.rowItem}>Member</span>
+                    <span>Role</span>
+                  </div>
                 {
                   sub.representatives.map(rep => {
                     return (
-                    <div key={rep.name} className={classes.committeeMember}>
-                      <div className={classes.field}>
-                          <span className={classes.fieldValue}>{rep.name}</span>
-                        </div>
-                        <div className={classes.field}>
-                          <span className={classes.fieldValue}>{rep.role}</span>
-                        </div>
+                    <div key={rep.name} className={classes.row}>
+                      <span className={classes.rowItem}>{rep.name}</span>
+                      <span className={classes.rowItem}>{rep.role}</span>
                     </div>
                   )})
                 }
+                </div>
               </section>
           )})
         }

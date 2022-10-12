@@ -6,7 +6,7 @@ function Footer() {
   const date = new Date();
   return (
     <div className="websiteBorder">
-      <p className={classes.FooterText}>
+      <p className={classes.footerText}>
         © {date.getFullYear()} Sienna Forest Home Owners Association
       </p>
     </div>

@@ -2,16 +2,16 @@
   --fontSize: 16px;
   --primaryColor: 50, 150, 150;
   --secondaryColor: 230, 230, 200;
-  --appBackgroundColor: 255, 255, 255;
+  --appBackgroundColor: 230, 230, 200;
   --primaryFontColor: 18, 62, 105;
   --secondaryFontColor: 255, 255, 255;
   --primaryBorderColor: 200, 200, 155;
-  --primaryButtonColor: 0, 255, 255;
+  --primaryButtonColor: 164, 222, 155;
   --secondaryButtonColor: 255, 255, 255;
   --buttonBorderRadius: 20%;
   --gutter: 10px;
   --headerHeight: 70px;
   --footerHeight: 24px;
   --sandColor: 244, 230, 160;
-
+  --primaryTextShadow: 0.5px 0.5px rgba(255, 255, 255, .2), 1.5px 1.5px rgba(0, 0, 0, .2);
 }

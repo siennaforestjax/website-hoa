@@ -8,13 +8,12 @@ import mock from '../../recommendations.json';
 function RecommendationPage() {
   
   return (
-    <div className={classes.pageWrapper}>
-      <h1>Recommendations</h1>
-      <p className={classes.pageDescription}>
-        Check out these recommendations provided by your fellow
-        neighbors.
-      </p>
+    <>
+      <h1 className={classes.pageTitle}>Recommendations</h1>
       <div className={classes.recommendationListContainer}>
+      <p className={classes.pageDescription}>
+        Looking to have some work done around the house?  Check out these recommendations from your neighbors.
+      </p>
         {mock.recommendations
           .filter((x) => (x.category === 'contractor'))
           .map((x) => (
@@ -23,7 +22,7 @@ function RecommendationPage() {
             </div>
           ))}
       </div>
-    </div>
+    </>
   );
 }
 

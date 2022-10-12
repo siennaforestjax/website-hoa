@@ -1,7 +1,12 @@
+.pageTitle {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
 .fig {
   background-size: cover;
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 600px;
   display: block;
   margin: 0 auto 25px auto;
 }
@@ -14,3 +19,23 @@
 .description address {
   display: inline;
 }
+
+.sectionTitle {
+  margin-top: 25px;
+}
+
+.linkList {
+  list-style-type: none;
+}
+
+.webLink {
+  margin-left: 25px;
+  color: rgb(var(--primaryFontColor));
+  font-weight: 600;
+}
+
+.webLink:hover {
+  color: rgb(var(--primaryColor));
+}
+
+

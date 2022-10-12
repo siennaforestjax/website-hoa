@@ -7,7 +7,7 @@ const sourceUrl = process.env.REACT_APP_API_URL;
 function YardOfTheMonthPage() {
   return (
     <>
-      <h1>Yard of the Month goes to ... Bob Ross!</h1>
+      <h1 className={classes.pageTitle}>Yard of the Month goes to ... Bob Ross!</h1>
       <div className={classes.largeImageWrapper}>
         <figure className={classes.largeImage}>
           <ImageWithLoadingFallback source={`${sourceUrl}/Front.webp`} altText='' />

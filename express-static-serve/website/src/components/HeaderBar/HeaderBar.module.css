@@ -1,4 +1,5 @@
 .title {
   font-size: 2.5rem;
-  text-shadow: 1px 1px rgba(var(--secondaryFontColor), 0.58);
+  color: rgb(var(--primaryButtonColor));
+  text-shadow: var(--primaryTextShadow);
 }

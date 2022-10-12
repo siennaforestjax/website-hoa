@@ -18,7 +18,7 @@ code {
 
 .colorful-bottom-border {
   border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, white 0%, teal 60%, white 100%);
+  border-image: linear-gradient(to right, #ddd 0%, teal 60%, #ddd 100%);
   border-image-slice: 1;
 }
 

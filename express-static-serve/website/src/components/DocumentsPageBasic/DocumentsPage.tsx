@@ -41,7 +41,7 @@ function DocumentsPagePretty() {
 
   function displayDocuments(docs: Array<HoaDocument>) {
     return (
-      <div className={classes.fileContainer}>
+      
         <ul className={classes.fileList}>
           {docs
             .sort((x, y) => sortStringDates(x.createTime, y.createTime))
@@ -49,23 +49,25 @@ function DocumentsPagePretty() {
               <Document key={doc.filename} document={doc} />
             ))}
         </ul>
-      </div>
     );
   }
 
   return (
     <>
       <h1>Documents</h1>
-      <h2>HOA Meeting Notes</h2>
-      {
-        isLoadingMinutes ? <LoadingSvg scale={0.8}/> 
-        : minutesDidError ? <p>Error Gathering Documents</p> : displayDocuments(docsMinutes)}
-
-      <h2>Community Documents</h2>
+      <div className={classes.fileContainer}>
+        <h2 className={classes.sectionTitle}>HOA Meeting Notes</h2>
+        {
+          isLoadingMinutes ? <LoadingSvg scale={0.8}/> 
+          : minutesDidError ? <p>Error Gathering Documents</p> : displayDocuments(docsMinutes)}
+      </div>
+      <div className={classes.fileContainer}>
+      <h2 className={classes.sectionTitle}>Miscellaneous Documents</h2>
       {
         isLoadingMisc ? <LoadingSvg scale={0.8}/> :
         miscDidError ? <p>Error Gathering Documents</p> : displayDocuments(docsMisc)
       }
+      </div>
     </>
   );
 }

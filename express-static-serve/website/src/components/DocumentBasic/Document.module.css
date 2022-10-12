@@ -5,6 +5,14 @@
 }
 
 .docSize {
-  margin-left: 10px;
   font-size: .85rem;
+}
+
+.docLink {
+  color: rgb(var(--primaryFontColor));
+  font-weight: bold;
+}
+
+.docLink:hover {
+  color: rgb(var(--primaryColor));
 }

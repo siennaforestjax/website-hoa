@@ -12,19 +12,18 @@ const API_URL = process.env.REACT_APP_API_URL;
 function Document({ document }: DocumentProps) {
 
   return (
-    <li key={document.filename} className={classes.doc}>
+    <li className={classes.doc}>
       <a
+        className={classes.docLink}
         href={`${API_URL}/${document.location}`}
         target="_blank"
         rel="nofollow noreferrer noopener"
         download
       >
-        <span className={classes.docName}>{document.filename}</span>
+        <span>{document.filename}</span>
         
-        </a>
-        <span className={classes.docSize}>
-          {displayFileSize(document.fileSizeInBytes)}
-        </span>
+        {displayFileSize(document.fileSizeInBytes)}
+      </a>
     </li>
   );
 
@@ -32,8 +31,8 @@ function Document({ document }: DocumentProps) {
     const { size, unit } = getSimplifiedFileSize(bytes);
 
     return (
-      <span>
-        ({size} {unit})
+      <span className={classes.docSize}>
+        _({size} {unit})
       </span>
     );
   }

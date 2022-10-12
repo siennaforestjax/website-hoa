@@ -1,3 +1,4 @@
 .footerText {
-  text-shadow: 0.3px 0.3px rgba(var(--secondaryFontColor), 0.58);
+  color: rgb(var(--primaryButtonColor));
+  text-shadow: var(--primaryTextShadow);
 }
