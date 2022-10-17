@@ -11,7 +11,6 @@ import Footer from '../Footer/Footer';
 import YardOfTheMonthPage from '../YardOfTheMonthPage/YardOfTheMonthPage';
 import classes from './App.module.css';
 import RecommendationPage from '../RecommendationPage/RecommendationPage';
-import ThemePicker from '../ThemePicker/ThemePicker';
 
 function App() {
   return (
@@ -19,28 +18,29 @@ function App() {
       <div className={classes.App}>
         <header className={classes.header}>
           <HeaderBar />
-          <ThemePicker />
         </header>
         <main className={classes.main}>
-          {/* <div className={classes.pageWrapper}>
-          <Routes>
-            <Route path="/" element={<NeighborhoodPage />} />
-            <Route
-              path="/documents"
-              element={<DocumentsPage />}
-            />
-            <Route
-              path="/board"
-              element={<BoardPage boardMembers={theBoard.boardMembers} subcommittees={theBoard.subcommittees} />}
-            />
-            <Route
-              path="/events"
-              element={<EventsPage events={theEvents.events} />}
-            />
-            <Route path="/yotm" element={<YardOfTheMonthPage />} />
-            <Route path="/recommendations" element={<RecommendationPage />} />
-          </Routes>
-          </div> */}
+          <div className={classes.pageWrapper}>
+            <Routes>
+              <Route path='/' element={<NeighborhoodPage />} />
+              <Route path='/documents' element={<DocumentsPage />} />
+              <Route
+                path='/board'
+                element={
+                  <BoardPage
+                    boardMembers={theBoard.boardMembers}
+                    subcommittees={theBoard.subcommittees}
+                  />
+                }
+              />
+              <Route
+                path='/events'
+                element={<EventsPage events={theEvents.events} />}
+              />
+              <Route path='/yotm' element={<YardOfTheMonthPage />} />
+              <Route path='/recommendations' element={<RecommendationPage />} />
+            </Routes>
+          </div>
         </main>
         <footer className={classes.footer}>
           <Footer />

@@ -1,6 +1,5 @@
-import { createPipelineFromOptions } from '@azure/core-http';
 import React, { useState } from 'react';
-import classes from './ThemePicker.module.css'
+import classes from './ThemePicker.module.css';
 
 function ThemePicker() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +11,8 @@ function ThemePicker() {
   }
 
   function changeValue(property: string, value: string) {
-    if(!value) return;
-    if(!value.match(matchRgb)) {
+    if (!value) return;
+    if (!value.match(matchRgb)) {
       return;
     }
 
@@ -32,7 +31,7 @@ function ThemePicker() {
     let primaryBorderColor = '';
     let primaryButtonColor = '';
 
-    switch(themeNumber) {
+    switch (themeNumber) {
       case 1: {
         primaryColor = '2, 102, 112';
         secondaryColor = '159, 237, 215';
@@ -69,7 +68,7 @@ function ThemePicker() {
       </button>
       <div className={`${classes.panel} ${isOpen ? classes.open : ''}`}>
         <button
-          type="button"
+          type='button'
           className={classes.exitButton}
           onClick={() => togglePanel()}
         >
@@ -78,26 +77,109 @@ function ThemePicker() {
         <div className={classes.customizeContainer}>
           <ul className={classes.themeList}>
             Themes:
-            <li><input type="radio" id="theme1" name="theme" onClick={() => changeTheme(1)}/> <label>Theme 1</label></li>
-            <li><input type="radio" id="theme2" name="theme" onClick={() => changeTheme(2)}/> <label>Theme 2</label> </li>
-            <li><input type="radio" id="default" name="theme" onClick={() => changeTheme(999)}/> <label>default</label></li>
+            <li>
+              <input
+                type='radio'
+                id='theme1'
+                name='theme'
+                onClick={() => changeTheme(1)}
+              />{' '}
+              <label>Theme 1</label>
+            </li>
+            <li>
+              <input
+                type='radio'
+                id='theme2'
+                name='theme'
+                onClick={() => changeTheme(2)}
+              />{' '}
+              <label>Theme 2</label>{' '}
+            </li>
+            <li>
+              <input
+                type='radio'
+                id='default'
+                name='theme'
+                onClick={() => changeTheme(999)}
+              />{' '}
+              <label>default</label>
+            </li>
           </ul>
           <ul className={classes.manualValues}>
             Customize:
-            <li><input type="text" className={classes.manualInput} onChange={(e) => changeValue('--primaryColor', e.target.value)}/><label className={classes.manualLabel}>PrimaryColor</label></li>
-            <li><input type="text" className={classes.manualInput} onChange={(e) => changeValue('--secondaryColor', e.target.value)}/><label className={classes.manualLabel}>secondaryColor</label></li>
-            <li><input type="text" className={classes.manualInput} onChange={(e) => changeValue('--appBackgroundColor', e.target.value)}/><label className={classes.manualLabel}>appBackgroundColor</label></li>
-            <li><input type="text" className={classes.manualInput} onChange={(e) => changeValue('--primaryFontColor', e.target.value)}/><label className={classes.manualLabel}>primaryFontColor</label></li>
-            <li><input type="text" className={classes.manualInput} onChange={(e) => changeValue('--secondaryFontColor', e.target.value)}/><label className={classes.manualLabel}>secondaryFontColor</label></li>
-            <li><input type="text" className={classes.manualInput} onChange={(e) => changeValue('--primaryBorderColor', e.target.value)}/><label className={classes.manualLabel}>primaryBorderColor</label></li>
-            <li><input type="text" className={classes.manualInput} onChange={(e) => changeValue('--primaryButtonColor', e.target.value)}/><label className={classes.manualLabel}>primaryButtonColor</label></li>
+            <li>
+              <input
+                type='text'
+                className={classes.manualInput}
+                onChange={(e) => changeValue('--primaryColor', e.target.value)}
+              />
+              <label className={classes.manualLabel}>PrimaryColor</label>
+            </li>
+            <li>
+              <input
+                type='text'
+                className={classes.manualInput}
+                onChange={(e) =>
+                  changeValue('--secondaryColor', e.target.value)
+                }
+              />
+              <label className={classes.manualLabel}>secondaryColor</label>
+            </li>
+            <li>
+              <input
+                type='text'
+                className={classes.manualInput}
+                onChange={(e) =>
+                  changeValue('--appBackgroundColor', e.target.value)
+                }
+              />
+              <label className={classes.manualLabel}>appBackgroundColor</label>
+            </li>
+            <li>
+              <input
+                type='text'
+                className={classes.manualInput}
+                onChange={(e) =>
+                  changeValue('--primaryFontColor', e.target.value)
+                }
+              />
+              <label className={classes.manualLabel}>primaryFontColor</label>
+            </li>
+            <li>
+              <input
+                type='text'
+                className={classes.manualInput}
+                onChange={(e) =>
+                  changeValue('--secondaryFontColor', e.target.value)
+                }
+              />
+              <label className={classes.manualLabel}>secondaryFontColor</label>
+            </li>
+            <li>
+              <input
+                type='text'
+                className={classes.manualInput}
+                onChange={(e) =>
+                  changeValue('--primaryBorderColor', e.target.value)
+                }
+              />
+              <label className={classes.manualLabel}>primaryBorderColor</label>
+            </li>
+            <li>
+              <input
+                type='text'
+                className={classes.manualInput}
+                onChange={(e) =>
+                  changeValue('--primaryButtonColor', e.target.value)
+                }
+              />
+              <label className={classes.manualLabel}>primaryButtonColor</label>
+            </li>
           </ul>
         </div>
       </div>
       <div
-        className={`${classes.panelBackground} ${
-          isOpen ? classes.open : ''
-        }`}
+        className={`${classes.panelBackground} ${isOpen ? classes.open : ''}`}
         onClick={() => togglePanel()}
       ></div>
     </nav>

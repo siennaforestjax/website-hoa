@@ -1,89 +1,90 @@
 .hamburger {
-    position: absolute;
-    display: block;
-    height: 50px;
-    width: 50px;
-    transform: rotateZ(90deg);
-    letter-spacing: -1px;
-    top: var(--gutter);
-    right: var(--gutter);
-    background-color: grey;
-    border: none;
-    box-shadow: 0 0 8px -2px black;
-    border-radius: var(--buttonBorderRadius);
-  }
-  
-  .panelBackground {
-    position: absolute;
-    top: 0;
-    right: -100vw;
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
-    z-index: 1;
-  }
-  
-  .panelBackground.open {
-    right: 0;
-  }
-  
-  .panel {
-    --panelWidth: 25vw;
-    position: absolute;
-    right: calc(-1 * var(--panelWidth));
-    width: var(--panelWidth);
-    height: 300px;
-    padding-left: var(--gutter);
-    border-radius: 3px;
-    transition: none;
-    background: linear-gradient(to left, white 5%, rgb(var(--primaryColor)));
-    z-index: 2;
-  }
-  
-  .panel.open {
-    top: 0;
-    right: 0;
-    transition: right 0.3s ease;
-    box-shadow: 1px 0 8px 0 black;
-  }
-  
-  .panel > .exitButton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    top: 0;
-    right: 0;
-    padding: 0;
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    color: rgb(var(--primaryFontColor));
-    transform: rotateZ(45deg);
-    background-color: transparent;
-    border: none;
-  }
-  
-  .customizeContainer {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-  }
+  position: absolute;
+  display: block;
+  height: 50px;
+  width: 50px;
+  transform: rotateZ(90deg);
+  letter-spacing: -1px;
+  top: var(--gutter);
+  right: var(--gutter);
+  background-color: grey;
+  border: none;
+  box-shadow: 0 0 8px -2px black;
+  border-radius: var(--buttonBorderRadius);
+}
 
-  .themeList, .manualValues {
-    width: 30%;
-    list-style: none;
-  }
+.panelBackground {
+  position: absolute;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 1;
+}
 
-  .manualValues {
-    width: 68%;
-  }
+.panelBackground.open {
+  right: 0;
+}
 
-  .manualInput {
-    width: 95px;
-  }
-  
-  .manualLabel {
-    padding-left: 5px;
-  }
+.panel {
+  --panelWidth: 25vw;
+  position: absolute;
+  right: calc(-1 * var(--panelWidth));
+  width: var(--panelWidth);
+  height: 300px;
+  padding-left: var(--gutter);
+  border-radius: 3px;
+  transition: none;
+  background: linear-gradient(to left, white 5%, rgb(var(--primaryColor)));
+  z-index: 2;
+}
+
+.panel.open {
+  top: 0;
+  right: 0;
+  transition: right 0.3s ease;
+  box-shadow: 1px 0 8px 0 black;
+}
+
+.panel > .exitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  top: 0;
+  right: 0;
+  padding: 0;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  color: rgb(var(--primaryFontColor));
+  transform: rotateZ(45deg);
+  background-color: transparent;
+  border: none;
+}
+
+.customizeContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.themeList,
+.manualValues {
+  width: 30%;
+  list-style: none;
+}
+
+.manualValues {
+  width: 68%;
+}
+
+.manualInput {
+  width: 95px;
+}
+
+.manualLabel {
+  padding-left: 5px;
+}
