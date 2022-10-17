@@ -5,10 +5,11 @@
 
 .fig {
   background-size: cover;
-  width: 700px;
-  height: 600px;
+  width: 350px;
+  height: 300px;
   display: block;
-  margin: 0 auto 25px auto;
+  float: right;
+  /* margin: 0 auto 25px auto; */
 }
 
 .description {
@@ -43,6 +44,6 @@
 }
 
 .factList > .fact {
- margin-top: 15px;
- text-indent: 30px; 
+  margin-top: 15px;
+  text-indent: 30px;
 }
