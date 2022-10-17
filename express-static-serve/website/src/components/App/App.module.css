@@ -5,18 +5,23 @@
   background-color: rgb(var(--appBackgroundColor));
 }
 
-.App > header {
+.App .header {
   height: var(--headerHeight);
+  min-height: var(--headerHeight);
+  max-height: var(--headerHeight);
   width: 100vw;
 }
 
-.App > footer {
+.App .footer {
+  min-height: var(--footerHeight);
+  max-height: var(--footerHeight);
   height: var(--footerHeight);
   width: 100vw;
 }
 
-.App main {
+.App .main {
   min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
+  height: calc(100vh - var(--headerHeight) - var(--footerHeight));
   width: 100vw;
 }
 

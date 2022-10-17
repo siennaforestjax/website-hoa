@@ -38,4 +38,11 @@
   color: rgb(var(--primaryColor));
 }
 
+.factList {
+  list-style-type: none;
+}
 
+.factList > .fact {
+ margin-top: 15px;
+ text-indent: 30px; 
+}

@@ -17,36 +17,34 @@ function App() {
   return (
     <Router>
       <div className={classes.App}>
-        <header>
+        <header className={classes.header}>
           <HeaderBar />
           <ThemePicker />
         </header>
-        <div>
-          <main>
-            <div className={classes.pageWrapper}>
-            <Routes>
-              <Route path="/" element={<NeighborhoodPage />} />
-              <Route
-                path="/documents"
-                element={<DocumentsPage />}
-              />
-              <Route
-                path="/board"
-                element={<BoardPage boardMembers={theBoard.boardMembers} subcommittees={theBoard.subcommittees} />}
-              />
-              <Route
-                path="/events"
-                element={<EventsPage events={theEvents.events} />}
-              />
-              <Route path="/yotm" element={<YardOfTheMonthPage />} />
-              <Route path="/recommendations" element={<RecommendationPage />} />
-            </Routes>
-            </div>
-          </main>
-          <footer>
-            <Footer />
-          </footer>
-        </div>
+        <main className={classes.main}>
+          {/* <div className={classes.pageWrapper}>
+          <Routes>
+            <Route path="/" element={<NeighborhoodPage />} />
+            <Route
+              path="/documents"
+              element={<DocumentsPage />}
+            />
+            <Route
+              path="/board"
+              element={<BoardPage boardMembers={theBoard.boardMembers} subcommittees={theBoard.subcommittees} />}
+            />
+            <Route
+              path="/events"
+              element={<EventsPage events={theEvents.events} />}
+            />
+            <Route path="/yotm" element={<YardOfTheMonthPage />} />
+            <Route path="/recommendations" element={<RecommendationPage />} />
+          </Routes>
+          </div> */}
+        </main>
+        <footer className={classes.footer}>
+          <Footer />
+        </footer>
       </div>
     </Router>
   );
