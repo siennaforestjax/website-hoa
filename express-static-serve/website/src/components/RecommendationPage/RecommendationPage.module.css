@@ -1,26 +1,27 @@
 .pageTitle {
-    margin-top: 25px;
-    margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 35px;
 }
 
 .pageDescription {
-    width: 1200px;
-    margin-bottom: 15px;
+  width: 1200px;
+  margin: auto;
+  margin-bottom: 15px;
 }
 
 .recommendationListContainer {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 1200px;
-    row-gap: 25px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  row-gap: 42px;
 }
 
 .recommendationContainer {
-    height: auto;
-    width: 100%;
-    box-shadow: 6px 6px 12px 0 rgba(0,0,0, .3);
+  height: auto;
+  width: 100%;
+  box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.3);
 }
