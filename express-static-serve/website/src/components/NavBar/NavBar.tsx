@@ -16,7 +16,7 @@ function NavBar() {
       </button>
       <div className={`${classes.navPanel} ${isOpen ? classes.open : ''}`}>
         <button
-          type="button"
+          type='button'
           className={classes.exitButton}
           onClick={() => toggleNavPanel()}
         >
@@ -24,32 +24,28 @@ function NavBar() {
         </button>
         <ul className={classes.navList}>
           <li>
-              About
-              <ul className={classes.navSubList}>
-               <Link to="/" onClick={() => toggleNavPanel()}>
-                  The Neighborhood (Home)
-                </Link>
-                <Link to="/board" onClick={() => toggleNavPanel()}>
-                  The Board
-                </Link>
-                <Link to="/yotm" onClick={() => toggleNavPanel()}>
-                  Yard of the Month
-                </Link>
-              </ul>
-            </li>
-          
-          {/* <li>
-            Events
+            About
             <ul className={classes.navSubList}>
-              <Link to="/events" onClick={() => toggleNavPanel()}>
-                See All
+              <Link to='/' onClick={() => toggleNavPanel()}>
+                The Neighborhood (Home)
+              </Link>
+              <Link to='/board' onClick={() => toggleNavPanel()}>
+                The Board
               </Link>
             </ul>
-          </li> */}
+          </li>
+          <li>
+            Celebrate
+            <ul className={classes.navSubList}>
+              <Link to='/yotm' onClick={() => toggleNavPanel()}>
+                Yard of the Month
+              </Link>
+            </ul>
+          </li>
           <li>
             Documents
             <ul className={classes.navSubList}>
-              <Link to="/documents" onClick={() => toggleNavPanel()}>
+              <Link to='/documents' onClick={() => toggleNavPanel()}>
                 See All
               </Link>
             </ul>
@@ -57,7 +53,7 @@ function NavBar() {
           <li>
             Recommendations
             <ul className={classes.navSubList}>
-              <Link to="/recommendations" onClick={() => toggleNavPanel()}>
+              <Link to='/recommendations' onClick={() => toggleNavPanel()}>
                 See All
               </Link>
             </ul>
