@@ -13,7 +13,6 @@
 
 .description {
   display: block;
-  margin-top: 15px;
 }
 
 .description address {
@@ -53,4 +52,14 @@
 .factList > .fact {
   margin-top: 15px;
   text-indent: 30px;
+}
+
+.factList > .fact:first-of-type {
+  margin-top: 10px;
+}
+
+.mandarinInfo,
+.siennaInfo {
+  margin-top: 10px;
+  font-style: italic;
 }

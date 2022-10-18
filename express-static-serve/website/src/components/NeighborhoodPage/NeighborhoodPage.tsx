@@ -27,16 +27,20 @@ function NeighborhoodPage({ facts }: NeighborhoodPageProps) {
           past 30 years, we've grown to 47 beautiful homes in this beautiful
           Mandarin area neighborhood.
           <br />
-          Visit us{' '}
-          <a
-            href='https://www.google.com/maps/dir//Flynn+Road+%26+Tanya+Terrace,+Jacksonville,+FL/@30.1537967,-81.6761568,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x88e5cedbc36ebd3b:0x858067931f06455d!2m2!1d-81.6410515!2d30.1537272!3e0'
-            target='_blank'
-            rel='noreferrer'
-          >
-            here
-          </a>
-          , or write us at:{' '}
-          <address>P. O. Box 600991, Jacksonville, Florida 32260-0991</address>
+          <div className={classes.siennaInfo}>
+            Visit us{' '}
+            <a
+              href='https://www.google.com/maps/dir//Flynn+Road+%26+Tanya+Terrace,+Jacksonville,+FL/@30.1537967,-81.6761568,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x88e5cedbc36ebd3b:0x858067931f06455d!2m2!1d-81.6410515!2d30.1537272!3e0'
+              target='_blank'
+              rel='noreferrer'
+            >
+              here
+            </a>
+            , or write us at:{' '}
+            <address>
+              P. O. Box 600991, Jacksonville, Florida 32260-0991
+            </address>
+          </div>
         </div>
 
         <h2 className={classes.usefulLinkTitle}>Useful Links</h2>
@@ -100,6 +104,16 @@ function NeighborhoodPage({ facts }: NeighborhoodPageProps) {
             {fact.detail}
           </li>
         ))}
+        <li className={classes.mandarinInfo}>
+          Learn more about Mandarin{' '}
+          <a
+            href='https://www.visitjacksonville.com/neighborhoods/mandarin/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            here.
+          </a>
+        </li>
       </ul>
     </>
   );
