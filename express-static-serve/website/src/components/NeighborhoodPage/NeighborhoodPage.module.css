@@ -24,14 +24,16 @@
 }
 
 .aboutTitle {
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .knowledgeTitle {
   margin-top: 25px;
 }
 
-.linkList {
+.linkList,
+.hoaMeeting,
+.factList {
   list-style-type: none;
 }
 
@@ -43,10 +45,6 @@
 
 .webLink:hover {
   color: rgb(var(--primaryColor));
-}
-
-.factList {
-  list-style-type: none;
 }
 
 .factList > .fact {

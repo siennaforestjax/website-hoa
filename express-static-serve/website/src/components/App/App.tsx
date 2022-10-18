@@ -8,6 +8,7 @@ import EventsPage from '../EventsPage/EventsPage';
 import theBoard from '../../boardMembers.json';
 import theEvents from '../../hoaEvents.json';
 import theFacts from '../../facts.json';
+import theMeeting from '../../hoaMeeting.json';
 import Footer from '../Footer/Footer';
 import YardOfTheMonthPage from '../YardOfTheMonthPage/YardOfTheMonthPage';
 import classes from './App.module.css';
@@ -25,7 +26,12 @@ function App() {
             <Routes>
               <Route
                 path='/'
-                element={<NeighborhoodPage facts={theFacts.facts} />}
+                element={
+                  <NeighborhoodPage
+                    facts={theFacts.facts}
+                    meetingDate={theMeeting.meeting}
+                  />
+                }
               />
               <Route path='/documents' element={<DocumentsPage />} />
               <Route
@@ -49,6 +55,7 @@ function App() {
         <footer className={classes.footer}>
           <Footer />
         </footer>
+        {/* <SpecialAlert /> */}
       </div>
     </Router>
   );

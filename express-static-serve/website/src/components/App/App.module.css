@@ -3,6 +3,7 @@
   width: 100vw;
   overflow-x: hidden;
   background-color: rgb(var(--appBackgroundColor));
+  position: relative;
 }
 
 .App .header {

@@ -2,15 +2,17 @@ import React from 'react';
 import classes from './NeighborhoodPage.module.css';
 import ImageWithLoadingFallback from '../ImageWithLoadingFallback/ImageWithLoadingFallback';
 import Fact from '../../interfaces/Fact';
+import HoaMeeting from '../../interfaces/HoaMeeting';
 import getRandomElement from '../../helper-functions/getRandomElement';
 
 const sourceUrl = process.env.REACT_APP_API_URL;
 
 type NeighborhoodPageProps = {
   facts: Array<Fact>;
+  meetingDate: HoaMeeting;
 };
 
-function NeighborhoodPage({ facts }: NeighborhoodPageProps) {
+function NeighborhoodPage({ facts, meetingDate }: NeighborhoodPageProps) {
   return (
     <>
       <h1 className={classes.pageTitle}>Welcome to the Neighborhood!</h1>
@@ -42,61 +44,69 @@ function NeighborhoodPage({ facts }: NeighborhoodPageProps) {
             </address>
           </div>
         </div>
-
-        <h2 className={classes.usefulLinkTitle}>Useful Links</h2>
-        <ul className={classes.linkList}>
-          <li>
-            <a
-              className={classes.webLink}
-              href='https://www.coj.net/welcome.aspx'
-              target='_blank'
-              rel='noreferrer'
-            >
-              City Of Jacksonville Information
-            </a>
-          </li>
-          <li>
-            <a
-              className={classes.webLink}
-              href='https://www.jaxsheriff.org/Contact-Us.aspx'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Contact the Jacksonville Sheriff's Department
-            </a>
-          </li>
-          <li>
-            <a
-              className={classes.webLink}
-              href='https://www.duvalelections.gov/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Find Voter Information
-            </a>
-          </li>
-          <li>
-            <a
-              className={classes.webLink}
-              href='https://myjax.custhelp.com/app/hauler'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Your Trash Schedule
-            </a>
-          </li>
-          <li>
-            <a
-              className={classes.webLink}
-              href='https://myjax.custhelp.com/app/evacuation_zone'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Know Your Evacuation Zone
-            </a>
-          </li>
+        <h2 className={classes.usefulLinkTitle}>
+          Join Us at Next HOA Meeting:
+        </h2>
+        <ul className={classes.hoaMeeting}>
+          <li>Date: {meetingDate.date}</li>
+          <li>Time: {meetingDate.time}</li>
+          <li>Location: {meetingDate.location}</li>
         </ul>
       </div>
+      <h2 className={classes.usefulLinkTitle}>Useful Links</h2>
+      <ul className={classes.linkList}>
+        <li>
+          <a
+            className={classes.webLink}
+            href='https://www.coj.net/welcome.aspx'
+            target='_blank'
+            rel='noreferrer'
+          >
+            City Of Jacksonville Information
+          </a>
+        </li>
+        <li>
+          <a
+            className={classes.webLink}
+            href='https://www.jaxsheriff.org/Contact-Us.aspx'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Contact the Jacksonville Sheriff's Department
+          </a>
+        </li>
+        <li>
+          <a
+            className={classes.webLink}
+            href='https://www.duvalelections.gov/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Find Voter Information
+          </a>
+        </li>
+        <li>
+          <a
+            className={classes.webLink}
+            href='https://myjax.custhelp.com/app/hauler'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Your Trash Schedule
+          </a>
+        </li>
+        <li>
+          <a
+            className={classes.webLink}
+            href='https://myjax.custhelp.com/app/evacuation_zone'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Know Your Evacuation Zone
+          </a>
+        </li>
+      </ul>
+
       <h2 className={classes.knowledgeTitle}>Did you know?</h2>
       <ul className={classes.factList}>
         {[getRandomElement(facts)].map((fact) => (
