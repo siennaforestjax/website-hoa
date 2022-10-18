@@ -7,6 +7,7 @@ import DocumentsPage from '../DocumentsPageBasic/DocumentsPage';
 import EventsPage from '../EventsPage/EventsPage';
 import theBoard from '../../boardMembers.json';
 import theEvents from '../../hoaEvents.json';
+import theFacts from '../../facts.json';
 import Footer from '../Footer/Footer';
 import YardOfTheMonthPage from '../YardOfTheMonthPage/YardOfTheMonthPage';
 import classes from './App.module.css';
@@ -22,7 +23,10 @@ function App() {
         <main className={classes.main}>
           <div className={classes.pageWrapper}>
             <Routes>
-              <Route path='/' element={<NeighborhoodPage />} />
+              <Route
+                path='/'
+                element={<NeighborhoodPage facts={theFacts.facts} />}
+              />
               <Route path='/documents' element={<DocumentsPage />} />
               <Route
                 path='/board'

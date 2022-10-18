@@ -5,10 +5,9 @@
 
 .fig {
   background-size: cover;
-  width: 350px;
-  height: 300px;
-  display: block;
-  float: right;
+  width: 450px;
+  height: 350px;
+  float: left;
   /* margin: 0 auto 25px auto; */
 }
 
@@ -21,7 +20,15 @@
   display: inline;
 }
 
-.sectionTitle {
+.usefulLinkTitle {
+  margin-top: 40px;
+}
+
+.aboutTitle {
+  margin-top: 10px;
+}
+
+.knowledgeTitle {
   margin-top: 25px;
 }
 
