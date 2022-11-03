@@ -27,10 +27,10 @@ function NavBar() {
             About
             <ul className={classes.navSubList}>
               <Link to='/' onClick={() => toggleNavPanel()}>
-                The Neighborhood (Home)
+                Your Neighborhood (Home)
               </Link>
               <Link to='/board' onClick={() => toggleNavPanel()}>
-                The Board
+                Your HOA Board
               </Link>
             </ul>
           </li>
@@ -43,7 +43,7 @@ function NavBar() {
             </ul>
           </li>
           <li>
-            Documents
+            HOA Documents
             <ul className={classes.navSubList}>
               <Link to='/documents' onClick={() => toggleNavPanel()}>
                 See All
@@ -51,7 +51,7 @@ function NavBar() {
             </ul>
           </li>
           <li>
-            Recommendations
+            Contractor Recommendations
             <ul className={classes.navSubList}>
               <Link to='/recommendations' onClick={() => toggleNavPanel()}>
                 See All
