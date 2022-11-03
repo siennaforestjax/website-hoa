@@ -14,10 +14,8 @@ function DocumentsPagePretty() {
   const [docsEssential, setDocsEssential] = useState([]);
   const [isLoadingMinutes, setIsLoadingMinutes] = useState(true);
   const [isLoadingMisc, setIsLoadingMisc] = useState(true);
-  const [isLoadingEssential, setIsLoadingEssential] = useState(true);
   const [minutesDidError, setMinutesDidError] = useState(false);
   const [miscDidError, setMiscDidError] = useState(false);
-  const [essentialDidError, setEssentialDidError] = useState(false);
 
   useEffect(() => {
     axios
