@@ -13,9 +13,9 @@
 }
 
 .figure {
-  min-width: 170px;
-  min-height: 170px;
-  max-width: 225px;
+  min-width: 200px;
+  min-height: 225px;
+  max-width: 200px;
   max-height: 225px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .figureCaption {
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
   text-align: center;
 }
@@ -118,7 +118,6 @@
 .rowItem {
   width: 50%;
 }
-
 
 /*------Medium Screens--------*/
 @media screen and (min-width: 500px) {
