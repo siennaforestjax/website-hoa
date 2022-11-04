@@ -32,3 +32,8 @@ code {
   position: relative;
   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
 }
+
+.pageTitle {
+  margin-top: 25px;
+  margin-bottom: 35px;
+}

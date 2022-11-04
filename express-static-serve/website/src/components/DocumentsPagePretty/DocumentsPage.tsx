@@ -14,29 +14,31 @@ function DocumentsPagePretty() {
   const [isLoadingMisc, setIsLoadingMisc] = useState(true);
   const [minutesDidError, setMinutesDidError] = useState(false);
   const [miscDidError, setMiscDidError] = useState(false);
-  
+
   useEffect(() => {
-    axios.get(`${API_URL}/api/documents/minutes`)
-        .then(response => {
-          setDocsMinutes(response.data);
-          setIsLoadingMinutes(false);
-        })
-        .catch(err => {
-          setIsLoadingMinutes(false);
-          setMinutesDidError(true);
-        });
-  }, [])
+    axios
+      .get(`${API_URL}/api/documents/minutes`)
+      .then((response) => {
+        setDocsMinutes(response.data);
+        setIsLoadingMinutes(false);
+      })
+      .catch((err) => {
+        setIsLoadingMinutes(false);
+        setMinutesDidError(true);
+      });
+  }, []);
   useEffect(() => {
-    axios.get(`${API_URL}/api/documents/misc`)
-        .then(response => {
-          setDocsMisc(response.data);
-          setIsLoadingMisc(false);
-        })
-        .catch(err => {
-          setIsLoadingMisc(false);
-          setMiscDidError(true);
-        });
-  }, [])
+    axios
+      .get(`${API_URL}/api/documents/misc`)
+      .then((response) => {
+        setDocsMisc(response.data);
+        setIsLoadingMisc(false);
+      })
+      .catch((err) => {
+        setIsLoadingMisc(false);
+        setMiscDidError(true);
+      });
+  }, []);
 
   function displayDocuments(docs: Array<HoaDocument>) {
     console.log(`sorting ${docs.length} docs`);
@@ -54,19 +56,26 @@ function DocumentsPagePretty() {
   }
 
   return (
-    <>
+    <div className={classes.pageWrapper}>
       <h1>Documents</h1>
       <h2>HOA Meeting Notes</h2>
-      {
-        isLoadingMinutes ? <p>Loading . . .</p> 
-        : minutesDidError ? <p>Error!</p> : displayDocuments(docsMinutes)}
+      {isLoadingMinutes ? (
+        <p>Loading . . .</p>
+      ) : minutesDidError ? (
+        <p>Error!</p>
+      ) : (
+        displayDocuments(docsMinutes)
+      )}
 
       <h2>Community Documents</h2>
-      {
-        isLoadingMisc ? <p>Loading . . .</p> :
-        miscDidError ? <p>Error!</p> : displayDocuments(docsMisc)
-      }
-    </>
+      {isLoadingMisc ? (
+        <p>Loading . . .</p>
+      ) : miscDidError ? (
+        <p>Error!</p>
+      ) : (
+        displayDocuments(docsMisc)
+      )}
+    </div>
   );
 }
 

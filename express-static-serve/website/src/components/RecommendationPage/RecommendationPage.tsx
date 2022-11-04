@@ -7,7 +7,7 @@ import mock from '../../recommendations.json';
 function RecommendationPage() {
   return (
     <>
-      <h1 className={classes.pageTitle}>Recommendations</h1>
+      <h1 className='pageTitle'>Recommendations</h1>
       <p className={classes.pageDescription}>
         Looking to have some work done around the house? Check out these
         recommendations from your neighbors.

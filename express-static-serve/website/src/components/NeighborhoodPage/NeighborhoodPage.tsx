@@ -15,7 +15,7 @@ type NeighborhoodPageProps = {
 function NeighborhoodPage({ facts, meetingDate }: NeighborhoodPageProps) {
   return (
     <>
-      <h1 className={classes.pageTitle}>Welcome to the Neighborhood!</h1>
+      <h1 className='pageTitle'>Welcome to the Neighborhood!</h1>
       <div className={classes.floatContainer}>
         <figure className={classes.fig}>
           <ImageWithLoadingFallback

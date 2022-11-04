@@ -15,7 +15,7 @@ const sourceUrl = process.env.REACT_APP_API_URL;
 const BoardPage = ({ boardMembers, subcommittees }: BoardPageProps) => {
   return (
     <>
-      <h1>Meet Your HOA</h1>
+      <h1 className='pageTitle'>Meet Your HOA</h1>
       <h2>The Board</h2>
       {boardMembers.map((boardMember) => {
         return (

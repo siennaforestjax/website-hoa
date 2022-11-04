@@ -1,83 +1,83 @@
 .container {
-    --divider-padding: calc(1.5 * var(--gutter));
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: [first] 2fr [second] 2fr [third] 6fr [four];
-    grid-template-rows: [first] 1fr [second] 1fr [third];
-    border: 2px solid rgb(var(--primaryBorderColor));
-    border-radius: 5px;
-    overflow-y: auto;
-    background-color: rgb(var(--secondaryColor));
+  --divider-padding: calc(1.5 * var(--gutter));
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: [first] 2fr [second] 2fr [third] 6fr [four];
+  grid-template-rows: [first] 1fr [second] 1fr [third];
+  border: 2px solid rgb(var(--primaryBorderColor));
+  border-radius: 5px;
+  overflow-y: auto;
+  background-color: rgb(var(--secondaryColor));
+  filter: brightness(1.03);
 }
 
 .leftHalf {
-    grid-column-start: 1;
-    grid-column-end: span third;
-    grid-row-start: 1;
-    grid-row-end: span third;
-    border-right: 2px solid rgb(var(--primaryBorderColor));
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
+  grid-column-start: 1;
+  grid-column-end: span third;
+  grid-row-start: 1;
+  grid-row-end: span third;
+  border-right: 2px solid rgb(var(--primaryBorderColor));
+  padding-top: var(--gutter);
+  padding-bottom: var(--gutter);
 }
 
 .rightHalf {
-    grid-column-start: third;
-    grid-column-end: span fourth;
-    grid-row-start: 1;
-    grid-row-end: span third;
-    border-left: 2px solid rgb(var(--primaryBorderColor));
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
+  grid-column-start: third;
+  grid-column-end: span fourth;
+  grid-row-start: 1;
+  grid-row-end: span third;
+  border-left: 2px solid rgb(var(--primaryBorderColor));
+  padding-top: var(--gutter);
+  padding-bottom: var(--gutter);
 }
 
-
 .halfColumn {
-    width: 50%;
-    display: inline-block;
+  width: 50%;
+  display: inline-block;
 }
 
 .row {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    column-gap: calc(.5 * var(--gutter));
-    margin-top: calc(2 * var(--gutter));
-    justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  column-gap: calc(0.5 * var(--gutter));
+  margin-top: calc(2 * var(--gutter));
+  justify-content: center;
 }
 
 .row:first-of-type {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .leftHalf .label {
-    width: 30%;
-    text-align: end;
+  width: 30%;
+  text-align: end;
 }
 
 .leftHalf .value {
-    width: 70%;
-    align-self: center;
+  width: 70%;
+  align-self: center;
 }
 
 .rightHalf .label {
-    width: 16%;
-    text-align: right;
+  width: 16%;
+  text-align: right;
 }
 
 .rightHalf .value {
-    width: 84%;
+  width: 84%;
 }
 
 .value {
-    font-size: 1.1rem;
-    padding-right: var(--divider-padding);
-    text-transform: capitalize;
+  font-size: 1.1rem;
+  padding-right: var(--divider-padding);
+  text-transform: capitalize;
 }
 
 .label {
-    padding-right: calc(.5 * var(--gutter));
-    border-right: 1px solid rgb(var(--primaryFontColor));
-    padding-left: var(--divider-padding);
-    font-weight: bold;
+  padding-right: calc(0.5 * var(--gutter));
+  border-right: 1px solid rgb(var(--primaryFontColor));
+  padding-left: var(--divider-padding);
+  font-weight: bold;
 }
