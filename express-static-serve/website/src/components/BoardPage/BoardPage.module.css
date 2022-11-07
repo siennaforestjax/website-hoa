@@ -59,7 +59,6 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .subcommittee {
@@ -99,14 +98,9 @@
   width: 30%;
 }
 
-.field {
-  width: 50%;
-}
-
 .row {
   display: flex;
   flex-direction: row;
-  width: 40%;
   justify-content: flex-start;
   align-items: center;
 }
@@ -115,14 +109,19 @@
   font-weight: bold;
 }
 
-.rowItem {
-  width: 50%;
+.columnTwo {
+  flex-grow: 1;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: calc(100% - 20px);
 }
 
 /*------Medium Screens--------*/
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   :root {
-    --figureWidth: 35%;
+    --detailsWidth: 35%;
   }
 
   .boardMember {
@@ -130,7 +129,34 @@
   }
 
   .details {
-    width: calc(100% - var(--figureWidth));
+    width: calc(100% - var(--detailsWidth));
     margin-top: 0;
+  }
+
+  .subcommitteeSection {
+    padding-left: 15px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 599px) {
+  :root {
+    --detailsWidth: 80vw;
+  }
+
+  .details {
+    width: var(--detailsWidth);
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .figure {
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 314px;
+    max-height: 314px;
+  }
+
+  .boardMember {
+    row-gap: 15px;
   }
 }
