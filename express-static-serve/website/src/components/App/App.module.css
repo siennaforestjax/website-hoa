@@ -38,3 +38,19 @@
   margin: auto;
   margin-bottom: 35px;
 }
+
+@media screen and (max-width: 620px) {
+  .pageWrapper {
+    height: 100%;
+    width: 90%;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    color: rgb(var(--primaryFontColor));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    margin-bottom: 35px;
+  }
+}

@@ -37,3 +37,12 @@ code {
   margin-top: 25px;
   margin-bottom: 35px;
 }
+
+@media screen and (max-width: 620px) {
+  .pageTitle {
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+}

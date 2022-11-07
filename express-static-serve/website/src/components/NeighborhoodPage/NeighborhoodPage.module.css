@@ -56,3 +56,28 @@
   margin-top: 10px;
   font-style: italic;
 }
+
+@media screen and (max-width: 1050px) {
+  .fig {
+    float: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .fig {
+    width: 325px;
+    height: 253px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .webLink {
+    margin-left: 0;
+  }
+
+  .factList > .fact {
+    margin-top: 15px;
+    text-indent: 20px;
+  }
+}
