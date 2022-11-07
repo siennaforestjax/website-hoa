@@ -55,15 +55,9 @@
   margin-top: 25px;
 }
 
-.subcommitteeSection {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
 .subcommittee {
   margin-top: 25px;
-  width: 80%;
+  width: 100%;
   padding-bottom: var(--boardMemberPaddingBottom);
 }
 
@@ -98,24 +92,24 @@
   width: 30%;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.headerRow {
-  font-weight: bold;
-}
-
-.columnTwo {
-  flex-grow: 1;
-}
-
 .imageWrapper {
   width: 100%;
   height: calc(100% - 20px);
+}
+
+th {
+  text-align: left;
+}
+
+td,
+th {
+  width: 50%;
+  font-size: 0.95rem;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  padding-left: 2.5vw;
 }
 
 /*------Medium Screens--------*/
@@ -135,6 +129,11 @@
 
   .subcommitteeSection {
     padding-left: 15px;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    padding-left: 18px;
   }
 }
 
