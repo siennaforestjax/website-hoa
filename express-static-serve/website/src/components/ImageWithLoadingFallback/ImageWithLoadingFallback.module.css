@@ -4,15 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.imageWrapper.loading,
-.imageWrapper.error {
   border: 1px solid black;
   border-style: inset;
-}
-
-.imageWrapper.error {
   background-color: rgb(200, 200, 200);
 }
 
