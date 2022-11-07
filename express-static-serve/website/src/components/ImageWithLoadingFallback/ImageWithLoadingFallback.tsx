@@ -28,9 +28,9 @@ function ImageWithLoadingFallback({
 
   return (
     <div
-      className={`${classes.imageWrapper} (${
-        isLoading ? classes.loading : isError ? classes.error : ''
-      })`}
+      className={`${classes.imageWrapper}${
+        isLoading ? ' ' + classes.loading : isError ? ' ' + classes.error : ''
+      }`}
     >
       {isLoading ? (
         <LoadingSvg scale={loadingScale} />
