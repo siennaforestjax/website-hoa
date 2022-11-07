@@ -39,12 +39,12 @@
   margin-bottom: 35px;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 610px) {
   .pageWrapper {
     height: 100%;
     width: 90%;
-    padding-left: var(--gutter);
-    padding-right: var(--gutter);
+    padding-left: calc(0.5 * var(--gutter));
+    padding-right: calc(0.5 * var(--gutter));
     color: rgb(var(--primaryFontColor));
     display: flex;
     flex-direction: column;

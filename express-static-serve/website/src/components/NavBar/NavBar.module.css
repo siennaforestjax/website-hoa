@@ -28,7 +28,7 @@
 }
 
 .navPanel {
-  --panelWidth: 65vw;
+  --panelWidth: 40vw;
   position: absolute;
   left: calc(-1 * var(--panelWidth));
   width: var(--panelWidth);
@@ -89,11 +89,33 @@
   background-color: white;
 }
 
-/* ------Medium Screens------ */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 641px) {
   .navPanel {
-    --panelWidth: 35vw;
+    --panelWidth: 360px;
     left: calc(-1 * var(--panelWidth));
     width: var(--panelWidth);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .navPanel {
+    --panelWidth: 80vw;
+    left: calc(-1 * var(--panelWidth));
+    width: var(--panelWidth);
+  }
+
+  .navHamburger {
+    display: block;
+    height: 40px;
+    width: 40px;
+    transform: rotateZ(90deg);
+    letter-spacing: -1px;
+    top: calc(1.6 * var(--gutter));
+    left: calc(1 * var(--gutter));
+    background-color: rgb(var(--primaryButtonColor));
+    border: none;
+    box-shadow: 0 0 8px -2px black;
+    border-radius: var(--buttonBorderRadius);
+    position: absolute;
   }
 }
