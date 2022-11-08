@@ -70,7 +70,7 @@ function DocumentsPagePretty() {
 
   return (
     <>
-      <h1>Documents</h1>
+      <h1 className='pageTitle'>Documents</h1>
       <div className={classes.fileContainer}>
         <h2 className={classes.sectionTitle}>Homeowner Essentials</h2>
         {isLoadingMinutes ? (

@@ -5,12 +5,17 @@
 }
 
 .docSize {
-  font-size: .85rem;
+  font-size: 0.85rem;
+  display: inline-block;
 }
 
 .docLink {
   color: rgb(var(--primaryFontColor));
   font-weight: bold;
+}
+
+.fileName {
+  margin-right: 3px;
 }
 
 .docLink:hover {

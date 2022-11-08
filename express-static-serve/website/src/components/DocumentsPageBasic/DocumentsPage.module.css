@@ -1,15 +1,29 @@
 .sectionTitle {
-  font-size: 1.2rem;
-  margin-top: 15px;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .fileContainer li {
   padding-left: calc(var(--gutter) * 4);
+  word-break: break-all;
 }
 
 .fileContainer {
   display: block;
   width: 100%;
+  background-color: rgb(var(--secondaryColor));
+  filter: brightness(1.03);
+  padding: calc(2 * var(--gutter));
   margin-top: 25px;
+  box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+.fileContainer:first-child {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 620px) {
+  .fileContainer li {
+    padding-left: 0;
+  }
 }
