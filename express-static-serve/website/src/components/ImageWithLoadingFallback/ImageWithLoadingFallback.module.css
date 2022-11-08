@@ -15,7 +15,7 @@
   object-fit: cover;
 }
 
-p.errorMessage {
+.errorMessage {
   font-style: italic;
   font-weight: bold;
   color: var(--primaryColor);
