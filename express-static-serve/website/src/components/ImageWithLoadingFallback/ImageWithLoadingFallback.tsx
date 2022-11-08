@@ -27,19 +27,9 @@ function ImageWithLoadingFallback({
   }
 
   return (
-    <div
-      className={`${classes.imageWrapper}${
-        isLoading ? ' ' + classes.loading : isError ? ' ' + classes.error : ''
-      }`}
-    >
-      {isLoading ? (
-        <LoadingSvg scale={loadingScale} />
-      ) : isError ? (
-        <p className={classes.errorMessage}>Image Failed To Load</p>
-      ) : (
-        ''
-      )}
+    <div className={classes.imageWrapper}>
       <img
+        style={{ display: isLoading || isError ? 'none' : 'block' }}
         className={classes.mainImage}
         src={source}
         alt={altText}
@@ -47,6 +37,13 @@ function ImageWithLoadingFallback({
         onError={onErrorHandler}
         {...props}
       />
+      {isLoading ? (
+        <LoadingSvg scale={loadingScale} />
+      ) : isError ? (
+        <p className={classes.errorMessage}>Image Failed To Load</p>
+      ) : (
+        ''
+      )}
     </div>
   );
 }

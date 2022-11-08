@@ -9,11 +9,6 @@
   background-color: rgb(200, 200, 200);
 }
 
-.imageWrapper.loading > img.mainImage,
-.imageWrapper.error > img.mainImage {
-  display: none;
-}
-
 .mainImage {
   height: 100%;
   width: 100%;
