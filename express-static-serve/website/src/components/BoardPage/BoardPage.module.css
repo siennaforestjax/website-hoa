@@ -19,7 +19,8 @@
   max-height: 225px;
 }
 
-.figure > * {
+.figure > .imageWrapper,
+.figure > .figureCaption {
   margin: auto;
 }
 
