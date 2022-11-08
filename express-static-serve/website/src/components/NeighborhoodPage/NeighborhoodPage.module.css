@@ -63,7 +63,7 @@
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (min-width: 416px) and (max-width: 620px) {
   .fig {
     width: 325px;
     height: 253px;
@@ -71,7 +71,7 @@
   }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (min-width: 360px) and (max-width: 415px) {
   .webLink {
     margin-left: 0;
   }

@@ -18,27 +18,33 @@ function YardOfTheMonthPage() {
         </figure>
       </div>
       <div className={classes.multiImageWrapper}>
-        <figure className={classes.standardImage}>
-          <ImageWithLoadingFallback
-            source={`${sourceUrl}/WindowView.webp`}
-            altText=''
-          />
-          <figcaption>(Window View of the River)</figcaption>
-        </figure>
-        <figure className={classes.standardImage}>
-          <ImageWithLoadingFallback
-            source={`${sourceUrl}/Foliage.webp`}
-            altText=''
-          />
-          <figcaption>(Back Yard)</figcaption>
-        </figure>
-        <figure className={classes.standardImage}>
-          <ImageWithLoadingFallback
-            source={`${sourceUrl}/Side.webp`}
-            altText=''
-          />
-          <figcaption>(Side of House)</figcaption>
-        </figure>
+        <div className={classes.standardImageWrapper}>
+          <figure className={classes.standardImage}>
+            <ImageWithLoadingFallback
+              source={`${sourceUrl}/WindowView.webp`}
+              altText=''
+            />
+            <figcaption>(Window View of the River)</figcaption>
+          </figure>
+        </div>
+        <div className={classes.standardImageWrapper}>
+          <figure className={classes.standardImage}>
+            <ImageWithLoadingFallback
+              source={`${sourceUrl}/Foliage.webp`}
+              altText=''
+            />
+            <figcaption>(Back Yard)</figcaption>
+          </figure>
+        </div>
+        <div className={classes.standardImageWrapper}>
+          <figure className={classes.standardImage}>
+            <ImageWithLoadingFallback
+              source={`${sourceUrl}/Side.webp`}
+              altText=''
+            />
+            <figcaption>(Side of House)</figcaption>
+          </figure>
+        </div>
       </div>
     </>
   );
