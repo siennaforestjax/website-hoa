@@ -18,7 +18,7 @@
   border-radius: 8px;
 }
 
-.fileContainer:first-child {
+.fileContainer:first-of-type {
   margin-top: 0;
 }
 
