@@ -7,16 +7,10 @@
 .recommendationListContainer {
   margin: auto;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  width: 1200px;
-  row-gap: 42px;
-}
-
-.recommendationContainer {
-  height: auto;
   width: 100%;
-  box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.3);
+  row-gap: 42px;
 }

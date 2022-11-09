@@ -7,18 +7,12 @@ import mock from '../../recommendations.json';
 function RecommendationPage() {
   return (
     <>
-      <h1 className='pageTitle'>Recommendations</h1>
-      <p className={classes.pageDescription}>
-        Looking to have some work done around the house? Check out these
-        recommendations from your neighbors.
-      </p>
+      <h1 className='pageTitle'>Contractor Recommendations</h1>
       <div className={classes.recommendationListContainer}>
         {mock.recommendations
           .filter((x) => x.category === 'contractor')
           .map((x) => (
-            <div key={x.id} className={classes.recommendationContainer}>
-              <Recommendation {...x} />
-            </div>
+            <Recommendation key={x.id} {...x} />
           ))}
       </div>
     </>

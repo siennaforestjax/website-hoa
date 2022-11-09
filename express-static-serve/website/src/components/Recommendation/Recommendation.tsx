@@ -1,48 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import RecommendationDetails from '../../interfaces/RecommendationDetails';
-import './Recommendation.module.css';
 import classes from './Recommendation.module.css';
 
 interface RecommendationProps extends RecommendationDetails {}
 
-function Recommendation({ category, lineOfBusiness, entityName, contractorName, workSummary, reviewer, review, cost, dateOfService, phoneNumber, address }: RecommendationProps) {
+function Recommendation({
+  category,
+  lineOfBusiness,
+  entityName,
+  contractorName,
+  workSummary,
+  reviewer,
+  review,
+  cost,
+  dateOfService,
+  phoneNumber,
+  address,
+}: RecommendationProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleClick() {
+    const newValue = !isOpen;
+    setIsOpen(newValue);
+  }
+
   return (
     <div className={classes.container}>
-      <div className={classes.leftHalf}>
-        <div className={classes.row}>
-          <span className={classes.label}>Contractor</span>
-          <span className={classes.value}>{contractorName}</span>
+      <div className={classes.header}>
+        <div className={classes.description}>
+          <p>
+            {entityName} - {lineOfBusiness}
+          </p>
         </div>
-        <div className={classes.row}>
-          <span className={classes.label}>Employer</span>
-          <span className={classes.value}>{entityName}</span>
-        </div>
-        <div className={classes.row}>
-            <span className={classes.label}>Line Of Work</span>
-            <span className={classes.value}>{lineOfBusiness}</span>
-        </div>
-        <div className={classes.row}>
-          <span className={classes.label}>Cost</span>
-          <span className={classes.value}>{cost}</span>
-        </div>
-        <div className={classes.row}>
-            <span className={classes.label}>Reviewed By</span>
-          <span className={classes.value}>{reviewer}</span>
-            </div>
-            <div className={classes.row}>
-            <span className={classes.label}>Service Date</span>
-          <span className={classes.value}>{dateOfService}</span>
+        <div className={classes.buttonContainer} onClick={handleClick}>
+          {/* <div
+            className={`${classes.toggleButton}${
+              isOpen ? ' ' + classes.open : ''
+            }`}
+          ></div> */}
+          <button className={classes.toggleButton}>
+            {isOpen ? 'collapse' : 'expand'}
+          </button>
         </div>
       </div>
-      <div className={classes.rightHalf}>
-        <div className={classes.row}>
-         <span className={classes.label}>Work Summary</span>
-         <span className={classes.value}>{workSummary}</span>
-        </div>
-        <div className={classes.row}>
-          <span className={classes.label}>Review</span>
-          <span className={classes.value}>{review}</span>
-        </div>
+      <div className={`${classes.body}${isOpen ? ' ' + classes.open : ''}`}>
+        <p className={classes.review}>{review}</p>
+        <p className={classes.reviewedBy}>
+          Reviewed By: {reviewer} | Date Of Service: {dateOfService}
+        </p>
       </div>
     </div>
   );

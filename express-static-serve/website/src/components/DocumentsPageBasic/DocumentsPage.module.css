@@ -11,8 +11,7 @@
 .fileContainer {
   display: block;
   width: 100%;
-  background-color: rgb(var(--secondaryColor));
-  filter: brightness(1.03);
+  background-color: rgb(var(--panelBackgroundColor));
   padding: calc(2 * var(--gutter));
   margin-top: 25px;
   box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.3);

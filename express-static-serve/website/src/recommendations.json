@@ -4,7 +4,7 @@
       "id": 1,
       "category": "contractor",
       "lineOfBusiness": "carpenter",
-      "entityName": "Ben's Wearhouse",
+      "entityName": "Ben's Warehouse",
       "contractorName": "Ben's Lil Bro",
       "workSummary": "Knock down bedroom wall.  Wire up new sockets.  Repaint Room.  Add additional window to allow for better flow of the general area.",
       "reviewer": "Aaron Flick",
@@ -24,7 +24,7 @@
       "reviewer": "Widow Bzzzpt",
       "review": "Carter was very efficient and discrete.  My husband never saw it coming.  Guess it's time to get back on the apps.",
       "cost": "Priceless",
-      "dateOfService": "The first day of the rest of my life",
+      "dateOfService": "1/12/2020",
       "phoneNumber": "<<--redacted-->>",
       "address": "<<--redacted-->>"
     },
@@ -44,4 +44,3 @@
     }
   ]
 }
-

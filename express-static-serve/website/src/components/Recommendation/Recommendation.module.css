@@ -1,83 +1,83 @@
 .container {
-  --divider-padding: calc(1.5 * var(--gutter));
+  --borderRadius: 12px;
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: [first] 2fr [second] 2fr [third] 6fr [four];
-  grid-template-rows: [first] 1fr [second] 1fr [third];
-  border: 2px solid rgb(var(--primaryBorderColor));
-  border-radius: 5px;
-  overflow-y: auto;
-  background-color: rgb(var(--secondaryColor));
-  filter: brightness(1.03);
+  max-width: 640px;
+  box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.3);
+  border-radius: var(--borderRadius);
+  background-color: rgb(var(--panelBackgroundColor));
 }
 
-.leftHalf {
-  grid-column-start: 1;
-  grid-column-end: span third;
-  grid-row-start: 1;
-  grid-row-end: span third;
-  border-right: 2px solid rgb(var(--primaryBorderColor));
-  padding-top: var(--gutter);
-  padding-bottom: var(--gutter);
-}
-
-.rightHalf {
-  grid-column-start: third;
-  grid-column-end: span fourth;
-  grid-row-start: 1;
-  grid-row-end: span third;
-  border-left: 2px solid rgb(var(--primaryBorderColor));
-  padding-top: var(--gutter);
-  padding-bottom: var(--gutter);
-}
-
-.halfColumn {
-  width: 50%;
-  display: inline-block;
-}
-
-.row {
+.header {
+  --dividerBorder: 2px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+  height: auto;
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
-  width: 100%;
-  column-gap: calc(0.5 * var(--gutter));
-  margin-top: calc(2 * var(--gutter));
+  border-bottom: var(--dividerBorder);
+}
+
+.header .description {
+  width: 80%;
+  height: auto;
+  border-radius: var(--borderRadius) 0 0 0;
+  text-align: left;
+  padding: var(--gutter);
+  font-size: 1.5rem;
+}
+
+.header .buttonContainer {
+  cursor: pointer;
+  width: 20%;
+  min-width: 75px;
+  height: auto;
+  border-radius: 0 var(--borderRadius) 0 0;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  /* border-left: var(--dividerBorder); */
 }
 
-.row:first-of-type {
-  margin-top: 0;
+.toggleButton {
+  background-color: rgb(var(--primaryButtonColor));
+  color: rgb(var(--primaryFontColor));
+  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
 }
 
-.leftHalf .label {
-  width: 30%;
-  text-align: end;
-}
-
-.leftHalf .value {
-  width: 70%;
-  align-self: center;
-}
-
-.rightHalf .label {
-  width: 16%;
-  text-align: right;
-}
-
-.rightHalf .value {
-  width: 84%;
-}
-
-.value {
-  font-size: 1.1rem;
-  padding-right: var(--divider-padding);
-  text-transform: capitalize;
-}
-
-.label {
-  padding-right: calc(0.5 * var(--gutter));
-  border-right: 1px solid rgb(var(--primaryFontColor));
-  padding-left: var(--divider-padding);
+.toggleText {
+  text-decoration: underline;
   font-weight: bold;
+}
+
+.body {
+  max-height: 0;
+  padding: var(--gutter);
+  padding-top: 0;
+  display: block;
+  border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.36s, max-height 0.26s;
+}
+
+.body.open {
+  padding-top: var(--gutter);
+  max-height: 1000px;
+  transform: scaleY(1);
+  transition: transform 0.36s, max-height 2.6s;
+}
+
+.review,
+.reviewedBy {
+  height: inherit;
+}
+
+.reviewedBy {
+  margin-top: calc(2 * var(--gutter));
+  font-style: italic;
+  text-align: center;
 }
