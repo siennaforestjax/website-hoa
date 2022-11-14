@@ -34,7 +34,7 @@
   width: var(--panelWidth);
   height: auto;
   padding-left: var(--gutter);
-  border-radius: 3px;
+  border-radius: 0 8px 8px 0;
   transition: none;
   background: linear-gradient(to right, white 5%, rgb(var(--primaryColor)));
   z-index: 2;

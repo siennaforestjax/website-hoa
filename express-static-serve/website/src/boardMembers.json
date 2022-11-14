@@ -7,7 +7,7 @@
       "startDate": "1/1/2022",
       "titleDescription": "The HOA President serves as the leader of the board. The main responsibilities of the president include presiding over board meetings and facilitating the decision-making process; signing contacts, checks, and other legal documents; serving as a spokesman for the HOA; and taking charge of the day-to-day operations.",
       "imageName": "president.jpg",
-      "imageDescription": "too cool for school"
+      "imageDescription": "in his sunday best"
     },
     {
       "title": "Treasurer",
@@ -32,7 +32,11 @@
     {
       "name": "Sienna Forest Management",
       "description": "This committee handles miscellaneous tasks as assigned by the board",
-      "objectives": ["build the HOA website", "welcome new neighbors", "provide recommendations towards having community guidelines followed"],
+      "objectives": [
+        "build the HOA website",
+        "welcome new neighbors",
+        "provide recommendations towards having community guidelines followed"
+      ],
       "representatives": [
         {
           "name": "MargaretAnne Payne",
@@ -44,7 +48,7 @@
         },
         {
           "name": "George DeMarino",
-          "role": "Community Relations" 
+          "role": "Community Relations"
         },
         {
           "name": "Chiti Musonda",
@@ -52,9 +56,9 @@
         },
         {
           "name": "Aaron Flick",
-          "role": "Website Developer" 
+          "role": "Website Developer"
         }
-      ] 
+      ]
     }
   ]
 }
