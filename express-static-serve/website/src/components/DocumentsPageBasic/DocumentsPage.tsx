@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import classes from './DocumentsPage.module.css';
 import HoaDocument from '../../interfaces/HoaDocument';
-import sortStringDates from '../../helper-functions/sortStringDates';
+import {
+  sortDates,
+  sortDatesDesc,
+} from '../../helper-functions/sortStringDates';
 import Document from '../DocumentBasic/Document';
 import axios from 'axios';
 import LoadingSvg from '../LoadingSvg/LoadingSvg';
@@ -56,14 +59,16 @@ function DocumentsPagePretty() {
       });
   }, []);
 
-  function displayDocuments(docs: Array<HoaDocument>) {
+  function displayDocuments(docs: Array<HoaDocument>, isAsc: boolean) {
+    isAsc
+      ? (docs = docs.sort((x, y) => (x.filename > y.filename ? 1 : -1)))
+      : (docs = docs.sort((x, y) => (x.filename > y.filename ? -1 : 1)));
+
     return (
       <ul className={classes.fileList}>
-        {docs
-          .sort((x, y) => sortStringDates(x.createTime, y.createTime))
-          .map((doc) => (
-            <Document key={doc.filename} document={doc} />
-          ))}
+        {docs.map((doc) => (
+          <Document key={doc.filename} document={doc} />
+        ))}
       </ul>
     );
   }
@@ -78,7 +83,7 @@ function DocumentsPagePretty() {
         ) : minutesDidError ? (
           <p>Error Gathering Documents</p>
         ) : (
-          displayDocuments(docsEssential)
+          displayDocuments(docsEssential, true)
         )}
       </div>
       <div className={classes.fileContainer}>
@@ -88,7 +93,7 @@ function DocumentsPagePretty() {
         ) : minutesDidError ? (
           <p>Error Gathering Documents</p>
         ) : (
-          displayDocuments(docsMinutes)
+          displayDocuments(docsMinutes, false)
         )}
       </div>
       <div className={classes.fileContainer}>
@@ -98,7 +103,7 @@ function DocumentsPagePretty() {
         ) : miscDidError ? (
           <p>Error Gathering Documents</p>
         ) : (
-          displayDocuments(docsMisc)
+          displayDocuments(docsMisc, true)
         )}
       </div>
     </>

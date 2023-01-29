@@ -1,7 +1,4 @@
-export default function sortDates(
-  unixDate1: number,
-  unixDate2: number
-) {
+export function sortDates(unixDate1: number, unixDate2: number) {
   if (!unixDate1) {
     return -1;
   }
@@ -22,4 +19,8 @@ export default function sortDates(
   }
 
   return 0;
+}
+
+export function sortDatesDesc(unixDate1: number, unixDate2: number) {
+  return sortDates(unixDate2, unixDate1);
 }

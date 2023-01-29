@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import classes from './DocumentsPage.module.css';
 import HoaDocument from '../../interfaces/HoaDocument';
-import sortStringDates from '../../helper-functions/sortStringDates';
+import { sortDates } from '../../helper-functions/sortStringDates';
 import Document from '../DocumentBasic/Document';
 import axios from 'axios';
 
@@ -46,7 +46,7 @@ function DocumentsPagePretty() {
       <div className={classes.fileContainer}>
         <ul className={classes.fileList}>
           {docs
-            .sort((x, y) => sortStringDates(x.createTime, y.createTime))
+            .sort((x, y) => sortDates(x.createTime, y.createTime))
             .map((doc) => (
               <Document key={doc.filename} document={doc} />
             ))}
