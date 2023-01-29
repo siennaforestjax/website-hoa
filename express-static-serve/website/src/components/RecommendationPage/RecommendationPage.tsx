@@ -11,6 +11,7 @@ function RecommendationPage() {
       <div className={classes.recommendationListContainer}>
         {mock.recommendations
           .filter((x) => x.category === 'contractor')
+          .sort((x) => (x.isNeighbor ? 1 : 0))
           .map((x) => (
             <Recommendation key={x.id} {...x} />
           ))}

@@ -9,6 +9,7 @@
 }
 
 .header {
+  position: relative;
   --dividerBorder: 2px solid rgba(0, 0, 0, 0.08);
   border-radius: var(--borderRadius) var(--borderRadius) 0 0;
   height: auto;
@@ -16,6 +17,15 @@
   display: flex;
   flex-wrap: nowrap;
   border-bottom: var(--dividerBorder);
+}
+
+.neighborIcon {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  color: purple;
+  background-color: white;
+  padding: 2px;
 }
 
 .header .description {
@@ -80,4 +90,14 @@
   margin-top: calc(2 * var(--gutter));
   font-style: italic;
   text-align: center;
+}
+
+.review {
+  margin-top: calc(2 * var(--gutter));
+  margin-bottom: calc(2 * var(--gutter));
+}
+
+.label {
+  padding-right: 10px;
+  font-style: italic;
 }
