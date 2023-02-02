@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import classes from './DocumentsPage.module.css';
 import HoaDocument from '../../interfaces/HoaDocument';
-import {
-  sortDates,
-  sortDatesDesc,
-} from '../../helper-functions/sortStringDates';
 import Document from '../DocumentBasic/Document';
 import axios from 'axios';
 import LoadingSvg from '../LoadingSvg/LoadingSvg';
